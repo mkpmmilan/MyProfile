@@ -1,4 +1,4 @@
 # This is my profile.
 ### I am Prageeth Milan 
 
-![image of Java](assets/images/java.png)
+![image of MyProfile](assets/images/0001.jpg)
