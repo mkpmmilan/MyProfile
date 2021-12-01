@@ -1,0 +1,16 @@
+.background{
+    background-color: #1B1B1B;
+}
+header>nav>ul li{
+    float: right;
+    padding: 8px;
+    font-size: 30px;
+}
+header>nav>ul li a{
+    color: #00D2D3;
+    font-family: Ubuntu;
+}
+.nav{
+    list-style-type: none;
+    padding: 8px;
+}

@@ -3,22 +3,26 @@
 <head>
     <title>Prageeth Milan</title>
     <link href="/assets/images/pm.jpeg" rel="icon">
+    <link href="/assets/styles/indexFile.css" rel="stylesheet">
     <meta content="Prageeth,Milan,Prageeth Milan,Software engineer" name="keywords">
     <meta content="I am Prageeth Milan.I am learning software engineering in IJSE" name="description">
     <meta content="width=device-width initial-scale=1" name="viewport">
     <meta content="#00D2D3" name="theme-color">
 </head>
-<body>
+<body class="background">
 <!--Header section start-->
 <header>
-    <!--Logo image-->
+
     <nav>
-        <h2 id="home"><a href="#home">Home</a></h2>
-        <h2><a href="#about_me">About</a></h2>
-        <h2><a href="#education">Education</a></h2>
-        <h2><a href="#skills">Skills</a></h2>
-        <h2><a href="#projects">Projects</a></h2>
-        <h2><a href="#contact_me">Contact</a></h2>
+        <img src="assets/images/welcomeBackground.png" alt="welcome image" style="height: auto; max-width: 100%; border: none; display: block;">
+        <ul class="nav">
+            <li><a href="#contact_me">Contact</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about_me">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li id="home"><a href="#home">Home</a></li>
+        </ul>
     </nav>
 
     <aside>
@@ -109,7 +113,7 @@
             <p>Subject</p>
             <input type="text">
             <p>Massage</p>
-            <textarea cols="30" rows="5" required></textarea><br>
+            <textarea cols="30" required rows="5"></textarea><br>
             <button type="submit">Send Massage</button>
         </form>
     </section>
