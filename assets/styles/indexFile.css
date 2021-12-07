@@ -1,16 +1,49 @@
 .background{
     background-color: #1B1B1B;
 }
-header>nav>ul li{
-    float: right;
-    padding: 8px;
-    font-size: 30px;
+.nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-header>nav>ul li a{
-    color: #00D2D3;
-    font-family: Ubuntu;
+.container{
+    max-width: 1300px;
+    margin: auto;
+    right: 50px;
+    overflow: hidden;
 }
 .nav{
-    list-style-type: none;
-    padding: 8px;
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 99;
+    transition: all 0.3s ease;
+    border-radius: 0 0% 15% 15%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.nav .Main-Menu ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.nav .Main-Menu li{
+    display: inline-block;
+}
+.bg-img{
+    background-image: url("/assets/images/welcomeBackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
