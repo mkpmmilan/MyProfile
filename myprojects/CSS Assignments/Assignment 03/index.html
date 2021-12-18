@@ -5,6 +5,29 @@
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <title>Assignment 03</title>
     <style>
+        body > section:nth-child(1) {
+            width: 275px;
+            height: 275px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            border-radius: 100%;
+            border: 16px solid grey;
+            transform: translate(-50%,-50%);
+            z-index: 10;
+        }
+        body>section>section{
+            border-radius: 100%;
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            margin: auto;
+            border: 15px solid red;
+            z-index: 10;
+        }
 
         body > section {
             width: 100%;
@@ -36,7 +59,7 @@
             background-color: orangered;
         }
 
-        body > section > div > h2 {
+        body > section > div > p {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
@@ -55,16 +78,16 @@
 </section>
 <section>
     <div>
-        <h2>Hello</h2>
+        <p>Hello</p>
     </div>
 </section>
 <section>
     <div>
-        <h2>Welcome To</h2>
+        <p>Welcome To</p>
     </div>
 </section>
 <section>
-    <div><h2>Institute Of Software Engineering</h2></div>
+    <div><p>Institute Of Software Engineering</p></div>
 </section>
 </body>
 </html>
