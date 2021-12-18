@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Assignment 04</title>
     <style>
         body>section{
-            border: 1px solid black;
+            position: relative;
             height: 100vh;
         }
         body>section>div{
@@ -15,7 +18,6 @@
             height: 80px;
             top: 0;
             margin: 0;
-            border-bottom: 1px solid red;
         }
         body>section:nth-child(1)>div{
             background-color: red;
@@ -29,20 +31,62 @@
         body>section:nth-child(4)>div{
             background-color: darkred;
         }
+        body>section:nth-child(1){
+            background-color: white;
+        }
+        body>section:nth-child(2){
+            background-color: lightseagreen;
+        }
+        body>section:nth-child(3){
+            background-color: #383333;
+        }
+        body>section:nth-child(4){
+            background-color: red;
+        }
+        body>section>div>h1{
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            position: absolute;
+            left: 15px;
+        }
+        body>section>p{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 100px;
+            font-weight: bold;
+            color: black;
+        }
+
     </style>
 </head>
 <body>
 <section>
-    <div></div>
+    <div>
+        <h1>Card 1</h1>
+    </div>
+    <p>Hello</p>
 </section>
 <section>
-    <div></div>
+    <div>
+        <h1>Card 2</h1>
+    </div>
+    <p>How</p>
 </section>
 <section>
-    <div></div>
+    <div>
+        <h1>Card 3</h1>
+    </div>
+    <p>Are</p>
 </section>
 <section>
-    <div></div>
+    <div>
+        <h1>Card 4</h1>
+    </div>
+    <p>You..?</p>
 </section>
 </body>
 </html>
