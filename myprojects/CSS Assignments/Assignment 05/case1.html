@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.css">
+    <title>Case 01</title>
+    <style>
+        section{
+            width: 228px;
+            height: 492px;
+            top: 91px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            right: 172px;
+        }
+        section>div{
+            left: 0;
+            background-color: #5015e5;
+            height: 40px;
+            position: relative;
+            color: white;
+            box-shadow: 1px 2px 3px 2px #3a483b;
+            transition: all 2s;
+        }
+        section>div>h2{
+            margin: 0;
+            padding: 10px;
+        }
+        section>div>i{
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            font-size: 28px;
+        }
+        section>div:hover{
+            cursor: pointer;
+            background-color: blue;
+            left: 172px;
+            transition: all 2s;
+        }
+
+
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <h2>Menu One</h2>
+        <i class="fas fa-address-book"></i>
+    </div>
+    <div>
+        <h2>Menu Two</h2>
+        <i class="fas fa-ambulance"></i>
+    </div>
+    <div>
+        <h2>Menu Three</h2>
+        <i class="fas fa-user-plus"></i>
+    </div>
+    <div>
+        <h2>Menu Four</h2>
+        <i class="fas fa-database"></i>
+    </div>
+    <div>
+        <h2>Menu Five</h2>
+        <i class="fas fa-cart-plus"></i>
+    </div>
+</section>
+</body>
+</html>
