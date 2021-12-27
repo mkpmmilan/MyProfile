@@ -120,7 +120,7 @@ body>section>section>div>div>h2{
     padding-right: 10px;
     letter-spacing: 3px;
     border: 4px solid #00D2D3;
-    transition: all 1s;
+    transition: all 2s;
 }
 .btnHireMe:hover{
     cursor: pointer;
