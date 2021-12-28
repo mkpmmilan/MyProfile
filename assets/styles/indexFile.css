@@ -145,11 +145,7 @@ body>section>section>div>div>h2{
     text-shadow: 2px 3px white;
     text-decoration: underline;
 }
-.ALetter{
-    color: #00D2D3;
-    text-shadow: 2px 3px #00D2D3;
-}
-.eLetter{
+.letter{
     color: #00D2D3;
     text-shadow: 2px 3px #00D2D3;
 }
@@ -203,12 +199,12 @@ body>section>section>div>div>h2{
     align-items: center;
     justify-content: space-evenly;
 }*/
-.social-media>img{
+.social-media>a>img{
     width: 50px;
     height: 50px;
     border-radius: 100%;
 }
-.social-media>img:hover{
+.social-media>a>img:hover{
     cursor: pointer;
     width: 60px;
     height: 60px;
@@ -245,4 +241,49 @@ body>section>section>div>div>h2{
     cursor: pointer;
     border-color: RoyalBlue;
     transition: all 1s;
+}
+#education{
+    /*position: relative;*/
+    font-family: 'Saira', sans-serif;
+    font-size: 66px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke:  1px black;
+    text-shadow: 2px 3px white;
+    text-decoration: underline;
+}
+.verticalLine{
+    border: 5px solid #00D2D3;
+    width: max-content;
+    height: 500px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+}
+#education_section{
+    position: relative;
+}
+#education_section>div:nth-child(3){
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+}
+#education_section>div:nth-child(4){
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#education_section>div:nth-child(5){
+    border: 1px solid blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
