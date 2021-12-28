@@ -156,7 +156,7 @@ body>section>section>div>div>h2{
     width: 400px;
     height: 400px;
     display: inline-block;
-    background-image: url("/assets/images/profile.jpg");
+    /*background-image: url("assets/images/profile.jpg");*/
     background-size: cover;
     background-position: center;
     border-radius: 100%;
