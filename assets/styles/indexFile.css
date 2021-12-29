@@ -255,7 +255,7 @@ body>section>section>div>div>h2{
 .verticalLine{
     border: 5px solid #00D2D3;
     width: max-content;
-    height: 500px;
+    height: 600px;
     margin-bottom: 30px;
     display: inline-block;
     position: relative;
@@ -265,25 +265,60 @@ body>section>section>div>div>h2{
     position: relative;
 }
 #education_section>div:nth-child(3){
-    border: 1px solid blue;
-    width: 100px;
+    border: 3px solid #FFF200;
+    border-radius: 12px;
+    width: 275px;
     height: 100px;
     position: absolute;
-    top: 0;
+    top: 25%;
+    left: 20%;
 }
 #education_section>div:nth-child(4){
-    border: 1px solid blue;
-    width: 100px;
+    border: 3px solid #FFF200;
+    border-radius: 12px;
+    width: 275px;
     height: 100px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 19.5%;
+    top: 48%;
 }
 #education_section>div:nth-child(5){
-    border: 1px solid blue;
-    width: 100px;
+    border: 3px solid #FFF200;
+    border-radius: 12px;
+    width: 275px;
     height: 100px;
     position: absolute;
+    left: 20%;
+    bottom: 15%;
+}
+#education_section>div>p{
+    color: #FFF200;
+    text-align: center;
+    position: absolute;
     left: 0;
+    right: 0;
+    top: 0;
     bottom: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+}
+#education_section>hr{
+    border: 3px solid #FFF200;
+    background-color: #FFF200;
+    width: 243px;
+    position: absolute;
+    height: max-content;
+}
+#education_section>hr:nth-child(6){
+    top: 235px;
+    left: 623px
+}
+#education_section>hr:nth-child(7){
+    top: 410px;
+    right: 612px;
+}
+#education_section>hr:nth-child(8){
+    bottom: 158px;
+    left: 623px;
 }
