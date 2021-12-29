@@ -133,7 +133,7 @@ body>section>section>div>div>h2{
 }
 #about_me{
     position: relative;
-    height: 650px;
+    height: 700px;
 }
 #about{
     position: relative;
@@ -349,3 +349,60 @@ body>section>section>div>div>h2{
     background-size: cover;
     background-position: center;
 }
+.skill_container{
+    height: 350px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 200px;
+    top: 178px;
+    color: white;
+    font-weight: bold;
+    font-family: Ubuntu;
+    justify-content: space-between;
+}
+.skill_container>div{
+    width: 570px;
+    height: 32px;
+    background-color: grey;
+}
+.skill_container>p{
+    font-size: 22px;
+}
+.skill_container>div>div{
+    text-align: right;
+    font-size: 27.9px;
+}
+.skill_container>div:nth-child(2)>div{
+    width: 90%;
+    height: max-content;
+    background-color: green;
+}
+.skill_container>div:nth-child(4)>div{
+    width: 80%;
+    height: max-content;
+    background-color: blue;
+}
+.skill_container>div:nth-child(6)>div{
+    width: 85%;
+    height: max-content;
+    background-color: orangered;
+}
+.skill_container>div:nth-child(8)>div{
+    width: 85%;
+    height: max-content;
+    background-color: deeppink;
+}
+.skill_container>div:nth-child(10)>div{
+    width: 75%;
+    height: max-content;
+    background-color: purple;
+}
+.skill_container>div:nth-child(12)>div{
+    width: 75%;
+    height: max-content;
+    background-color: red;
+}
+
+
