@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .background {
     background-color: #1B1B1B;
 }
@@ -65,8 +68,7 @@
     -webkit-text-stroke: 1px black;
     paint-order: stroke fill;
     text-shadow: 2px 3px black;
-    transition: all 1s;
-    transition-timing-function: ease;
+    transition: 0.6s ease;
 }
 
 ::-webkit-scrollbar {
@@ -132,10 +134,69 @@ body > section > section > div > div > h2 {
 
 .my-name {
     position: relative;
-    font-size: 87px;
+    font-size: 78px;
+    letter-spacing: -15px;
     font-family: 'Audiowide', cursive;
     color: #00D2D3;
     -webkit-text-stroke: 1px black;
+}
+.my-name>span{
+    opacity: 0;
+    animation: myNameAnimate 0.5s linear forwards;
+}
+.Hletter{
+    margin-right: 35px;
+}
+@keyframes myNameAnimate {
+    0% {
+        opacity: 0;
+        transform: rotateX(90deg);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        filter: blur(0px);
+    }
+}
+.my-name>span:nth-child(1){
+    animation-delay: 0.20s;
+}
+.my-name>span:nth-child(2){
+    animation-delay: 0.40s;
+}
+.my-name>span:nth-child(3){
+    animation-delay: 0.60s;
+}
+.my-name>span:nth-child(4){
+    animation-delay: 0.80s;
+}
+.my-name>span:nth-child(5){
+    animation-delay: 1.00s;
+}
+.my-name>span:nth-child(6){
+    animation-delay: 1.20s;
+}
+.my-name>span:nth-child(7){
+    animation-delay: 1.40s;
+}
+.my-name>span:nth-child(8){
+    animation-delay: 1.60s;
+}
+.my-name>span:nth-child(9){
+    animation-delay: 1.80s;
+}
+.my-name>span:nth-child(10){
+    animation-delay: 2.00s;
+}
+.my-name>span:nth-child(11){
+    animation-delay: 2.20s;
+}
+.my-name>span:nth-child(12){
+    animation-delay: 2.40s;
+}
+.my-name>span:nth-child(13){
+    animation-delay: 2.60s;
 }
 
 .btnHireMe {
@@ -565,24 +626,34 @@ body > section > section > div > div > h2 {
     width: 424px;
     height: 320px;
     position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
 }
 
 .assignment_container {
     width: 424px;
     height: 320px;
     position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
 }
 
 .projects_container > img {
     width: 100%;
     height: 100%;
     opacity: 0.5;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
 }
 
 .assignment_container > img {
     width: 100%;
     height: 100%;
     opacity: 0.5;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
 }
 
 .inside_div {
@@ -594,6 +665,8 @@ body > section > section > div > div > h2 {
     opacity: 0;
     z-index: 3;
     transition: all 0.6s;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
 }
 
 .project_word {
