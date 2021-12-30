@@ -774,3 +774,53 @@ body > section > section > div > div > h2 {
     height: max-content;
     margin-bottom: 25px;
 }
+.form_content{
+    position: absolute;
+    top: 180px;
+    right: 67px;
+    width: 560px;
+    height: 440px;
+}
+.contact_me_form{
+    width: 100%;
+    height: 100%;
+}
+.contact_me_form>p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+    color: #FFF200;
+    padding-top: 8px;
+}
+.contact_me_form>input{
+    font-size: 21px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid;
+    border-color: #00D2D3;
+    color: white;
+    padding: 5px;
+}
+.contact_me_form>textarea{
+    font-size: 21px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid;
+    border-color: #00D2D3;
+    color: white;
+}
+.sendBtn{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    background: transparent;
+    margin-top: 8px;
+    color: white;
+    padding: 7px;
+    border-color: #00D2D3;
+    border-radius: 12px;
+}
+.sendBtn:hover{
+    cursor: pointer;
+    color: #FFF200;
+    border-color: #FFF200;
+}
