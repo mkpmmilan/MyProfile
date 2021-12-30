@@ -57,6 +57,13 @@
     paint-order: stroke fill;
     text-shadow: 2px 3px black;
     transition: all 1s;
+    transition-timing-function: ease;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #FFF200;
 }
 .nav .Main-Menu a:hover{
     /*border-bottom: 3px solid snow;*/
@@ -403,6 +410,45 @@ body>section>section>div>div>h2{
     width: 75%;
     height: max-content;
     background-color: red;
+}
+.project_section{
+    position: relative;
+}
+#projects{
+    font-family: 'Saira', sans-serif;
+    font-size: 66px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke:  1px black;
+    text-shadow: 2px 3px white;
+    text-decoration: underline;
+    padding-top: 50px;
+}
+.main-project-container{
+    width: 1100px;
+    height: max-content;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    left: 310px;
+    margin: 20px;
+}
+.projects_container{
+    width: 424px;
+    height: 320px;
+    border: 1px solid white;
+    position: relative;
+    background: url("../images/projects.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.assignment_container{
+    width: 424px;
+    height: 320px;
+    border: 1px solid white;
+    background: url("../images/assignments.png");
+    background-size: cover;
+    background-position: center;
 }
 
 
