@@ -703,5 +703,74 @@ body > section > section > div > div > h2 {
     text-shadow: 2px 3px white;
     text-decoration: underline;
 }
-
-
+.contactme_container{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 950px;
+    height: max-content;
+    position: relative;
+    left: 50px;
+}
+.address_content{
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    margin-bottom: 25px;
+}
+.contact_content{
+    display: flex;
+    flex-direction: row;
+    width: 230px;
+}
+.email_content{
+    display: flex;
+    flex-direction: row;
+    width: 320px;
+}
+.address_content>div{
+    margin-left: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    cursor: default;
+}
+.contact_content>div{
+    margin-left: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+.email_content>div{
+    margin-left: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+.address_content>div>span:nth-child(1){
+    color: white;
+    text-decoration: underline;
+}
+.address_content>div>span:nth-child(3){
+    color: #B2BEC3;
+}
+.contact_content>div>a{
+    color: white;
+    text-decoration: underline;
+}
+.contact_content>div>span:nth-child(3){
+    color: #B2BEC3;
+    cursor: default;
+}
+.email_content>div>a{
+    color: white;
+    text-decoration: underline;
+}
+.email_content>div>span:nth-child(3){
+    color: #B2BEC3;
+    cursor: default;
+}
+.location_content{
+    position: relative;
+    left: 65px;
+    width: max-content;
+    height: max-content;
+    margin-bottom: 25px;
+}
