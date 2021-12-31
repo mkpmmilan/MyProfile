@@ -113,3 +113,35 @@ body{
     border: 6px ridge #FFF200;
     transition: all 0.6s;
 }
+#transition_title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    padding-left: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.transition_section{
+    height: 300px;
+    position: relative;
+}
+.transition_assignment_section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(1,300px);
+    grid-gap: 35px 50px;
+}
+.transition_assignment_section>div{
+    position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
+}
