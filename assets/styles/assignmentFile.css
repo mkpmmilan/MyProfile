@@ -1,0 +1,71 @@
+body{
+    background-color: grey;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #FFF200;
+}
+#assignment_title{
+    font-family: 'Saira', sans-serif;
+    font-size: 66px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 3px white;
+    text-decoration: underline;
+}
+.FirstLetter{
+    color: #00D2D3;
+    text-shadow: 2px 3px #00D2D3;
+}
+.LastLetter{
+    color: #00D2D3;
+    text-shadow: 2px 3px #00D2D3;
+}
+#css_title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    font-size: 40px;
+    padding-left: 20px;
+    margin: 0;
+}
+#layout_title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    padding-left: 70px;
+    padding-top: 30px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+}
+.layout_section{
+    height: 650px;
+    position: relative;
+}
+.layout_assignment_section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(2,300px);
+    grid-gap: 35px 50px;
+}
+.layout_assignment_section>div{
+    position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
+}
+
