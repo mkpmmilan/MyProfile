@@ -158,3 +158,22 @@ body{
     height: 690px;
     position: relative;
 }
+.animations_assignment_section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(2,300px);
+    grid-gap: 35px 50px;
+}
+.animations_assignment_section>div{
+    position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
+}
