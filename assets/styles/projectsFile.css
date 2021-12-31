@@ -80,8 +80,7 @@ body{
     top: 14%;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
-    color: white;
-    -webkit-text-stroke: 1px black;
+    color: black;
     font-size: 33px;
     padding-left: 35px;
     text-decoration: underline;
@@ -90,9 +89,9 @@ body{
     position: absolute;
     top: 40%;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    color: white;
-    -webkit-text-stroke: 1px black;
+    /*font-weight: bold;*/
+    color: black;
+    /*-webkit-text-stroke: 1px black;*/
     font-size: 21px;
     padding-left: 35px;
 }
@@ -117,8 +116,8 @@ body{
     top: 14%;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
-    color: white;
-    -webkit-text-stroke: 1px black;
+    color: black;
+    /*-webkit-text-stroke: 1px black;*/
     font-size: 33px;
     padding-left: 25px;
     text-decoration: underline;
