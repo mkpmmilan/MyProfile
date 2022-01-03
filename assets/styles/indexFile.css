@@ -450,6 +450,7 @@ body > section > section > div > div > h2 {
     position: absolute;
     top: 15%;
     left: 7%;
+    box-shadow: 1px 1px 6px 4px #FFF200;
 }
 
 .education_content > div:nth-child(3) {
@@ -460,6 +461,7 @@ body > section > section > div > div > h2 {
     position: absolute;
     right: 6.5%;
     top: 43%;
+    box-shadow: 1px 1px 6px 4px #FFF200;
 }
 
 .education_content > div:nth-child(4) {
@@ -470,6 +472,7 @@ body > section > section > div > div > h2 {
     position: absolute;
     left: 7%;
     bottom: 15%;
+    box-shadow: 1px 1px 6px 4px #FFF200;
 }
 
 .education_content > div > p {
