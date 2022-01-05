@@ -1020,7 +1020,9 @@ footer > h4:nth-child(2) {
 
     .social-media-content {
         bottom: 345px;
-        left: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .myself {
