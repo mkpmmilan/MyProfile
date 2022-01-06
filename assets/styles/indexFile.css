@@ -1049,11 +1049,16 @@ footer > h4:nth-child(2) {
 
     .education_content > div:nth-child(2) {
         top: 11%;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .education_content > div:nth-child(3) {
         top: 42%;
-        right: 7%;
+        right: 0;
+        left: 0;
+        margin: auto;
     }
 
     #education_section {
@@ -1062,6 +1067,9 @@ footer > h4:nth-child(2) {
 
     .education_content > div:nth-child(4) {
         bottom: 10%;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .education_content > hr {
@@ -1071,7 +1079,9 @@ footer > h4:nth-child(2) {
 
     .education_content > hr:nth-child(5) {
         top: 214px;
-        left: 110px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .education_content > hr:nth-child(6) {
@@ -1080,7 +1090,9 @@ footer > h4:nth-child(2) {
 
     .education_content > hr:nth-child(7) {
         bottom: 214px;
-        left: 110px;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     #skills {
@@ -1246,7 +1258,254 @@ footer > h4:nth-child(2) {
         font-size: 14px;
     }
 
-    html, body {
+    /*html, body {
         overflow-x: hidden;
+    }*/
+}
+
+@media all and (min-width: 321px) and (max-width: 375px) {
+    .nav {
+        width: 100vw;
+    }
+
+    .Main-Menu {
+        display: none;
+    }
+
+    .container > img {
+        left: 15px;
+    }
+
+    .my-name {
+        font-size: 40px;
+    }
+
+    .welcome-content {
+        width: 100%;
+    }
+
+    .welcome-text > h2 {
+        font-size: 20px;
+    }
+
+    .welcome-text {
+        top: 50%;
+        left: 20%;
+        width: 85%;
+    }
+
+    .software-engineer {
+        animation: zoom-inWord 2s linear forwards;
+    }
+
+    @keyframes zoom-inWord {
+        0% {
+            opacity: 0;
+            font-size: 0;
+            filter: blur(10px);
+        }
+        100% {
+            opacity: 1;
+            font-size: 30px;
+            filter: blur(0px);
+        }
+    }
+    .btnHireMe {
+        font-size: 17px;
+    }
+
+    #about {
+        padding-top: 0;
+        font-size: 40px;
+    }
+
+    .profile-content {
+        position: absolute;
+        width: 225px;
+        height: 225px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .working-experience {
+        position: absolute;
+        width: 115px;
+        height: 115px;
+        top: 190px;
+        left: 215px;
+    }
+
+    .working-experience > h1 {
+        font-size: 14px;
+    }
+
+    .years {
+        font-size: 40px;
+    }
+
+    .social-media > a > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-media > a > img:hover {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-media-content {
+        bottom: 345px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .myself {
+        display: none;
+    }
+
+    #education {
+        padding-top: 0;
+        font-size: 40px;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+
+    .education_content > hr {
+        transform: rotate(90deg);
+    }
+
+    .education_content {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .education_content > div:nth-child(2) {
+        top: 11%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > div:nth-child(3) {
+        top: 42%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #education_section {
+        height: 635px;
+    }
+
+    .education_content > div:nth-child(4) {
+        bottom: 10%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > hr {
+        width: 95px;
+        border: 2px solid #FFF200;
+    }
+
+    .education_content > hr:nth-child(5) {
+        top: 214px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > hr:nth-child(6) {
+        display: none;
+    }
+
+    .education_content > hr:nth-child(7) {
+        bottom: 214px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #skills {
+        padding-top: 0;
+        font-size: 40px;
+    }
+
+    .background_skills {
+        position: absolute;
+        width: 250px;
+        height: 210px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #skills_section {
+        height: 554px;
+    }
+
+    .skill_container > p {
+        font-size: 16px;
+    }
+
+    .skill_container > div {
+        width: 287px;
+        height: 15px;
+    }
+
+    .skill_container {
+        right: 0;
+        height: 230px;
+        left: 0;
+        margin: auto;
+        margin-bottom: 0;
+        bottom: 20px;
+    }
+
+    .skill_container > div > div {
+        font-size: 13.9px;
+    }
+
+    #projects {
+        font-size: 40px;
+        padding-top: 0;
+    }
+
+    .main-project-container {
+        flex-direction: column;
+        height: 470px;
+        width: 100vw;
+        left: 0;
+        align-items: center;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .projects_container {
+        width: 275px;
+        height: 210px;
+    }
+
+    .assignment_container {
+        width: 275px;
+        height: 210px;
+    }
+
+    .project_word {
+        font-size: 30px;
+    }
+
+    .inside_div {
+        opacity: 1;
+        border: 6px ridge #FFF200;
+        transition: all 0s;
+        cursor: default;
     }
 }
