@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
+
 html, body {
     overflow-x: hidden;
 }
@@ -175,7 +176,8 @@ body > section > section > div > div > h2 {
 .Hletter {
     margin-right: 35px;
 }
-.line-break{
+
+.line-break {
     display: none;
 }
 
@@ -415,8 +417,7 @@ body > section > section > div > div > h2 {
 }
 
 .btnDownload {
-    position: relative;
-    top: 25px;
+    position: absolute;
     background-color: transparent;
     border: 4px solid #00D2D3;
     border-radius: 12px;
@@ -425,6 +426,8 @@ body > section > section > div > div > h2 {
     font-weight: bold;
     transition: all 1s;
     font-size: 28px;
+    top: 68%;
+    right: 35%;
 }
 
 .btnDownload:hover {
@@ -963,11 +966,13 @@ footer > h4:nth-child(2) {
         left: 20%;
         width: 85%;
     }
-    .line-break{
+
+    .line-break {
         display: flex;
         flex-direction: column;
     }
-    .Hletter{
+
+    .Hletter {
         margin-right: 0;
     }
 
@@ -1009,8 +1014,8 @@ footer > h4:nth-child(2) {
         position: absolute;
         width: 100px;
         height: 100px;
-        top: 190px;
-        left: 175px;
+        top: 27%;
+        left: 58%;
     }
 
     .working-experience > h1 {
@@ -1039,6 +1044,10 @@ footer > h4:nth-child(2) {
     }
 
     .myself {
+        display: none;
+    }
+
+    .btnDownload {
         display: none;
     }
 
@@ -1272,7 +1281,7 @@ footer > h4:nth-child(2) {
     }
 }
 
-@media all and (min-width: 321px) and (max-width: 375px) {
+@media all and (min-width: 320px) and (max-width: 375px) {
     .nav {
         width: 100vw;
     }
@@ -1302,11 +1311,13 @@ footer > h4:nth-child(2) {
         left: 20%;
         width: 85%;
     }
-    .line-break{
+
+    .line-break {
         display: flex;
         flex-direction: column;
     }
-    .Hletter{
+
+    .Hletter {
         margin-right: 0;
     }
 
@@ -1337,8 +1348,8 @@ footer > h4:nth-child(2) {
 
     .profile-content {
         position: absolute;
-        width: 225px;
-        height: 225px;
+        width: 215px;
+        height: 215px;
         left: 0;
         right: 0;
         margin: auto;
@@ -1346,14 +1357,14 @@ footer > h4:nth-child(2) {
 
     .working-experience {
         position: absolute;
-        width: 115px;
-        height: 115px;
-        top: 190px;
-        left: 215px;
+        width: 105px;
+        height: 105px;
+        top: 27%;
+        left: 58%;
     }
 
     .working-experience > h1 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .years {
@@ -1378,6 +1389,10 @@ footer > h4:nth-child(2) {
     }
 
     .myself {
+        display: none;
+    }
+
+    .btnDownload {
         display: none;
     }
 
@@ -1524,6 +1539,7 @@ footer > h4:nth-child(2) {
         transition: all 0s;
         cursor: default;
     }
+
     #contact_me {
         font-size: 40px;
     }
@@ -1591,6 +1607,7 @@ footer > h4:nth-child(2) {
         color: #FFF200;
         border-color: #FFF200;
     }
+
     footer > h4:nth-child(1) {
         display: none;
     }
@@ -1605,6 +1622,7 @@ footer > h4:nth-child(2) {
         font-size: 15px;
     }
 }
+
 @media all and (min-width: 375px) and (max-width: 425px) {
     .nav {
         width: 100vw;
@@ -1635,11 +1653,13 @@ footer > h4:nth-child(2) {
         left: 20%;
         width: 85%;
     }
-    .line-break{
+
+    .line-break {
         display: flex;
         flex-direction: column;
     }
-    .Hletter{
+
+    .Hletter {
         margin-right: 0;
     }
 
@@ -1661,5 +1681,292 @@ footer > h4:nth-child(2) {
     }
     .btnHireMe {
         font-size: 20px;
+    }
+
+    #about {
+        padding-top: 0;
+        font-size: 45px;
+    }
+
+    .profile-content {
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .working-experience {
+        position: absolute;
+        width: 115px;
+        height: 115px;
+        top: 29%;
+        left: 58%;
+    }
+
+    .working-experience > h1 {
+        font-size: 14px;
+    }
+
+    .years {
+        font-size: 40px;
+    }
+
+    .social-media > a > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-media > a > img:hover {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-media-content {
+        bottom: 325px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .myself {
+        display: none;
+    }
+
+    .btnDownload {
+        display: none;
+    }
+
+    #education {
+        padding-top: 0;
+        font-size: 45px;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+
+    .education_content > hr {
+        transform: rotate(90deg);
+    }
+
+    .education_content {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .education_content > div:nth-child(2) {
+        top: 11%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > div:nth-child(3) {
+        top: 42%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #education_section {
+        height: 635px;
+    }
+
+    .education_content > div:nth-child(4) {
+        bottom: 10%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > hr {
+        width: 95px;
+        border: 2px solid #FFF200;
+    }
+
+    .education_content > hr:nth-child(5) {
+        top: 214px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > hr:nth-child(6) {
+        display: none;
+    }
+
+    .education_content > hr:nth-child(7) {
+        bottom: 214px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #skills {
+        padding-top: 0;
+        font-size: 45px;
+    }
+
+    .background_skills {
+        position: absolute;
+        width: 270px;
+        height: 230px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #skills_section {
+        height: 575px;
+    }
+
+    .skill_container > p {
+        font-size: 16px;
+    }
+
+    .skill_container > div {
+        width: 300px;
+        height: 15px;
+    }
+
+    .skill_container {
+        right: 0;
+        height: 230px;
+        left: 0;
+        margin: auto;
+        margin-bottom: 0;
+        bottom: 20px;
+    }
+
+    .skill_container > div > div {
+        font-size: 13.9px;
+    }
+
+    #projects {
+        font-size: 40px;
+        padding-top: 0;
+    }
+
+    .main-project-container {
+        flex-direction: column;
+        height: 470px;
+        width: 100vw;
+        left: 0;
+        align-items: center;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .projects_container {
+        width: 275px;
+        height: 210px;
+    }
+
+    .assignment_container {
+        width: 285px;
+        height: 215px;
+    }
+
+    .project_word {
+        font-size: 30px;
+    }
+
+    .inside_div {
+        opacity: 1;
+        border: 6px ridge #FFF200;
+        transition: all 0s;
+        cursor: default;
+    }
+
+    #contact_me {
+        font-size: 40px;
+    }
+
+    .contactme_container {
+        flex-direction: column;
+        width: 97%;
+        left: 10px;
+    }
+
+    .address_content {
+        margin-bottom: 0;
+        padding: 10px;
+    }
+    .contact_content{
+        padding: 10px;
+    }
+    .email_content{
+        padding: 10px;
+    }
+
+    .address_content > div {
+        font-size: 16px;
+    }
+
+    .contact_content > div {
+        font-size: 16px;
+    }
+
+    .email_content > div {
+        font-size: 16px;
+    }
+
+    .form_content {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .location_content {
+        left: 0;
+        width: 93vw;
+        height: 37vh;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .location_content > iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact_me_form {
+        width: 95%;
+        height: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+    .contact_me_form > p {
+        font-size: 17px;
+    }
+
+    .sendBtn {
+        font-size: 17px;
+        color: #FFF200;
+        border-color: #FFF200;
+    }
+
+    footer > h4:nth-child(1) {
+        display: none;
+    }
+
+    footer > h4:nth-child(2) {
+        display: block;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    footer > h4:nth-child(2) > span {
+        font-size: 18px;
     }
 }
