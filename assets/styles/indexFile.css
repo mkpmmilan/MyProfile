@@ -1093,6 +1093,9 @@ footer > h4:nth-child(2) {
         right: 0;
         margin: auto;
     }
+    .education_content>div>p{
+        font-size: 12px;
+    }
 
     .education_content > hr {
         width: 95px;
@@ -1438,6 +1441,9 @@ footer > h4:nth-child(2) {
         right: 0;
         margin: auto;
     }
+    .education_content>div>p{
+        font-size: 14px;
+    }
 
     .education_content > hr {
         width: 95px;
@@ -1779,6 +1785,9 @@ footer > h4:nth-child(2) {
         left: 0;
         right: 0;
         margin: auto;
+    }
+    .education_content>div>p{
+        font-size: 14px;
     }
 
     .education_content > hr {
