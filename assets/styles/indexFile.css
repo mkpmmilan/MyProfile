@@ -1059,7 +1059,6 @@ footer > h4:nth-child(2) {
     }
 
     .download_btn_inside_div {
-        background-color: transparent;
         border: 4px solid #00D2D3;
         border-radius: 12px;
         color: white;
@@ -1069,6 +1068,7 @@ footer > h4:nth-child(2) {
         display: block;
         margin: auto;
         margin-top: 10px;
+        background-color: royalblue;
     }
 
     .myself {
@@ -1431,7 +1431,6 @@ footer > h4:nth-child(2) {
     }
 
     .download_btn_inside_div {
-        background-color: transparent;
         border: 4px solid #00D2D3;
         border-radius: 12px;
         color: white;
@@ -1441,6 +1440,7 @@ footer > h4:nth-child(2) {
         display: block;
         margin: auto;
         margin-top: 10px;
+        background-color: royalblue;
     }
 
     .myself {
@@ -1800,7 +1800,6 @@ footer > h4:nth-child(2) {
     }
 
     .download_btn_inside_div {
-        background-color: transparent;
         border: 4px solid #00D2D3;
         border-radius: 12px;
         color: white;
@@ -1810,6 +1809,7 @@ footer > h4:nth-child(2) {
         display: block;
         margin: auto;
         margin-top: 10px;
+        background-color: royalblue;
     }
 
     .myself {
