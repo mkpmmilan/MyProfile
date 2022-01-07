@@ -399,7 +399,9 @@ body > section > section > div > div > h2 {
     /*transition-property: width,height;
     transition-duration: 2s;*/
 }
-
+.para_myself{
+    display: none;
+}
 .myself {
     width: max-content;
     height: max-content;
@@ -415,9 +417,7 @@ body > section > section > div > div > h2 {
     font-family: Ubuntu;
     line-height: 50px;
 }
-
 .btnDownload {
-    position: absolute;
     background-color: transparent;
     border: 4px solid #00D2D3;
     border-radius: 12px;
@@ -426,8 +426,6 @@ body > section > section > div > div > h2 {
     font-weight: bold;
     transition: all 1s;
     font-size: 28px;
-    top: 68%;
-    right: 35%;
 }
 
 .btnDownload:hover {
@@ -1042,12 +1040,31 @@ footer > h4:nth-child(2) {
         right: 0;
         margin: auto;
     }
-
-    .myself {
-        display: none;
+    .para_myself{
+        display: block;
+        color: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 20px;
+        bottom: 7%;
+        font-size: 17px;
+    }
+    .download_btn_inside_div{
+        background-color: transparent;
+        border: 4px solid #00D2D3;
+        border-radius: 12px;
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+        transition: all 1s;
+        font-size: 15px;
+        display: block;
+        margin: auto;
     }
 
-    .btnDownload {
+    .myself {
         display: none;
     }
 
@@ -1390,12 +1407,30 @@ footer > h4:nth-child(2) {
         right: 0;
         margin: auto;
     }
-
-    .myself {
-        display: none;
+    .para_myself{
+        display: block;
+        color: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 20px;
+        bottom: 6%;
+        font-size: 20px;
     }
-
-    .btnDownload {
+    .download_btn_inside_div{
+        background-color: transparent;
+        border: 4px solid #00D2D3;
+        border-radius: 12px;
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+        transition: all 1s;
+        font-size: 17px;
+        display: block;
+        margin: auto;
+    }
+    .myself {
         display: none;
     }
 
@@ -1735,14 +1770,34 @@ footer > h4:nth-child(2) {
         right: 0;
         margin: auto;
     }
+    .para_myself{
+        display: block;
+        color: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        padding: 20px;
+        bottom: 6%;
+        font-size: 20px;
+    }
+    .download_btn_inside_div{
+        background-color: transparent;
+        border: 4px solid #00D2D3;
+        border-radius: 12px;
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+        transition: all 1s;
+        font-size: 17px;
+        display: block;
+        margin: auto;
+    }
 
     .myself {
         display: none;
     }
 
-    .btnDownload {
-        display: none;
-    }
 
     #education {
         padding-top: 0;
