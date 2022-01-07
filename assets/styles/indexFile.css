@@ -1053,8 +1053,9 @@ footer > h4:nth-child(2) {
         margin: auto;
         padding: 20px;
         bottom: 7%;
-        font-size: 17px;
+        font-size: 16px;
         height: max-content;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     .download_btn_inside_div {
@@ -1423,9 +1424,10 @@ footer > h4:nth-child(2) {
         right: 0;
         margin: auto;
         padding: 20px;
-        bottom: 6%;
-        font-size: 19px;
+        bottom: 5%;
+        font-size: 18px;
         height: max-content;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     .download_btn_inside_div {
@@ -1792,8 +1794,9 @@ footer > h4:nth-child(2) {
         margin: auto;
         padding: 20px;
         bottom: 5%;
-        font-size: 20px;
+        font-size: 19px;
         height: max-content;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     .download_btn_inside_div {
