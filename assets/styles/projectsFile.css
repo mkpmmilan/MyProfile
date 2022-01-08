@@ -1,6 +1,9 @@
 body{
     background-color: grey;
 }
+html, body{
+    overflow-x: hidden;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -121,4 +124,43 @@ body{
     font-size: 33px;
     padding-left: 25px;
     text-decoration: underline;
+}
+@media all and (max-width: 320px) {
+    ::-webkit-scrollbar-thumb {
+        background: none;
+    }
+    #title{
+        font-size: 35px;
+    }
+    #title2{
+        font-size: 20px;
+    }
+    .desktop_applications{
+        grid-template-columns: repeat(1,85vw);
+        grid-template-rows: repeat(4,210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .desktop{
+        height: 1050px;
+    }
+    .desktop_applications>div{
+        transform: translate(15px, 10px);
+    }
+    .insideDiv{
+        opacity: 1;
+        border: 6px ridge #FFF200
+    }
+    .major_title{
+        font-size: 19px;
+        padding-left: 0;
+    }
+    .wholesale_title{
+        font-size: 19px;
+        padding-left: 0;
+    }
+    .description{
+        font-size: 16px;
+        padding-left: 0;
+    }
 }
