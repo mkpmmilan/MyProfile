@@ -161,7 +161,7 @@ body > section > section > div > div > h2 {
 
 .my-name {
     position: relative;
-    font-size: 78px;
+    font-size: 75px;
     letter-spacing: -15px;
     font-family: 'Audiowide', cursive;
     color: #00D2D3;
@@ -340,7 +340,7 @@ body > section > section > div > div > h2 {
     background-size: cover;
     background-position: center;
     border-radius: 100%;
-    left: 225px;
+    left: 160px;
     border: 6px solid #00D2D3;
 }
 
@@ -352,8 +352,7 @@ body > section > section > div > div > h2 {
     border-radius: 100%;
     border: 3px solid black;
     display: inline-block;
-    top: 15px;
-    left: 76px;
+    left: 20px;
 }
 
 .working-experience > h1 {
@@ -377,7 +376,7 @@ body > section > section > div > div > h2 {
 .social-media-content {
     position: absolute;
     bottom: 40px;
-    left: 255px;
+    left: 190px;
     width: max-content;
 }
 
@@ -468,15 +467,16 @@ body > section > section > div > div > h2 {
 
 .education_content {
     width: 1200px;
-    /* height: 620px; */
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    /* margin: auto; */
-    margin-left: 274px;
-    margin-right: 274px;
+    margin-left: auto;
+    margin-right: auto;
+    /* inset: 0px; */
+    /* margin-left: 274px; */
+    /* margin-right: 274px; */
     margin-top: 135px;
 }
 
@@ -663,7 +663,8 @@ body > section > section > div > div > h2 {
     display: inline-flex;
     justify-content: space-between;
     position: relative;
-    left: 310px;
+    /*left: 310px;*/
+    left: 17%;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -847,12 +848,12 @@ body > section > section > div > div > h2 {
     left: 65px;
     width: max-content;
     height: max-content;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
 
 .form_content {
     position: absolute;
-    top: 180px;
+    top: 220px;
     right: 67px;
     width: 560px;
     height: 440px;
@@ -1269,7 +1270,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 0;
         width: 93vw;
-        height: 37vh;
+        height: 250px;
         margin-top: 35px;
         margin-bottom: 35px;
         margin-left: auto;
@@ -1638,7 +1639,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 0;
         width: 93vw;
-        height: 37vh;
+        height: 250px;
         margin-top: 35px;
         margin-bottom: 35px;
         margin-left: auto;
@@ -2016,7 +2017,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 0;
         width: 93vw;
-        height: 37vh;
+        height: 250px;
         margin-top: 35px;
         margin-bottom: 35px;
         margin-left: auto;
@@ -2393,7 +2394,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 0;
         width: 93vw;
-        height: 37vh;
+        height: 300px;
         margin-top: 35px;
         margin-bottom: 35px;
         margin-left: auto;
@@ -2770,7 +2771,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 0;
         width: 80vw;
-        height: 37vh;
+        height: 300px;
         margin-top: 35px;
         margin-bottom: 35px;
         margin-left: auto;
@@ -3146,7 +3147,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 5%;
         width: 45vw;
-        height: 30vh;
+        height: 250px;
         margin-top: 35px;
         margin-bottom: 35px;
     }
@@ -3362,7 +3363,7 @@ footer > h4:nth-child(2) {
     }
 
     .education_content > div > p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .education_content > hr {
@@ -3510,7 +3511,7 @@ footer > h4:nth-child(2) {
 
     .form_content {
         position: absolute;
-        top: 18%;
+        top: 23%;
         right: 0%;
         width: 45vw;
         height: auto;
@@ -3519,7 +3520,7 @@ footer > h4:nth-child(2) {
     .location_content {
         left: 5%;
         width: 45vw;
-        height: 30vh;
+        height: 275px;
         margin-top: 35px;
         margin-bottom: 35px;
     }
@@ -3727,7 +3728,7 @@ footer > h4:nth-child(2) {
     }
 
     .education_content > div > p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .education_content > hr {
@@ -3838,8 +3839,8 @@ footer > h4:nth-child(2) {
     }
 
     .contactme_container {
-        flex-direction: column;
-        width: 50%;
+        flex-direction: row;
+        width: auto;
         left: 3%;
     }
 
@@ -3875,7 +3876,7 @@ footer > h4:nth-child(2) {
 
     .form_content {
         position: absolute;
-        top: 18%;
+        top: 34%;
         right: 0%;
         width: 45vw;
         height: auto;
@@ -3883,10 +3884,10 @@ footer > h4:nth-child(2) {
 
     .location_content {
         left: 5%;
-        width: 45vw;
-        height: 30vh;
-        margin-top: 35px;
-        margin-bottom: 35px;
+        width: 530px;
+        height: 365px;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
 
     .location_content > iframe {
@@ -3912,16 +3913,9 @@ footer > h4:nth-child(2) {
     }
 
     footer > h4:nth-child(1) {
-        display: none;
-    }
-
-    footer > h4:nth-child(2) {
         display: block;
-        font-size: 15px;
-        text-align: center;
     }
-
-    footer > h4:nth-child(2) > span {
-        font-size: 19px;
+    footer>h4:nth-child(2){
+        display: none;
     }
 }
