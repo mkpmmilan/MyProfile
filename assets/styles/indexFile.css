@@ -2892,7 +2892,7 @@ footer > h4:nth-child(2) {
         position: absolute;
         width: 150px;
         height: 150px;
-        top: 24%;
+        top: 29%;
         left: 56%;
     }
 
@@ -3241,7 +3241,7 @@ footer > h4:nth-child(2) {
         }
     }
     .btnHireMe {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     #about {
@@ -3266,7 +3266,7 @@ footer > h4:nth-child(2) {
         width: 130px;
         height: 130px;
         top: 53%;
-        left: 22%;
+        left: 186px;
     }
 
     .working-experience > h1 {
@@ -3342,12 +3342,12 @@ footer > h4:nth-child(2) {
 
     .education_content > div:nth-child(2) {
         top: 23%;
-        left: 7%;
+        left: 71px;
     }
 
     .education_content > div:nth-child(3) {
         top: 23%;
-        right: 7%;
+        right: 71px;
     }
 
     #education_section {
@@ -3373,7 +3373,7 @@ footer > h4:nth-child(2) {
 
     .education_content > hr:nth-child(5) {
         top: 46%;
-        left: 16%;
+        left: 147px;
         width: 115px;
     }
 
@@ -3389,7 +3389,7 @@ footer > h4:nth-child(2) {
     .education_content > hr:nth-child(6) {
         width: 115px;
         top: 46%;
-        right: 16%;
+        right: 147px;
     }
 
     #skills {
@@ -3470,6 +3470,371 @@ footer > h4:nth-child(2) {
 
     #contact_me {
         font-size: 50px;
+    }
+
+    .contactme_container {
+        flex-direction: column;
+        width: 50%;
+        left: 3%;
+    }
+
+    .img_contactIcon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .address_content {
+        margin-bottom: 0;
+        padding: 10px;
+    }
+
+    .contact_content {
+        padding: 10px;
+    }
+
+    .email_content {
+        padding: 10px;
+    }
+
+    .address_content > div {
+        font-size: 17px;
+    }
+
+    .contact_content > div {
+        font-size: 17px;
+    }
+
+    .email_content > div {
+        font-size: 17px;
+    }
+
+    .form_content {
+        position: absolute;
+        top: 18%;
+        right: 0%;
+        width: 45vw;
+        height: auto;
+    }
+
+    .location_content {
+        left: 5%;
+        width: 45vw;
+        height: 30vh;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .location_content > iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact_me_form {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+    .contact_me_form > p {
+        font-size: 17px;
+    }
+
+    .sendBtn {
+        font-size: 17px;
+        color: #FFF200;
+        border-color: #FFF200;
+    }
+
+    footer > h4:nth-child(1) {
+        display: block;
+    }
+    footer>h4:nth-child(2){
+        display: none;
+    }
+}
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+    .nav {
+        width: 100vw;
+    }
+
+    .Main-Menu {
+        display: inline-block;
+    }
+
+    .nav .Main-Menu li {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .container > img {
+        left: 15px;
+    }
+
+    .my-name {
+        font-size: 72px;
+    }
+
+    .welcome-content {
+        width: 100%;
+    }
+
+    .welcome-text > h2 {
+        font-size: 27px;
+    }
+
+    .welcome-text {
+        top: 50%;
+        left: 15%;
+        width: 87%;
+    }
+
+    .software-engineer {
+        animation: zoom-inWord 2s linear forwards;
+    }
+
+    @keyframes zoom-inWord {
+        0% {
+            opacity: 0;
+            font-size: 0;
+            filter: blur(10px);
+        }
+        100% {
+            opacity: 1;
+            font-size: 50px;
+            filter: blur(0px);
+        }
+    }
+    .btnHireMe {
+        font-size: 24px;
+    }
+
+    #about {
+        padding-top: 50px;
+        font-size: 60px;
+    }
+
+    #about_me {
+        height: 600px;
+    }
+
+    .profile-content {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 5%;
+        top: 30%;
+    }
+
+    .working-experience {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 59%;
+        left: 238px;
+    }
+
+    .working-experience > h1 {
+        font-size: 14px;
+    }
+
+    .years {
+        font-size: 45px;
+    }
+
+    .social-media > a > img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-media > a > img:hover {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-media-content {
+        bottom: 5%;
+        left: 6%;
+    }
+
+    .para_myself {
+        display: none;
+    }
+
+    .myself {
+        display: inline-block;
+        position: absolute;
+        top: 27%;
+        right: 3%;
+        font-size: 2vw;
+        font-weight: bolder;
+    }
+
+    .btnDownload {
+        border: 4px solid #00D2D3;
+        border-radius: 12px;
+        color: white;
+        padding: 8px;
+        font-weight: bold;
+        font-size: 20px;
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+        background-color: royalblue;
+    }
+
+    #education {
+        padding-top: 50px;
+        font-size: 60px;
+    }
+
+    .verticalLine {
+        position: absolute;
+        display: inline-block;
+        height: 0;
+        width: 90vw;
+        top: 54%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+
+    .education_content {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .education_content > div:nth-child(2) {
+        top: 23%;
+        left: 71px;
+    }
+
+    .education_content > div:nth-child(3) {
+        top: 23%;
+        right: 71px;
+    }
+
+    #education_section {
+        height: 700px;
+    }
+
+    .education_content > div:nth-child(4) {
+        bottom: 14%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .education_content > div > p {
+        font-size: 16px;
+    }
+
+    .education_content > hr {
+        width: 95px;
+        border: 2px solid #FFF200;
+        transform: rotate(90deg);
+    }
+
+    .education_content > hr:nth-child(5) {
+        top: 46%;
+        left: 147px;
+        width: 115px;
+    }
+
+
+    .education_content > hr:nth-child(7) {
+        bottom: 256px;
+        left: 0;
+        right: 0;
+        width: 115px;
+        margin: auto;
+    }
+
+    .education_content > hr:nth-child(6) {
+        width: 115px;
+        top: 46%;
+        right: 147px;
+    }
+
+    #skills {
+        padding-top: 50px;
+        font-size: 60px;
+    }
+
+    .background_skills {
+        position: absolute;
+        width: 270px;
+        height: 230px;
+        left: 8%;
+        top: 33%;
+        margin-bottom: 0;
+    }
+
+    #skills_section {
+        height: 510px;
+    }
+
+    .skill_container > p {
+        font-size: 16px;
+    }
+
+    .skill_container > div {
+        width: 43vw;
+        height: 15px;
+    }
+
+    .skill_container {
+        right: 5%;
+        height: 230px;
+        top: 32%;
+    }
+
+    .skill_container > div > div {
+        font-size: 13.9px;
+    }
+
+    #projects {
+        font-size: 60px;
+        padding-top: 50px;
+    }
+
+    .main-project-container {
+        flex-direction: row;
+        height: 400px;
+        width: 100vw;
+        left: 0;
+        align-items: center;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        justify-content: space-around;
+    }
+
+    .projects_container {
+        width: 340px;
+        height: 270px;
+    }
+
+    .assignment_container {
+        width: 340px;
+        height: 270px;
+    }
+
+    .project_word {
+        font-size: 30px;
+    }
+
+    .inside_div {
+        opacity: 1;
+        border: 6px ridge #FFF200;
+        transition: all 0s;
+        cursor: default;
+    }
+
+    #contact_me {
+        font-size: 60px;
     }
 
     .contactme_container {
