@@ -191,15 +191,16 @@ html, body{
     }
     .insideDiv{
         opacity: 1;
-        border: 6px ridge #FFF200
+        border: 6px ridge #FFF200;
+        transition: all 0s;
     }
     .major_title{
         font-size: 19px;
-        padding-left: 0;
+        padding-left: 10px;
     }
     .wholesale_title{
         font-size: 19px;
-        padding-left: 0;
+        padding-left: 10px;
     }
     .description{
         font-size: 16px;
