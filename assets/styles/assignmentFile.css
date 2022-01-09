@@ -1,6 +1,9 @@
 body{
     background-color: grey;
 }
+html, body{
+    overflow-x: hidden;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -176,4 +179,62 @@ body{
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
     box-shadow: 8px 10px 13px black;
+}
+@media all and (max-width: 320px) {
+    .layout_section{
+        height: 1050px;
+    }
+    .layout_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .assignment_section{
+        transform: translate(15px, 10px);
+    }
+    #assignment_title{
+        font-size: 35px;
+    }
+    #css_title{
+        font-size: 20px;
+    }
+    #layout_title{
+        font-size: 18px;
+    }
+    .assignment_section>div{
+        border: 6px ridge #FFF200;
+        opacity: 1;
+        transition: all 0s;
+    }
+    .main-title{
+        font-size: 30px;
+    }
+    .assignment_section>img{
+        opacity: 0.3;
+    }
+    #transition_title{
+        font-size: 18px;
+    }
+    .transition_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .transition_section{
+        height: 530px;
+    }
+    #animations_title{
+        font-size: 18px;
+    }
+    .animations_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .animations_section{
+        height: 1050px;
+    }
 }
