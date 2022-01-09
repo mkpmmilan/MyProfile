@@ -238,3 +238,61 @@ html, body{
         height: 1050px;
     }
 }
+@media all and (min-width: 320px) and (max-width: 375px) {
+    .layout_section{
+        height: 1050px;
+    }
+    .layout_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .assignment_section{
+        transform: translate(15px, 10px);
+    }
+    #assignment_title{
+        font-size: 40px;
+    }
+    #css_title{
+        font-size: 22px;
+    }
+    #layout_title{
+        font-size: 20px;
+    }
+    .assignment_section>div{
+        border: 6px ridge #FFF200;
+        opacity: 1;
+        transition: all 0s;
+    }
+    .main-title{
+        font-size: 30px;
+    }
+    .assignment_section>img{
+        opacity: 0.3;
+    }
+    #transition_title{
+        font-size: 20px;
+    }
+    .transition_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .transition_section{
+        height: 530px;
+    }
+    #animations_title{
+        font-size: 20px;
+    }
+    .animations_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(4, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .animations_section{
+        height: 1050px;
+    }
+}
