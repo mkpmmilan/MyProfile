@@ -595,3 +595,64 @@ html, body{
         padding-left: 25%;
     }
 }
+@media all and (min-width: 850px) and (max-width: 1024px) {
+    .layout_section{
+        height: 500px;
+    }
+    .layout_assignment_section{
+        grid-template-columns: repeat(3, 27vw);
+        grid-template-rows: repeat(2, 200px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .assignment_section{
+        transform: translate(10%, 10px);
+    }
+    #assignment_title{
+        font-size: 55px;
+    }
+    #css_title{
+        font-size: 35px;
+    }
+    #layout_title{
+        font-size: 30px;
+    }
+    .assignment_section>div{
+        border: 6px ridge #FFF200;
+        opacity: 1;
+        transition: all 0s;
+    }
+    .main-title{
+        font-size: 33px;
+    }
+    .assignment_section>img{
+        opacity: 0.3;
+    }
+    #transition_title{
+        font-size: 30px;
+    }
+    .transition_assignment_section{
+        grid-template-columns: repeat(2, 27vw);
+        grid-template-rows: repeat(1, 200px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .transition_section{
+        height: 250px;
+    }
+    #animations_title{
+        font-size: 30px;
+    }
+    .animations_assignment_section{
+        grid-template-columns: repeat(3, 27vw);
+        grid-template-rows: repeat(2, 200px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .animations_section{
+        height: 500px;
+    }
+    .viewFile{
+        padding-left: 25%;
+    }
+}
