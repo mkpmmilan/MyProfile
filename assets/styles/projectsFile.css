@@ -303,3 +303,115 @@ html, body {
         padding-left: 10px;
     }
 }
+@media all and (min-width: 425px) and (max-width: 500px) {
+    ::-webkit-scrollbar-thumb {
+        background: none;
+    }
+
+    #title {
+        font-size: 45px;
+    }
+
+    #title2 {
+        font-size: 27px;
+    }
+
+    .desktop_applications {
+        grid-template-columns: repeat(1, 82vw);
+        grid-template-rows: repeat(4, 275px);
+        row-gap: 50px;
+        width: 100vw;
+    }
+
+    .desktop {
+        height: 1200px;
+    }
+
+    .project_section > img {
+        opacity: 0.3;
+    }
+
+    .desktop_applications > div {
+        transform: translate(10%, 10px);
+    }
+
+    .insideDiv {
+        opacity: 1;
+        border: 6px ridge #FFF200;
+        transition: all 0s;
+    }
+
+    .major_title {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+
+    .wholesale_title {
+        font-size: 24px;
+        padding-left: 10px;
+    }
+
+    .description {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 690px) {
+    ::-webkit-scrollbar-thumb {
+        background: none;
+    }
+
+    #title {
+        font-size: 45px;
+    }
+
+    #title2 {
+        font-size: 27px;
+    }
+
+    .desktop_applications {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(2, 195px);
+        row-gap: 50px;
+        width: 100vw;
+    }
+
+    .desktop {
+        height: 515px;
+    }
+
+    .project_section > img {
+        opacity: 0.3;
+    }
+
+    .desktop_applications > div {
+        transform: translate(10%, 10px);
+    }
+
+    .insideDiv {
+        opacity: 1;
+        border: 6px ridge #FFF200;
+        transition: all 0s;
+    }
+
+    .major_title {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .wholesale_title {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .description {
+        font-size: 2.7vw;
+        padding-left: 5px;
+    }
+    .download{
+        bottom: 8%;
+    }
+}
+@media all and (min-width: 690px) and (max-width: 768px) {
+
+}

@@ -648,6 +648,7 @@ body > section > section > div > div > h2 {
 
 .project_section {
     position: relative;
+    height: 620px;
 }
 
 #projects {
@@ -666,13 +667,17 @@ body > section > section > div > div > h2 {
     height: max-content;
     display: inline-flex;
     justify-content: space-between;
-    position: relative;
-    /*left: 310px;*/
-    left: 17%;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 30%;
+    /* left: 310px; */
+    /* left: 17%; */
+    /* margin-top: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 100px;*/
 }
 
 .projects_container {
@@ -1205,6 +1210,7 @@ footer > h4:nth-child(2) {
         height: 470px;
         width: 100vw;
         left: 0;
+        top: 13%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -1577,6 +1583,7 @@ footer > h4:nth-child(2) {
         height: 470px;
         width: 100vw;
         left: 0;
+        top: 13%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -1947,6 +1954,7 @@ footer > h4:nth-child(2) {
         height: 470px;
         width: 100vw;
         left: 0;
+        top: 13%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -2324,6 +2332,7 @@ footer > h4:nth-child(2) {
         height: 500px;
         width: 100vw;
         left: 0;
+        top: 13%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -2701,6 +2710,7 @@ footer > h4:nth-child(2) {
         height: 500px;
         width: 100vw;
         left: 0;
+        top: 13%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -3071,6 +3081,7 @@ footer > h4:nth-child(2) {
         height: 400px;
         width: 100vw;
         left: 0;
+        top: 22%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -3444,6 +3455,7 @@ footer > h4:nth-child(2) {
         height: 400px;
         width: 100vw;
         left: 0;
+        top: 22%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -3547,10 +3559,12 @@ footer > h4:nth-child(2) {
     footer > h4:nth-child(1) {
         display: block;
     }
-    footer>h4:nth-child(2){
+
+    footer > h4:nth-child(2) {
         display: none;
     }
 }
+
 @media all and (min-width: 1024px) and (max-width: 1440px) {
     .nav {
         width: 100vw;
@@ -3802,6 +3816,7 @@ footer > h4:nth-child(2) {
         height: 400px;
         width: 100vw;
         left: 0;
+        top: 22%;
         align-items: center;
         margin-top: 0;
         margin-right: 0;
@@ -3905,7 +3920,8 @@ footer > h4:nth-child(2) {
     footer > h4:nth-child(1) {
         display: block;
     }
-    footer>h4:nth-child(2){
+
+    footer > h4:nth-child(2) {
         display: none;
     }
 }
