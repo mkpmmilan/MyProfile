@@ -395,8 +395,9 @@ body > section > section > div > div > h2 {
     cursor: pointer;
     width: 60px;
     height: 60px;
-    /*transition-property: width,height;
-    transition-duration: 2s;*/
+    /*transition-property: width,height;*/
+    /*transition-duration: 2s;*!*/
+    transition: all 0.3s;
 }
 
 .para_myself {
