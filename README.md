@@ -12,7 +12,7 @@
 <br>
 <li style="font-size: 20px"><b>Github My Profile Page URL</b> :- <a href="https://mkpmmilan.github.io/MyProfile/" target="_blank">https://mkpmmilan.github.io/MyProfile/</a></li>
 <br>
-<li style="font-size: 20px"><b>000WebHost URL</b> :- <a href="https://prageethmilan.000webhostapp.com/" target="_blank">https://prageethmilan.000webhostapp.com/</a></li>
+<li style="font-size: 20px"><b>InfinityFree URL</b> :- <a href="http://prageethmilan.epizy.com/" target="_blank">http://prageethmilan.epizy.com/</a></li>
 </ul>
 
 <h3><u><b>Some images of my website</b></u></h3>
