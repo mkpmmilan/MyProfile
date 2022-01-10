@@ -77,8 +77,8 @@ html, body {
 
 .nav .Main-Menu a {
     color: #00D2D3;
-    -webkit-text-stroke: 1px black;
-    paint-order: stroke fill;
+    -webkit-text-stroke: 0.2px black;
+    /*paint-order: stroke fill;*/
     text-shadow: 2px 3px black;
     transition: 0.6s ease;
 }
@@ -132,14 +132,14 @@ html, body {
     font-family: 'Eagle Lake', cursive;
 }*/
 body > section > section > div > div > h2 {
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 0.2px black;
     font-size: 34px;
     color: white;
     font-family: 'Eagle Lake', cursive;
 }
 
 .software-engineer {
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 0.2px black;
     font-size: 52px;
     color: #FFF200;
     opacity: 0;
