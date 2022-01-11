@@ -552,9 +552,9 @@ body > section > section > div > div > h2 {
     bottom: 146px;
     left: 357px;
 }
-
 #skills_section {
     position: relative;
+    height: 580px;
 }
 
 #skills {
@@ -567,87 +567,105 @@ body > section > section > div > div > h2 {
     text-decoration: underline;
     padding-top: 50px;
 }
-
-.background_skills {
-    width: 440px;
-    height: 350px;
-    position: relative;
-    border-radius: 25%;
-    display: inline-block;
-    margin-bottom: 90px;
-    left: 200px;
-    background: url("../images/programmer.gif");
-    background-size: cover;
-    background-position: center;
-}
-
-.skill_container {
-    height: 350px;
-    width: max-content;
-    display: flex;
-    flex-direction: column;
+.skill_inner_container{
+    width: 80%;
+    height: 300px;
     position: absolute;
-    right: 200px;
-    top: 178px;
-    color: white;
-    font-weight: bold;
-    font-family: Ubuntu;
+    left: 0;
+    bottom: 100px;
+    right: 0;
+    margin: auto;
+    display: flex;
+    filter: drop-shadow(10px 10px 2px grey);
     justify-content: space-between;
 }
-
-.skill_container > div {
-    width: 570px;
-    height: 32px;
-    background-color: grey;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+.skill_inner_container>img{
+    width: 10%;
+    height: 46%;
+    border-radius: 30px;
+    position: relative;
 }
-
-.skill_container > p {
-    font-size: 22px;
+.skill_inner_container>img:nth-child(1):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-
-.skill_container > div > div {
-    text-align: right;
-    font-size: 27.9px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+.skill_inner_container>img:nth-child(2):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-
-.skill_container > div:nth-child(2) > div {
-    width: 90%;
-    height: max-content;
-    background-color: green;
+.skill_inner_container>img:nth-child(3):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-
-.skill_container > div:nth-child(4) > div {
-    width: 80%;
-    height: max-content;
-    background-color: blue;
+.skill_inner_container>img:nth-child(4):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-
-.skill_container > div:nth-child(6) > div {
-    width: 85%;
-    height: max-content;
-    background-color: orangered;
+.skill_inner_container>img:nth-child(5):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-
-.skill_container > div:nth-child(8) > div {
-    width: 85%;
-    height: max-content;
-    background-color: deeppink;
+.skill_inner_container>img:nth-child(6):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-
-.skill_container > div:nth-child(10) > div {
-    width: 75%;
-    height: max-content;
-    background-color: purple;
+.skill_inner_container>img:nth-child(1){
+    animation-name: topToBottom;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
 }
-
-.skill_container > div:nth-child(12) > div {
-    width: 75%;
-    height: max-content;
-    background-color: red;
+.skill_inner_container>img:nth-child(2){
+    animation-name: bottomToTop;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(3){
+    animation-name: topToBottom;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(4){
+    animation-name: bottomToTop;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(5){
+    animation-name: topToBottom;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(6){
+    animation-name: bottomToTop;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+@keyframes topToBottom {
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: -54%;
+    }
+}
+@keyframes bottomToTop {
+    from{
+        bottom: -54%;
+    }
+    to{
+        bottom: 0;
+    }
 }
 
 .project_section {
@@ -1169,39 +1187,72 @@ footer > h4:nth-child(2) {
         font-size: 40px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 250px;
-        height: 210px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
     #skills_section {
-        height: 554px;
+        height: 650px;
     }
-
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 505px;
+        flex-direction: column;
+        filter: drop-shadow(5px 5px 2px grey);
+        bottom: 65px;
     }
-
-    .skill_container > div {
-        width: 287px;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 65px;
+        height: 65px;
+        border-radius: 20px;
+        transform: none;
     }
-
-    .skill_container {
-        right: 0;
-        height: 230px;
-        left: 0;
-        margin: auto;
-        margin-bottom: 0;
-        bottom: 20px;
+    .skill_inner_container>img:nth-child(1){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    .skill_inner_container>img:nth-child(2){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(3){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(4){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(5){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    @keyframes leftToRight {
+        from{
+            left: 0;
+        }
+        to{
+            left: 71%;
+        }
+    }
+    @keyframes rightToLeft {
+        from{
+            left: 71%;
+        }
+        to{
+            left: 0;
+        }
     }
 
     #projects {
@@ -1542,39 +1593,72 @@ footer > h4:nth-child(2) {
         font-size: 40px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 250px;
-        height: 210px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
     #skills_section {
-        height: 554px;
+        height: 650px;
     }
-
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 505px;
+        flex-direction: column;
+        filter: drop-shadow(5px 5px 2px grey);
+        bottom: 65px;
     }
-
-    .skill_container > div {
-        width: 287px;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        transform: none;
     }
-
-    .skill_container {
-        right: 0;
-        height: 230px;
-        left: 0;
-        margin: auto;
-        margin-bottom: 0;
-        bottom: 20px;
+    .skill_inner_container>img:nth-child(1){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    .skill_inner_container>img:nth-child(2){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(3){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(4){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(5){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    @keyframes leftToRight {
+        from{
+            left: 0;
+        }
+        to{
+            left: 71%;
+        }
+    }
+    @keyframes rightToLeft {
+        from{
+            left: 71%;
+        }
+        to{
+            left: 0;
+        }
     }
 
     #projects {
@@ -1913,39 +1997,72 @@ footer > h4:nth-child(2) {
         font-size: 45px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 270px;
-        height: 230px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
     #skills_section {
-        height: 575px;
+        height: 650px;
     }
-
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 530px;
+        flex-direction: column;
+        filter: drop-shadow(5px 5px 2px grey);
+        bottom: 40px;
     }
-
-    .skill_container > div {
-        width: 300px;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 75px;
+        height: 75px;
+        border-radius: 20px;
+        transform: none;
     }
-
-    .skill_container {
-        right: 0;
-        height: 230px;
-        left: 0;
-        margin: auto;
-        margin-bottom: 0;
-        bottom: 20px;
+    .skill_inner_container>img:nth-child(1){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    .skill_inner_container>img:nth-child(2){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(3){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(4){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(5){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    @keyframes leftToRight {
+        from{
+            left: 0;
+        }
+        to{
+            left: 71%;
+        }
+    }
+    @keyframes rightToLeft {
+        from{
+            left: 71%;
+        }
+        to{
+            left: 0;
+        }
     }
 
     #projects {
@@ -2291,39 +2408,73 @@ footer > h4:nth-child(2) {
         font-size: 45px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 270px;
-        height: 230px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
     #skills_section {
-        height: 575px;
+        height: 700px;
     }
 
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 590px;
+        flex-direction: column;
+        filter: drop-shadow(5px 5px 2px grey);
+        bottom: 40px;
     }
-
-    .skill_container > div {
-        width: 350px;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        transform: none;
     }
-
-    .skill_container {
-        right: 0;
-        height: 230px;
-        left: 0;
-        margin: auto;
-        margin-bottom: 0;
-        bottom: 20px;
+    .skill_inner_container>img:nth-child(1){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    .skill_inner_container>img:nth-child(2){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(3){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(4){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(5){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    @keyframes leftToRight {
+        from{
+            left: 0;
+        }
+        to{
+            left: 71%;
+        }
+    }
+    @keyframes rightToLeft {
+        from{
+            left: 71%;
+        }
+        to{
+            left: 0;
+        }
     }
 
     #projects {
@@ -2669,39 +2820,73 @@ footer > h4:nth-child(2) {
         font-size: 45px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 270px;
-        height: 230px;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-
     #skills_section {
-        height: 575px;
+        height: 770px;
     }
 
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 660px;
+        flex-direction: column;
+        filter: drop-shadow(5px 5px 2px grey);
+        bottom: 40px;
     }
-
-    .skill_container > div {
-        width: 400px;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        transform: none;
     }
-
-    .skill_container {
-        right: 0;
-        height: 230px;
-        left: 0;
-        margin: auto;
-        margin-bottom: 0;
-        bottom: 20px;
+    .skill_inner_container>img:nth-child(1){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    .skill_inner_container>img:nth-child(2){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(3){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(4){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(5){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    @keyframes leftToRight {
+        from{
+            left: 0;
+        }
+        to{
+            left: 71%;
+        }
+    }
+    @keyframes rightToLeft {
+        from{
+            left: 71%;
+        }
+        to{
+            left: 0;
+        }
     }
 
     #projects {
@@ -3043,36 +3228,34 @@ footer > h4:nth-child(2) {
         font-size: 50px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 270px;
-        height: 230px;
-        left: 8%;
-        top: 33%;
-        margin-bottom: 0;
-    }
-
     #skills_section {
         height: 510px;
     }
 
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 335px;
+        bottom: 40px;
     }
-
-    .skill_container > div {
-        width: 43vw;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 75px;
+        height: 75px;
+        border-radius: 20px;
     }
-
-    .skill_container {
-        right: 5%;
-        height: 230px;
-        top: 32%;
+    @keyframes topToBottom {
+        from{
+            bottom: 0;
+        }
+        to{
+            bottom: -77%;
+        }
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    @keyframes bottomToTop {
+        from{
+            bottom: -77%;
+        }
+        to{
+            bottom: 0;
+        }
     }
 
     #projects {
@@ -3417,36 +3600,34 @@ footer > h4:nth-child(2) {
         font-size: 50px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 270px;
-        height: 230px;
-        left: 8%;
-        top: 33%;
-        margin-bottom: 0;
-    }
-
     #skills_section {
         height: 510px;
     }
 
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 335px;
+        bottom: 40px;
     }
-
-    .skill_container > div {
-        width: 43vw;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 11vw;
+        height: 11vw;
+        border-radius: 20px;
     }
-
-    .skill_container {
-        right: 5%;
-        height: 230px;
-        top: 32%;
+    @keyframes topToBottom {
+        from{
+            bottom: 0;
+        }
+        to{
+            bottom: -66%;
+        }
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    @keyframes bottomToTop {
+        from{
+            bottom: -66%;
+        }
+        to{
+            bottom: 0;
+        }
     }
 
     #projects {
@@ -3778,36 +3959,34 @@ footer > h4:nth-child(2) {
         font-size: 60px;
     }
 
-    .background_skills {
-        position: absolute;
-        width: 270px;
-        height: 230px;
-        left: 8%;
-        top: 33%;
-        margin-bottom: 0;
-    }
-
     #skills_section {
         height: 510px;
     }
 
-    .skill_container > p {
-        font-size: 16px;
+    .skill_inner_container{
+        height: 335px;
+        bottom: 40px;
     }
-
-    .skill_container > div {
-        width: 43vw;
-        height: 15px;
+    .skill_inner_container>img{
+        width: 9vw;
+        height: 9vw;
+        border-radius: 20px;
     }
-
-    .skill_container {
-        right: 5%;
-        height: 230px;
-        top: 32%;
+    @keyframes topToBottom {
+        from{
+            bottom: 0;
+        }
+        to{
+            bottom: -62%;
+        }
     }
-
-    .skill_container > div > div {
-        font-size: 13.9px;
+    @keyframes bottomToTop {
+        from{
+            bottom: -62%;
+        }
+        to{
+            bottom: 0;
+        }
     }
 
     #projects {
