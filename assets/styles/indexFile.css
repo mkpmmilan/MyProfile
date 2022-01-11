@@ -137,14 +137,12 @@ html, body {
     font-family: 'Eagle Lake', cursive;
 }*/
 body > section > section > div > div > h2 {
-    -webkit-text-stroke: 0.2px black;
     font-size: 34px;
     color: white;
     font-family: 'Eagle Lake', cursive;
 }
 
 .software-engineer {
-    -webkit-text-stroke: 0.2px black;
     font-size: 52px;
     color: #FFF200;
     opacity: 0;
