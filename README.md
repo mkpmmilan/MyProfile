@@ -17,4 +17,15 @@
 
 <h3><u><b>Some images of my website</b></u></h3>
 
-![image of MyProfile](assets/images/0001.jpg)
+![image of Home Page](assets/images/ss001.png)
+
+![image of About Page](assets/images/ss002.png)
+
+![image of Education Page](assets/images/ss003.png)
+
+![image of Skill Page](assets/images/ss004.png)
+
+![image of Project Page](assets/images/ss005.png)
+
+![image of Contact Page](assets/images/ss006.png)
+
