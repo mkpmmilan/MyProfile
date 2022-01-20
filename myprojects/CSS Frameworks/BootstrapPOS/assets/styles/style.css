@@ -1,0 +1,10 @@
+.homePageSection{
+    width: 100vw;
+    height: 100vh;
+}
+.posNavi{
+    background: linear-gradient(to right, #a8ff78, #78ffd6);
+}
+.naviItems>li:hover{
+    background-color: lightgreen;
+}
