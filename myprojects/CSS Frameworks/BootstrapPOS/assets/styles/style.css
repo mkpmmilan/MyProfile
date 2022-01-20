@@ -3,7 +3,6 @@
     height: 100vh;
 }
 .posNavi{
-    position: fixed;
     z-index: 5;
     width: 100vw;
     background: linear-gradient(to right, #a8ff78, #78ffd6);
