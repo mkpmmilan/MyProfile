@@ -54,9 +54,9 @@
                 <h3 class="text-center bg-success p-2 text-light">Search Customer</h3>
                 <form>
                     <div class="mb-3 ms-3 me-3">
-                        <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1"
+                        <input class="form-control" id="custId"
                                placeholder="Input Customer ID"
-                               type="email">
+                               type="text">
                     </div>
                     <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
                     <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
@@ -73,9 +73,9 @@
             </div>
         </div>
         <div class="row mt-1 mt-md-2 mt-lg-5">
-            <div class="col">
-                <table class="table bg-light table-bordered w-100 table-hover">
-                    <h3 class="text-center bg-success p-2 text-light mb-0">Customer Details</h3>
+            <h3 class="text-center bg-success p-2 text-light mb-0">Customer Details</h3>
+            <div class="col customeTableDiv">
+                <table class="table bg-light table-bordered w-100 h-100 table-hover">
                     <thead class="bg-info">
                     <tr>
                         <th>ID</th>

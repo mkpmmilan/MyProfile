@@ -19,3 +19,13 @@
 .btnViewAllCustomers{
     right: 0%;
 }
+.itemTableDiv{
+    position: relative;
+    height: 45vh;
+    overflow: auto;
+}
+.customeTableDiv{
+    position: relative;
+    height: 45vh;
+    overflow: auto;
+}
