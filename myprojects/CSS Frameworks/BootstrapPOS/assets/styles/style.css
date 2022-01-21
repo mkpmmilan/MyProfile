@@ -13,3 +13,9 @@
 .searchCustomer{
     background-color: #c8c8c8;
 }
+.btnRegister{
+    right: 30%;
+}
+.btnViewAllCustomers{
+    right: 0%;
+}
