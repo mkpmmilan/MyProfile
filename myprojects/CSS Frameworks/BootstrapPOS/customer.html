@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<section class="position-relative vw-100 vh-100">
+<section class="position-relative vw-100 vh-100 d-flex flex-column">
 <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -23,10 +23,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 naviItems">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="homePage.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="customer.html">Customers</a>
+                    <a class="nav-link active" href="customer.html">Customers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Items</a>
@@ -39,7 +39,7 @@
     </div>
 </nav>
 
-    <div class="position-relative">
+    <div class="position-relative d-inline-block ms-4 ms-md-4 ms-lg-5 mt-3 mt-lg-4 mt-md-4">
     <h1><i class="fas fa-users"></i> Customers</h1>
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -47,7 +47,22 @@
             <li class="breadcrumb-item active" aria-current="page">Customers</li>
         </ol>
     </nav>
-
+    </div>
+    <div class="flex-grow-1 d-flex flex-column container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6 ms-0 ms-md-4 ms-lg-5 mt-2 mt-lg-3 mt-md-3 searchCustomer p-0">
+                <h3 class="text-center bg-success p-2 text-light">Search Customer</h3>
+                <form>
+                    <div class="mb-3 ms-3 me-3">
+                        <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" type="email" placeholder="Input Customer ID">
+                    </div>
+                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
+                </form>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
     </div>
 </section>
 
