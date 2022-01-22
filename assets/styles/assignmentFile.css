@@ -180,6 +180,37 @@ html, body{
     border-bottom-right-radius: 20%;
     box-shadow: 8px 10px 13px black;
 }
+#css_frameworks_title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.frameworks_section{
+    height: 350px;
+    position: relative;
+}
+.frameworks_assignment_section{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    grid-template-rows: repeat(1,300px);
+    grid-gap: 35px 50px;
+}
+.frameworks_assignment_section>div{
+    position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
+}
 @media all and (max-width: 320px) {
     .layout_section{
         height: 1050px;
@@ -197,6 +228,9 @@ html, body{
         font-size: 35px;
     }
     #css_title{
+        font-size: 20px;
+    }
+    #css_frameworks_title{
         font-size: 20px;
     }
     #layout_title{
@@ -221,6 +255,15 @@ html, body{
         grid-template-rows: repeat(2, 210px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(1, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 270px;
     }
     .transition_section{
         height: 530px;
@@ -257,6 +300,9 @@ html, body{
     #css_title{
         font-size: 22px;
     }
+    #css_frameworks_title{
+        font-size: 22px;
+    }
     #layout_title{
         font-size: 20px;
     }
@@ -279,6 +325,15 @@ html, body{
         grid-template-rows: repeat(2, 210px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(1, 210px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 270px;
     }
     .transition_section{
         height: 530px;
@@ -315,6 +370,9 @@ html, body{
     #css_title{
         font-size: 25px;
     }
+    #css_frameworks_title{
+        font-size: 25px;
+    }
     #layout_title{
         font-size: 23px;
     }
@@ -337,6 +395,15 @@ html, body{
         grid-template-rows: repeat(2, 250px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 88vw);
+        grid-template-rows: repeat(1, 250px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 300px;
     }
     .transition_section{
         height: 600px;
@@ -373,6 +440,9 @@ html, body{
     #css_title{
         font-size: 27px;
     }
+    #css_frameworks_title{
+        font-size: 27px;
+    }
     #layout_title{
         font-size: 25px;
     }
@@ -395,6 +465,15 @@ html, body{
         grid-template-rows: repeat(2, 275px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 82vw);
+        grid-template-rows: repeat(1, 275px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 320px;
     }
     .transition_section{
         height: 650px;
@@ -431,6 +510,9 @@ html, body{
     #css_title{
         font-size: 27px;
     }
+    #css_frameworks_title{
+        font-size: 27px;
+    }
     #layout_title{
         font-size: 25px;
     }
@@ -453,6 +535,15 @@ html, body{
         grid-template-rows: repeat(1, 195px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 40vw);
+        grid-template-rows: repeat(1, 195px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 250px;
     }
     .transition_section{
         height: 220px;
@@ -492,6 +583,9 @@ html, body{
     #css_title{
         font-size: 30px;
     }
+    #css_frameworks_title{
+        font-size: 30px;
+    }
     #layout_title{
         font-size: 27px;
     }
@@ -514,6 +608,15 @@ html, body{
         grid-template-rows: repeat(1, 225px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 41vw);
+        grid-template-rows: repeat(1, 225px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 280px;
     }
     .transition_section{
         height: 250px;
@@ -553,6 +656,9 @@ html, body{
     #css_title{
         font-size: 35px;
     }
+    #css_frameworks_title{
+        font-size: 35px;
+    }
     #layout_title{
         font-size: 30px;
     }
@@ -570,6 +676,15 @@ html, body{
         grid-template-rows: repeat(1, 225px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 41vw);
+        grid-template-rows: repeat(1, 225px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 280px;
     }
     .transition_section{
         height: 250px;
@@ -609,6 +724,9 @@ html, body{
     #css_title{
         font-size: 35px;
     }
+    #css_frameworks_title{
+        font-size: 35px;
+    }
     #layout_title{
         font-size: 30px;
     }
@@ -626,6 +744,15 @@ html, body{
         grid-template-rows: repeat(1, 200px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 27vw);
+        grid-template-rows: repeat(1, 200px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 280px;
     }
     .transition_section{
         height: 250px;
@@ -665,6 +792,9 @@ html, body{
     #css_title{
         font-size: 40px;
     }
+    #css_frameworks_title{
+        font-size: 40px;
+    }
     #layout_title{
         font-size: 35px;
     }
@@ -682,6 +812,15 @@ html, body{
         grid-template-rows: repeat(1, 260px);
         grid-gap: 50px;
         width: 100vw
+    }
+    .frameworks_assignment_section{
+        grid-template-columns: repeat(1, 28vw);
+        grid-template-rows: repeat(1, 260px);
+        grid-gap: 50px;
+        width: 100vw
+    }
+    .frameworks_section{
+        height: 320px;
     }
     .transition_section{
         height: 290px;
