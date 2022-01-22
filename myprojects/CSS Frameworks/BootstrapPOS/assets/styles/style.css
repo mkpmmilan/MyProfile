@@ -21,11 +21,18 @@
 }
 .itemTableDiv{
     position: relative;
-    height: 45vh;
+    height: 30vh;
     overflow: auto;
+    background-color: white;
 }
 .customeTableDiv{
     position: relative;
-    height: 45vh;
+    height: 30vh;
+    overflow: auto;
+    background-color: white;
+}
+.cartTbleDiv{
+    position: relative;
+    height: 20vh;
     overflow: auto;
 }
