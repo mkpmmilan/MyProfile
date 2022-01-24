@@ -23,17 +23,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 naviItems">
-                <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="homePage.html">Home</a>
+                <li class="nav-item nav-link naviItem-1">
+                    Home
+                   <!-- <a aria-current="page" class="nav-link active" href="#">Home</a>-->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="customer.html">Customers</a>
+                <li class="nav-item nav-link naviItem-2">
+                    Customer
+                    <!--<a class="nav-link" href="#">Customers</a>-->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="items.html">Items</a>
+                <li class="nav-item nav-link naviItem-3">
+                    Items
+                    <!--<a class="nav-link" href="#">Items</a>-->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="placeOrder.html">Orders</a>
+                <li class="nav-item nav-link naviItem-4">
+                    Orders
+                    <!--<a class="nav-link" href="#">Orders</a>-->
                 </li>
             </ul>
         </div>
@@ -83,12 +87,12 @@
     </div>
 
     <!--customer Form-->
-    <div class="container flex-grow-1 flex-column" style="background-color: #c8c8c8;">
+    <div id="customerPage" class="container flex-grow-1 flex-column" style="background-color: #c8c8c8;display: none">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h1><i class="fas fa-users"></i> Customers</h1>
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-decoration-none" href="homePage.html">Home</a></li>
+                    <li class="breadcrumb-item customerPageNavi customerHomeNavi"><!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
                     <li aria-current="page" class="breadcrumb-item active">Customers</li>
                 </ol>
             </nav>
@@ -165,12 +169,12 @@
     </div>
 
     <!--item form-->
-    <div class="container flex-grow-1 flex-column" style="background-color: #c8c8c8;">
+    <div id="itemPage" class="container flex-grow-1 flex-column" style="background-color: #c8c8c8; display: none;">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h1><i class="fas fa-boxes"></i> Items</h1>
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-decoration-none" href="homePage.html">Home</a></li>
+                    <li class="breadcrumb-item itemPageNavi itemHomeNavi"><!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
                     <li aria-current="page" class="breadcrumb-item active">Items</li>
                 </ol>
             </nav>
@@ -244,12 +248,12 @@
     </div>
 
     <!--placeOrder Form-->
-    <div class="container-fluid flex-grow-1 flex-column" style="background-color: #c8c8c8">
+    <div id="placeOrderPage" class="container-fluid flex-grow-1 flex-column" style="background-color: #c8c8c8; display: none">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h1><i class="fas fa-cart-plus"></i> Place Order</h1>
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-decoration-none" href="homePage.html">Home</a></li>
+                    <li class="breadcrumb-item placeOrderPageNavi placeOrderHomeNavi"><!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
                     <li aria-current="page" class="breadcrumb-item active">Orders</li>
                 </ol>
             </nav>
@@ -703,5 +707,6 @@
 </div>
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
