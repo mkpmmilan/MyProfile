@@ -1,10 +1,6 @@
-.homePageSection{
-    width: 100vw;
-    height: 100vh;
-}
 .posNavi{
     z-index: 5;
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(to right, #a8ff78, #78ffd6);
 }
 .naviItems>li:hover{

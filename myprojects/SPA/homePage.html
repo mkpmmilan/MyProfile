@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap POS</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/styles/style.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi" style="position: fixed;">
+<section class="position-relative vh-100 d-flex flex-column">
+<nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="assets/images/logo.png" alt="" style="width: 130px; height: 30px" class="d-inline-block align-text-top logo">
+            <img alt="" class="d-inline-block align-text-top logo" src="assets/images/logo.png"
+                 style="width: 130px; height: 30px">
         </a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
@@ -22,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 naviItems">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="homePage.html">Home</a>
+                    <a aria-current="page" class="nav-link active" href="homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="customer.html">Customers</a>
@@ -37,42 +39,669 @@
         </div>
     </div>
 </nav>
-<section class="position-relative homePageSection">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <!--homepage-->
+    <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+                    data-bs-target="#carouselExampleIndicators" type="button"></button>
+            <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
+            <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
+            <button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
+            <button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carouselExampleIndicators"
+                    type="button"></button>
         </div>
-        <div class="carousel-inner vw-100 vh-100">
+        <div class="carousel-inner w-100" style="height: 92vh;">
             <div class="carousel-item active h-100">
-                <img src="assets/images/01.jpg" class="d-block w-100 h-100" alt="welcome">
+                <img alt="welcome" class="d-block w-100 h-100" src="assets/images/01.jpg">
             </div>
             <div class="carousel-item h-100">
-                <img src="assets/images/02.jpg" class="d-block w-100 h-100" alt="slide 2">
+                <img alt="slide 2" class="d-block w-100 h-100" src="assets/images/02.jpg">
             </div>
             <div class="carousel-item h-100">
-                <img src="assets/images/03.jpg" class="d-block w-100 h-100" alt="slide 3">
+                <img alt="slide 3" class="d-block w-100 h-100" src="assets/images/03.jpg">
             </div>
             <div class="carousel-item h-100">
-                <img src="assets/images/04.jpeg" class="d-block w-100 h-100" alt="slide 4">
+                <img alt="slide 4" class="d-block w-100 h-100" src="assets/images/04.jpeg">
             </div>
             <div class="carousel-item h-100">
-                <img src="assets/images/05.jpg" class="d-block w-100 h-100" alt="slide 5">
+                <img alt="slide 5" class="d-block w-100 h-100" src="assets/images/05.jpg">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators"
+                type="button">
+            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators"
+                type="button">
+            <span aria-hidden="true" class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <!--customer Form-->
+    <div class="container flex-grow-1 flex-column" style="background-color: #c8c8c8;">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h1><i class="fas fa-users"></i> Customers</h1>
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="homePage.html">Home</a></li>
+                    <li aria-current="page" class="breadcrumb-item active">Customers</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row justify-content-around" style="height: max-content">
+            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: white">
+                <h3 class="text-center bg-success p-2 text-light">Search Customer</h3>
+                <form>
+                    <div class="mb-3 ms-3 me-3">
+                        <input class="form-control" id="custId"
+                               placeholder="Input Customer ID"
+                               type="text">
+                    </div>
+                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
+                </form>
+            </div>
+            <div class="col-10 col-md-5 col-lg-5 mt-2">
+                <button class="btn btn-info position-relative m-2" data-bs-target="#registerCustomer"
+                        data-bs-toggle="modal">Register Customer
+                </button>
+                <button class="btn btn-warning position-relative m-2">View All Customers</button>
+                <button class="btn btn-primary position-relative m-2" data-bs-target="#updateCustomer"
+                        data-bs-toggle="modal">Update Customer
+                </button>
+                <button class="btn btn-danger position-relative m-2" data-bs-target="#deleteCustomer"
+                        data-bs-toggle="modal">Delete Customer
+                </button>
+            </div>
+        </div>
+        <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+            <div class="col-10">
+                <h3 class="text-center bg-success p-2 text-light mb-0">Customer Details</h3>
+                <div class="customeTableDiv">
+                    <table class="table bg-light table-bordered w-100 h-100 table-hover">
+                        <thead class="bg-info">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Salary</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>C001</td>
+                            <td>Kamal</td>
+                            <td>Galle</td>
+                            <td>25000.00</td>
+                        </tr>
+                        <tr>
+                            <td>C002</td>
+                            <td>Prageeth</td>
+                            <td>Galle</td>
+                            <td>35000.00</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Nimal</td>
+                            <td>Colombo</td>
+                            <td>15000.00</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Bandara</td>
+                            <td>Matara</td>
+                            <td>20000.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--item form-->
+    <div class="container flex-grow-1 flex-column" style="background-color: #c8c8c8;">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h1><i class="fas fa-boxes"></i> Items</h1>
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="homePage.html">Home</a></li>
+                    <li aria-current="page" class="breadcrumb-item active">Items</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row justify-content-around" style="height: max-content">
+            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: white">
+                <h3 class="text-center bg-success p-2 text-light">Search Item</h3>
+                <form>
+                    <div class="mb-3 ms-3 me-3">
+                        <input class="form-control" id="searchcode"
+                               placeholder="Input Item Code"
+                               type="text">
+                    </div>
+                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="reset">Clear</button>
+                </form>
+            </div>
+            <div class="col-10 col-md-5 col-lg-5 mt-2">
+                <button class="btn btn-info position-relative m-2" data-bs-target="#addItem"
+                        data-bs-toggle="modal">Add Item</button>
+                <button class="btn btn-warning position-relative m-2">View All Items</button>
+                <button class="btn btn-primary position-relative m-2" data-bs-target="#updateItem"
+                        data-bs-toggle="modal">Update Item</button>
+                <button class="btn btn-danger position-relative m-2" data-bs-target="#deleteItem"
+                        data-bs-toggle="modal">Delete Item</button>
+            </div>
+        </div>
+        <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
+            <div class="col-10">
+                <h3 class="text-center bg-success p-2 text-light mb-0">Item Details</h3>
+                <div class="itemTableDiv">
+                    <table class="table bg-light table-bordered w-100 h-100 table-hover">
+                        <thead class="bg-info">
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Unit Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>I001</td>
+                            <td>Keerisamba 5kg</td>
+                            <td>150.00</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>I002</td>
+                            <td>Dhal 2kg</td>
+                            <td>200.00</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>I003</td>
+                            <td>Keerisamba 10kg</td>
+                            <td>450.00</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>I004</td>
+                            <td>Noodles 5kg</td>
+                            <td>250.00</td>
+                            <td>50</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--placeOrder Form-->
+    <div class="container-fluid flex-grow-1 flex-column" style="background-color: #c8c8c8">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h1><i class="fas fa-cart-plus"></i> Place Order</h1>
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="homePage.html">Home</a></li>
+                    <li aria-current="page" class="breadcrumb-item active">Orders</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row justify-content-around" style="height: max-content">
+            <div class="col-10 col-md-5 col-lg-3 p-3 mt-3" style="background-color: white">
+                <h3 class="text-center bg-success p-2 text-light">Invoice</h3>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="orderId">Order ID</label>
+                        <input class="form-control border-dark" id="orderId" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="orderDate">Order Date</label>
+                        <input class="form-control border-dark" id="orderDate" type="date">
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="selectcustomerId">Customer ID</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="selectcustomerId">
+                            <option selected>-Select Customer-</option>
+                            <option value="1">C001</option>
+                            <option value="2">C002</option>
+                            <option value="3">C003</option>
+                            <option value="4">C004</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocName">Customer Name</label>
+                        <input class="form-control border-dark" id="pocName" type="text" disabled>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocaddress">Customer Address</label>
+                        <input class="form-control border-dark" id="pocaddress" type="text" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="pocsalary">Customer Salary</label>
+                        <input class="form-control border-dark" id="pocsalary" type="text" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-5 col-lg-3 p-3 mt-3" style="background-color: white">
+                <h3 class="text-center bg-success p-2 text-light">Items</h3>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="itemcode">Item Code</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="itemcode">
+                            <option selected>-Select Item-</option>
+                            <option value="1">I001</option>
+                            <option value="2">I002</option>
+                            <option value="3">I003</option>
+                            <option value="4">I004</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="poiName">Item Name</label>
+                        <input class="form-control border-dark" id="poiName" type="text" disabled>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="itemPrice">Unit Price</label>
+                        <input class="form-control border-dark" id="itemPrice" type="text" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="qtyOnHand">Qty On Hand</label>
+                        <input class="form-control border-dark" id="qtyOnHand" type="text" disabled>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="buyQty">Buy Qty</label>
+                        <input class="form-control border-dark" id="buyQty" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <button type="submit" class="btn btn-primary rounded-2">Add To Cart</button>
+                        <button type="submit" class="btn btn-secondary rounded-2">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-md-10 col-lg-3 p-3 mt-3 bg-light mt-1">
+                <h3 class="text-center bg-success p-2 text-light">Payment Details</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="total">Total (Rs.)</label>
+                        <input class="form-control border-dark" id="total" type="text" disabled>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="noOfItems">No Of Items</label>
+                        <input class="form-control border-dark" id="noOfItems" type="text" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="cash">Cash (Rs.)</label>
+                        <input class="form-control border-dark" id="cash" type="text">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <label class="fw-bold" for="balance">Balance (Rs.)</label>
+                        <input class="form-control border-dark" id="balance" type="text" disabled>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary rounded-2 mt-2">Place Order</button>
+                        <button type="submit" class="btn btn-secondary rounded-2 mt-2">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1 justify-content-around">
+            <div class="col-10 p-3 mt-3">
+                <h3 class="text-center bg-success p-2 text-light">Cart Details</h3>
+                <div class="cartTbleDiv bg-light">
+                    <table class="table table-hover table-bordered">
+                        <thead class="bg-info">
+                        <tr>
+                            <th>Item Code</th>
+                            <th>Name</th>
+                            <th>Unit Price</th>
+                            <th>Qty On Hand</th>
+                            <th>Buy Qty</th>
+                            <th>Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>I001</td>
+                            <td>Keerisamba 5kg</td>
+                            <td>150.00</td>
+                            <td>200</td>
+                            <td>2</td>
+                            <td><button type="button" class="bg-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>I002</td>
+                            <td>Dhal 2kg</td>
+                            <td>200.00</td>
+                            <td>100</td>
+                            <td>1</td>
+                            <td><button type="button" class="bg-danger">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>I003</td>
+                            <td>Keerisamba 10kg</td>
+                            <td>450.00</td>
+                            <td>150</td>
+                            <td>1</td>
+                            <td><button type="button" class="bg-danger">Delete</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- Modal Register Customer -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="registerCustomer" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  bg-success">
+                <h5 class="modal-title text-light">Register Customer</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="customerId">Customer ID :</label>
+                        <input class="form-control" id="customerId"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="customerName">Customer Name :</label>
+                        <input class="form-control" id="customerName"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="customerAddress">Customer Address :</label>
+                        <input class="form-control" id="customerAddress"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="customerSalary">Customer Salary :</label>
+                        <input class="form-control" id="customerSalary"
+                               type="number">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" type="submit">Save</button>
+                <button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Update Customer -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="updateCustomer" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  bg-success">
+                <h5 class="modal-title text-light">Update Customer</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="searchCustomerId">Search Customer ID :</label>
+                        <input class="form-control" id="searchCustomerId"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="cName">Customer Name :</label>
+                        <input class="form-control" id="cName"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="caddress">Customer Address :</label>
+                        <input class="form-control" id="caddress"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="csalary">Customer Salary :</label>
+                        <input class="form-control" id="csalary"
+                               type="number">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" type="submit">Update</button>
+                <button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Delete Customer -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="deleteCustomer" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  bg-success">
+                <h5 class="modal-title text-light">Delete Customer</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="searchCId">Search Customer ID :</label>
+                        <input class="form-control" id="searchCId"
+                               type="text">
+                    </div>
+                    <fieldset disabled>
+                        <div class="ms-3 me-3">
+                            <label class="form-label fw-bold mb-0" for="dcName">Customer Name :</label>
+                            <input class="form-control" id="dcName"
+                                   type="text">
+                        </div>
+                        <div class="ms-3 me-3">
+                            <label class="form-label fw-bold mb-0" for="dcAddress">Customer Address :</label>
+                            <input class="form-control" id="dcAddress"
+                                   type="text">
+                        </div>
+                        <div class="ms-3 me-3">
+                            <label class="form-label fw-bold mb-0" for="dcSalary">Customer Salary :</label>
+                            <input class="form-control" id="dcSalary"
+                                   type="number">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#confirmationcustomer" data-bs-toggle="modal"
+                        type="submit">Delete
+                </button>
+                <button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Modal delete confirmation massage-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="confirmationcustomer" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">Confirmation Alert</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure whether you want to delete this customer?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-bs-dismiss="modal" type="submit">Yes</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add Item -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="addItem" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  bg-success">
+                <h5 class="modal-title text-light">Add Item</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="icode">Item Code :</label>
+                        <input class="form-control" id="icode"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="itemName">Item Name :</label>
+                        <input class="form-control" id="itemName"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="itemUnitPrice">Item Unit Price :</label>
+                        <input class="form-control" id="itemUnitPrice"
+                               type="number">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="itemQty">Item Quantity :</label>
+                        <input class="form-control" id="itemQty"
+                               type="number">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Save</button>
+                <button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Update Item -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="updateItem" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  bg-success">
+                <h5 class="modal-title text-light">Update Item</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="searchItemCode">Search Item Code :</label>
+                        <input class="form-control" id="searchItemCode"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="name">Item Name :</label>
+                        <input class="form-control" id="name"
+                               type="text">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="unitPrice">Item Unit Price :</label>
+                        <input class="form-control" id="unitPrice"
+                               type="number">
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="qty">Item Qty :</label>
+                        <input class="form-control" id="qty"
+                               type="number">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Update</button>
+                <button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Delete Item -->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="deleteItem" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header  bg-success">
+                <h5 class="modal-title text-light">Delete Item</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="searchIcode">Search Item Code :</label>
+                        <input class="form-control" id="searchIcode"
+                               type="text">
+                    </div>
+                    <fieldset disabled>
+                        <div class="ms-3 me-3">
+                            <label class="form-label fw-bold mb-0" for="disabledName">Item Name :</label>
+                            <input class="form-control" id="disabledName"
+                                   type="text">
+                        </div>
+                        <div class="ms-3 me-3">
+                            <label class="form-label fw-bold mb-0" for="disabledAddress">Item Unit Price :</label>
+                            <input class="form-control" id="disabledAddress"
+                                   type="number">
+                        </div>
+                        <div class="ms-3 me-3">
+                            <label class="form-label fw-bold mb-0" for="disabledSalary">Item Quantity :</label>
+                            <input class="form-control" id="disabledSalary"
+                                   type="number">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" type="submit" data-bs-dismiss="modal" data-bs-target="#confirmation"
+                        data-bs-toggle="modal">Delete</button>
+                <button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Modal delete confirmation massage-->
+<div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmation Alert</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure whether you want to delete this item?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" type="submit" data-bs-dismiss="modal">Yes</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
