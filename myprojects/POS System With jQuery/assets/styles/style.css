@@ -1,0 +1,38 @@
+.homePageSection{
+    width: 100vw;
+    height: 100vh;
+}
+.posNavi{
+    z-index: 5;
+    width: 100vw;
+    background: linear-gradient(to right, #a8ff78, #78ffd6);
+}
+.naviItems>li:hover{
+    background-color: lightgreen;
+}
+.searchCustomer{
+    background-color: #c8c8c8;
+}
+.btnRegister{
+    right: 30%;
+}
+.btnViewAllCustomers{
+    right: 0%;
+}
+.itemTableDiv{
+    position: relative;
+    height: 30vh;
+    overflow: auto;
+    background-color: white;
+}
+.customeTableDiv{
+    position: relative;
+    height: 30vh;
+    overflow: auto;
+    background-color: white;
+}
+.cartTbleDiv{
+    position: relative;
+    height: 20vh;
+    overflow: auto;
+}
