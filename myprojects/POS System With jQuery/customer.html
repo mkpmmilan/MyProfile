@@ -88,31 +88,8 @@
                             <th>Salary</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>C001</td>
-                            <td>Kamal</td>
-                            <td>Galle</td>
-                            <td>25000.00</td>
-                        </tr>
-                        <tr>
-                            <td>C002</td>
-                            <td>Prageeth</td>
-                            <td>Galle</td>
-                            <td>35000.00</td>
-                        </tr>
-                        <tr>
-                            <td>C003</td>
-                            <td>Nimal</td>
-                            <td>Colombo</td>
-                            <td>15000.00</td>
-                        </tr>
-                        <tr>
-                            <td>C004</td>
-                            <td>Bandara</td>
-                            <td>Matara</td>
-                            <td>20000.00</td>
-                        </tr>
+                        <tbody id="customerTable">
+
                         </tbody>
                     </table>
                 </div>
@@ -133,29 +110,30 @@
             <div class="modal-body">
                 <form>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="customerId">Customer ID :</label>
-                        <input class="form-control" id="customerId"
+                        <label class="form-label fw-bold mb-0" for="txtCustomerId">Customer ID :</label>
+                        <input class="form-control" id="txtCustomerId"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="customerName">Customer Name :</label>
-                        <input class="form-control" id="customerName"
+                        <label class="form-label fw-bold mb-0" for="txtCustomerName">Customer Name :</label>
+                        <input class="form-control" id="txtCustomerName"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="customerAddress">Customer Address :</label>
-                        <input class="form-control" id="customerAddress"
+                        <label class="form-label fw-bold mb-0" for="txtCustomerAddress">Customer Address :</label>
+                        <input class="form-control" id="txtCustomerAddress"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="customerSalary">Customer Salary :</label>
-                        <input class="form-control" id="customerSalary"
+                        <label class="form-label fw-bold mb-0" for="txtCustomerSalary">Customer Salary :</label>
+                        <input class="form-control" id="txtCustomerSalary"
                                type="number">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-dismiss="modal" type="submit">Save</button>
+                <button class="btn btn-primary" id="btnRegisterCustomer" type="submit">Save
+                </button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
             </div>
         </div>
@@ -239,7 +217,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#confirmation" data-bs-toggle="modal"
+                <button class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#confirmation"
+                        data-bs-toggle="modal"
                         type="submit">Delete
                 </button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
@@ -268,7 +247,27 @@
     </div>
 </div>
 
-
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    $("#btnRegisterCustomer").click(function () {
+
+        let customerId = $("#txtCustomerId").val();
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerSalary = $("#txtCustomerSalary").val();
+
+        let tableRow = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td></tr>`;
+
+        $("#customerTable").append(tableRow);
+
+        $("#txtCustomerId").val("");
+        $("#txtCustomerName").val("");
+        $("#txtCustomerAddress").val("");
+        $("#txtCustomerSalary").val("");
+
+
+    });
+</script>
 </body>
 </html>
