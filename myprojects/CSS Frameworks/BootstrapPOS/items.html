@@ -85,31 +85,8 @@
                         <th>Quantity</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>I001</td>
-                        <td>Keerisamba 5kg</td>
-                        <td>150.00</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>I002</td>
-                        <td>Dhal 2kg</td>
-                        <td>200.00</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>I003</td>
-                        <td>Keerisamba 10kg</td>
-                        <td>450.00</td>
-                        <td>150</td>
-                    </tr>
-                    <tr>
-                        <td>I004</td>
-                        <td>Noodles 5kg</td>
-                        <td>250.00</td>
-                        <td>50</td>
-                    </tr>
+                    <tbody id="itemTable">
+
                     </tbody>
                 </table>
                 </div>
@@ -130,29 +107,29 @@
             <div class="modal-body">
                 <form>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="icode">Item Code :</label>
-                        <input class="form-control" id="icode"
+                        <label class="form-label fw-bold mb-0" for="txtIcode">Item Code :</label>
+                        <input class="form-control" id="txtIcode"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="itemName">Item Name :</label>
-                        <input class="form-control" id="itemName"
+                        <label class="form-label fw-bold mb-0" for="txtItemName">Item Name :</label>
+                        <input class="form-control" id="txtItemName"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="itemUnitPrice">Item Unit Price :</label>
-                        <input class="form-control" id="itemUnitPrice"
+                        <label class="form-label fw-bold mb-0" for="txtItemUnitPrice">Item Unit Price :</label>
+                        <input class="form-control" id="txtItemUnitPrice"
                                type="number">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="itemQty">Item Quantity :</label>
-                        <input class="form-control" id="itemQty"
+                        <label class="form-label fw-bold mb-0" for="txtItemQty">Item Quantity :</label>
+                        <input class="form-control" id="txtItemQty"
                                type="number">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Save</button>
+                <button class="btn btn-primary" type="submit" id="btnAddItem">Save</button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
             </div>
         </div>
@@ -264,7 +241,26 @@
     </div>
 </div>
 
-
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    $("#btnAddItem").click(function () {
+
+        let itemCode = $("#txtIcode").val();
+        let itemName = $("#txtItemName").val();
+        let itemUnitPrice = $("#txtItemUnitPrice").val();
+        let itemQty = $("#txtItemQty").val();
+
+        let tableRow = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQty}</td></tr>`;
+
+        $("#itemTable").append(tableRow);
+
+        $("#txtIcode").val("");
+        $("#txtItemName").val("");
+        $("#txtItemUnitPrice").val("");
+        $("#txtItemQty").val("");
+
+    });
+</script>
 </body>
 </html>
