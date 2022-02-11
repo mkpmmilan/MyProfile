@@ -1,41 +1,108 @@
-document.getElementsByClassName("naviItem-1")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="block";
-   document.getElementById("customerPage").style.display="none";
-   document.getElementById("itemPage").style.display="none";
-   document.getElementById("placeOrderPage").style.display="none";
+
+$(".naviItem-1").click(function () {
+   $("#carouselExampleIndicators").css('display','block');
+   $("#customerPage").css('display','none');
+   $("#itemPage").css('display','none');
+   $("#placeOrderPage").css('display','none');
 });
 
-document.getElementsByClassName("naviItem-2")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="none";
-   document.getElementById("customerPage").style.display="block";
-   document.getElementById("itemPage").style.display="none";
-   document.getElementById("placeOrderPage").style.display="none";
+$(".naviItem-2").click(function () {
+   $("#carouselExampleIndicators").css('display','none');
+   $("#customerPage").css('display','block');
+   $("#itemPage").css('display','none');
+   $("#placeOrderPage").css('display','none');
 });
 
-document.getElementsByClassName("naviItem-3")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="none";
-   document.getElementById("customerPage").style.display="none";
-   document.getElementById("itemPage").style.display="block";
-   document.getElementById("placeOrderPage").style.display="none";
+$(".naviItem-3").click(function () {
+   $("#carouselExampleIndicators").css('display','none');
+   $("#customerPage").css('display','none');
+   $("#itemPage").css('display','block');
+   $("#placeOrderPage").css('display','none');
 });
 
-document.getElementsByClassName("naviItem-4")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="none";
-   document.getElementById("customerPage").style.display="none";
-   document.getElementById("itemPage").style.display="none";
-   document.getElementById("placeOrderPage").style.display="block";
+$(".naviItem-4").click(function () {
+   $("#carouselExampleIndicators").css('display','none');
+   $("#customerPage").css('display','none');
+   $("#itemPage").css('display','none');
+   $("#placeOrderPage").css('display','block');
 });
 
-document.getElementsByClassName("customerHomeNavi")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="block";
-   document.getElementById("customerPage").style.display="none";
+$(".customerHomeNavi").click(function () {
+   $("#carouselExampleIndicators").css('display','block');
+   $("#customerPage").css('display','none');
 });
 
-document.getElementsByClassName("itemHomeNavi")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="block";
-   document.getElementById("itemPage").style.display="none";
+$(".itemHomeNavi").click(function () {
+   $("#carouselExampleIndicators").css('display','block');
+   $("#customerPage").css('display','none');
 });
-document.getElementsByClassName("placeOrderHomeNavi")[0].addEventListener("click",function () {
-   document.getElementById("carouselExampleIndicators").style.display="block";
-   document.getElementById("placeOrderPage").style.display="none";
+
+$(".placeOrderHomeNavi").click(function () {
+   $("#carouselExampleIndicators").css('display','block');
+   $("#customerPage").css('display','none');
 });
+
+$("#registerCustomer").on('shown.bs.modal',function () {
+   $(this).find("#txtCustomerId").focus();
+});
+
+/*Customer Form JS*/
+
+$("#btnRegisterCustomer").click(function () {
+   let customerId = $("#txtCustomerId").val();
+   let customerName = $("#txtCustomerName").val();
+   let customerAddress = $("#txtCustomerAddress").val();
+   let customerSalary = $("#txtCustomerSalary").val();
+
+   let tableRow = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td></tr>`;
+
+   $("#customerTable").append(tableRow);
+
+   $("#txtCustomerId").val("");
+   $("#txtCustomerName").val("");
+   $("#txtCustomerAddress").val("");
+   $("#txtCustomerSalary").val("");
+
+});
+
+$("#txtCustomerId").keydown(function (event) {
+   if(event.key == "Enter"){
+      $("#txtCustomerName").focus();
+   }
+});
+
+$("#txtCustomerName").keydown(function (event) {
+   if(event.key == "Enter"){
+      $("#txtCustomerAddress").focus();
+   }
+});
+
+$("#txtCustomerAddress").keydown(function (event) {
+   if(event.key == "Enter"){
+      $("#txtCustomerSalary").focus();
+   }
+});
+$("#txtCustomerSalary").keydown(function (event) {
+   if(event.key == "Enter"){
+      let customerId = $("#txtCustomerId").val();
+      let customerName = $("#txtCustomerName").val();
+      let customerAddress = $("#txtCustomerAddress").val();
+      let customerSalary = $("#txtCustomerSalary").val();
+
+      let tableRow = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td></tr>`;
+
+      $("#customerTable").append(tableRow);
+
+      $("#txtCustomerId").val("");
+      $("#txtCustomerName").val("");
+      $("#txtCustomerAddress").val("");
+      $("#txtCustomerSalary").val("");
+
+      $("#txtCustomerId").focus();
+   }
+});
+
+/*Item Form JS*/
+
+
+
