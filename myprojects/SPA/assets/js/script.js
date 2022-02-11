@@ -104,5 +104,60 @@ $("#txtCustomerSalary").keydown(function (event) {
 
 /*Item Form JS*/
 
+$("#addItem").on('shown.bs.modal',function () {
+   $(this).find("#txtIcode").focus();
+});
 
+$("#btnAddItem").click(function () {
+
+   let itemCode = $("#txtIcode").val();
+   let itemName = $("#txtItemName").val();
+   let itemUnitPrice = $("#txtItemUnitPrice").val();
+   let itemQty = $("#txtItemQty").val();
+
+   let tableRow = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQty}</td></tr>`;
+
+   $("#itemTable").append(tableRow);
+
+   $("#txtIcode").val("");
+   $("#txtItemName").val("");
+   $("#txtItemUnitPrice").val("");
+   $("#txtItemQty").val("");
+
+});
+
+$("#txtIcode").keydown(function (event) {
+   if(event.key == "Enter"){
+      $("#txtItemName").focus();
+   }
+});
+$("#txtItemName").keydown(function (event) {
+   if(event.key == "Enter"){
+      $("#txtItemUnitPrice").focus();
+   }
+});
+$("#txtItemUnitPrice").keydown(function (event) {
+   if(event.key == "Enter"){
+      $("#txtItemQty").focus();
+   }
+});
+$("#txtItemQty").keydown(function (event) {
+   if(event.key == "Enter"){
+      let itemCode = $("#txtIcode").val();
+      let itemName = $("#txtItemName").val();
+      let itemUnitPrice = $("#txtItemUnitPrice").val();
+      let itemQty = $("#txtItemQty").val();
+
+      let tableRow = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQty}</td></tr>`;
+
+      $("#itemTable").append(tableRow);
+
+      $("#txtIcode").val("");
+      $("#txtItemName").val("");
+      $("#txtItemUnitPrice").val("");
+      $("#txtItemQty").val("");
+
+      $("#txtIcode").focus();
+   }
+});
 

@@ -191,7 +191,7 @@
                             <th>Quantity</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="itemTable">
 
                         </tbody>
                     </table>
@@ -525,29 +525,29 @@
             <div class="modal-body">
                 <form>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="icode">Item Code :</label>
-                        <input class="form-control" id="icode"
+                        <label class="form-label fw-bold mb-0" for="txtIcode">Item Code :</label>
+                        <input class="form-control" id="txtIcode"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="itemName">Item Name :</label>
-                        <input class="form-control" id="itemName"
+                        <label class="form-label fw-bold mb-0" for="txtItemName">Item Name :</label>
+                        <input class="form-control" id="txtItemName"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="itemUnitPrice">Item Unit Price :</label>
-                        <input class="form-control" id="itemUnitPrice"
+                        <label class="form-label fw-bold mb-0" for="txtItemUnitPrice">Item Unit Price :</label>
+                        <input class="form-control" id="txtItemUnitPrice"
                                type="number">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="itemQty">Item Quantity :</label>
-                        <input class="form-control" id="itemQty"
+                        <label class="form-label fw-bold mb-0" for="txtItemQty">Item Quantity :</label>
+                        <input class="form-control" id="txtItemQty"
                                type="number">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Save</button>
+                <button class="btn btn-primary" type="submit" id="btnAddItem">Save</button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
             </div>
         </div>
