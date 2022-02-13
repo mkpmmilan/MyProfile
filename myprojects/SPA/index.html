@@ -405,8 +405,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" id="btnRegisterCustomer" type="submit">Save</button>
-                <button class="btn btn-secondary" type="reset">Clear</button>
+                <button class="btn btn-primary" id="btnRegisterCustomer" type="submit" data-bs-target="#registerconfirmationcustomer" data-bs-toggle="modal">Save</button>
+                <button class="btn btn-secondary" type="reset" id="btnclearcustomerform">Clear</button>
             </div>
         </div>
     </div>
@@ -489,7 +489,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#confirmationcustomer" data-bs-toggle="modal"
+                <button class="btn btn-danger" data-bs-dismiss="modal" data-bs-target="#deleteconfirmationcustomer" data-bs-toggle="modal"
                         type="submit">Delete
                 </button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
@@ -500,7 +500,7 @@
 
 
 <!--Modal delete confirmation massage-->
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="confirmationcustomer" tabindex="-1">
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="deleteconfirmationcustomer" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -512,6 +512,25 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" data-bs-dismiss="modal" type="submit">Yes</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal add customer confirmation-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="registerconfirmationcustomer" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Confirmation Alert</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure whether you want to add this customer?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-bs-dismiss="modal" type="submit" id="btnAddCustomer">Yes</button>
                 <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
             </div>
         </div>
@@ -555,8 +574,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" id="btnAddItem">Save</button>
-                <button class="btn btn-secondary" type="reset">Clear</button>
+                <button class="btn btn-primary" type="submit" id="btnAddItem" data-bs-target="#addconfirmationitem" data-bs-toggle="modal">Save</button>
+                <button class="btn btn-secondary" type="reset" id="btnclearitemform">Clear</button>
             </div>
         </div>
     </div>
@@ -661,6 +680,25 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" type="submit" data-bs-dismiss="modal">Yes</button>
+                <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal add item confirmation-->
+<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="addconfirmationitem" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel3">Confirmation Alert</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure whether you want to add this item?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-bs-dismiss="modal" type="submit" id="btnSaveItem">Yes</button>
                 <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
             </div>
         </div>

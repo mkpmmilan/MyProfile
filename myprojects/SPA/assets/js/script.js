@@ -49,7 +49,7 @@ $("#registerCustomer").on('shown.bs.modal', function () {
 
 $("#btnRegisterCustomer").prop('disabled', true);
 
-$("#btnRegisterCustomer").click(function () {
+$("#btnAddCustomer").click(function () {
     let customerId = $("#txtCustomerId").val();
     let customerName = $("#txtCustomerName").val();
     let customerAddress = $("#txtCustomerAddress").val();
@@ -66,11 +66,10 @@ $("#btnRegisterCustomer").click(function () {
 
     $("#btnRegisterCustomer").prop('disabled', true);
 
-    $("#txtCustomerId").focus();
-    $("#txtCustomerId").css('border','1px solid #ced4da');
-    $("#txtCustomerName").css('border','1px solid #ced4da');
-    $("#txtCustomerAddress").css('border','1px solid #ced4da');
-    $("#txtCustomerSalary").css('border','1px solid #ced4da');
+    $("#txtCustomerId").css('border', '1px solid #ced4da');
+    $("#txtCustomerName").css('border', '1px solid #ced4da');
+    $("#txtCustomerAddress").css('border', '1px solid #ced4da');
+    $("#txtCustomerSalary").css('border', '1px solid #ced4da');
 });
 
 let regCusId = /^(C00-)[0-9]{3,4}$/;
@@ -88,7 +87,7 @@ $("#txtCustomerId").keyup(function (event) {
         custSalary = $("#txtCustomerSalary").val();
         custName = $("#txtCustomerName").val();
         custAddress = $("#txtCustomerAddress").val();
-        if(regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
             $("#btnRegisterCustomer").prop('disabled', false);
         }
     } else {
@@ -113,7 +112,7 @@ $("#txtCustomerName").keyup(function (event) {
         custId = $("#txtCustomerId").val();
         custSalary = $("#txtCustomerSalary").val();
         custAddress = $("#txtCustomerAddress").val();
-        if(regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
             $("#btnRegisterCustomer").prop('disabled', false);
         }
     } else {
@@ -139,7 +138,7 @@ $("#txtCustomerAddress").keyup(function (event) {
         custId = $("#txtCustomerId").val();
         custName = $("#txtCustomerName").val();
         custSalary = $("#txtCustomerSalary").val();
-        if(regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
             $("#btnRegisterCustomer").prop('disabled', false);
         }
     } else {
@@ -159,7 +158,7 @@ $("#txtCustomerSalary").keyup(function (event) {
         custId = $("#txtCustomerId").val();
         custName = $("#txtCustomerName").val();
         custAddress = $("#txtCustomerAddress").val();
-        if(regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
             $("#btnRegisterCustomer").prop('disabled', false);
         }
     } else {
@@ -169,6 +168,21 @@ $("#txtCustomerSalary").keyup(function (event) {
     }
 });
 
+$("#btnclearcustomerform").click(function () {
+    $("#btnRegisterCustomer").prop('disabled', true);
+    $("#txtCustomerId").focus();
+
+    $("#txtCustomerId").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerSalary").val("");
+
+    $("#txtCustomerId").css('border', '1px solid #ced4da');
+    $("#txtCustomerName").css('border', '1px solid #ced4da');
+    $("#txtCustomerAddress").css('border', '1px solid #ced4da');
+    $("#txtCustomerSalary").css('border', '1px solid #ced4da');
+});
+
 
 /*Item Form JS*/
 
@@ -176,9 +190,10 @@ $("#addItem").on('shown.bs.modal', function () {
     $(this).find("#txtIcode").focus();
 });
 
-$("#btnAddItem").prop('disabled',true);
+$("#btnAddItem").prop('disabled', true);
 
-$("#btnAddItem").click(function () {
+
+$("#btnSaveItem").click(function () {
 
     let itemCode = $("#txtIcode").val();
     let itemName = $("#txtItemName").val();
@@ -194,13 +209,12 @@ $("#btnAddItem").click(function () {
     $("#txtItemUnitPrice").val("");
     $("#txtItemQty").val("");
 
-    $("#btnAddItem").prop('disabled',true);
+    $("#btnAddItem").prop('disabled', true);
 
-    $("#txtIcode").focus();
-    $("#txtIcode").css('border','1px solid #ced4da');
-    $("#txtItemName").css('border','1px solid #ced4da');
-    $("#txtItemUnitPrice").css('border','1px solid #ced4da');
-    $("#txtItemQty").css('border','1px solid #ced4da');
+    $("#txtIcode").css('border', '1px solid #ced4da');
+    $("#txtItemName").css('border', '1px solid #ced4da');
+    $("#txtItemUnitPrice").css('border', '1px solid #ced4da');
+    $("#txtItemQty").css('border', '1px solid #ced4da');
 
 });
 
@@ -219,7 +233,7 @@ $("#txtIcode").keyup(function (event) {
         iQty = $("#txtItemQty").val();
         iUnitPrice = $("#txtItemUnitPrice").val();
         iName = $("#txtItemName").val();
-        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
             $("#btnAddItem").prop('disabled', false);
         }
     } else {
@@ -244,7 +258,7 @@ $("#txtItemName").keyup(function (event) {
         iQty = $("#txtItemQty").val();
         iUnitPrice = $("#txtItemUnitPrice").val();
         iCode = $("#txtIcode").val();
-        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
             $("#btnAddItem").prop('disabled', false);
         }
     } else {
@@ -269,7 +283,7 @@ $("#txtItemUnitPrice").keyup(function (event) {
         iQty = $("#txtItemQty").val();
         iName = $("#txtItemName").val();
         iCode = $("#txtIcode").val();
-        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
             $("#btnAddItem").prop('disabled', false);
         }
     } else {
@@ -289,7 +303,7 @@ $("#txtItemQty").keyup(function (event) {
         iUnitPrice = $("#txtItemUnitPrice").val();
         iName = $("#txtItemName").val();
         iCode = $("#txtIcode").val();
-        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
             $("#btnAddItem").prop('disabled', false);
         }
     } else {
@@ -297,5 +311,20 @@ $("#txtItemQty").keyup(function (event) {
         $("#itemQtyError").text("Item Qty is a required field.Pattern : 100");
         $("#btnAddItem").prop('disabled', true);
     }
+});
+
+$("#btnclearitemform").click(function () {
+    $("#btnAddItem").prop('disabled', true);
+    $("#txtIcode").focus();
+
+    $("#txtIcode").val("");
+    $("#txtItemName").val("");
+    $("#txtItemUnitPrice").val("");
+    $("#txtItemQty").val("");
+
+    $("#txtIcode").css('border', '1px solid #ced4da');
+    $("#txtItemName").css('border', '1px solid #ced4da');
+    $("#txtItemUnitPrice").css('border', '1px solid #ced4da');
+    $("#txtItemQty").css('border', '1px solid #ced4da');
 });
 
