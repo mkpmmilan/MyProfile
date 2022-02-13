@@ -66,6 +66,11 @@ $("#btnRegisterCustomer").click(function () {
 
     $("#btnRegisterCustomer").prop('disabled', true);
 
+    $("#txtCustomerId").focus();
+    $("#txtCustomerId").css('border','1px solid #ced4da');
+    $("#txtCustomerName").css('border','1px solid #ced4da');
+    $("#txtCustomerAddress").css('border','1px solid #ced4da');
+    $("#txtCustomerSalary").css('border','1px solid #ced4da');
 });
 
 let regCusId = /^(C00-)[0-9]{3,4}$/;
@@ -191,40 +196,106 @@ $("#btnAddItem").click(function () {
 
     $("#btnAddItem").prop('disabled',true);
 
+    $("#txtIcode").focus();
+    $("#txtIcode").css('border','1px solid #ced4da');
+    $("#txtItemName").css('border','1px solid #ced4da');
+    $("#txtItemUnitPrice").css('border','1px solid #ced4da');
+    $("#txtItemQty").css('border','1px solid #ced4da');
+
 });
 
-/*$("#txtIcode").keydown(function (event) {
-    if (event.key == "Enter") {
-        $("#txtItemName").focus();
-    }
-});*/
-$("#txtItemName").keydown(function (event) {
-    if (event.key == "Enter") {
-        $("#txtItemUnitPrice").focus();
+let regItemCode = /^(I00-)[0-9]{3,4}$/;
+let iCode;
+$("#txtIcode").keyup(function (event) {
+    iCode = $("#txtIcode").val();
+    if (regItemCode.test(iCode)) {
+        $("#txtIcode").css('border', '2px solid green');
+        $("#itemCodeError").text("");
+        $("#txtItemName").css('border', '2px solid red');
+        $("#itemNameError").text("Item name is a required field.");
+        if (event.key == "Enter") {
+            $("#txtItemName").focus();
+        }
+        iQty = $("#txtItemQty").val();
+        iUnitPrice = $("#txtItemUnitPrice").val();
+        iName = $("#txtItemName").val();
+        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+            $("#btnAddItem").prop('disabled', false);
+        }
+    } else {
+        $("#txtIcode").css('border', '2px solid red');
+        $("#itemCodeError").text("Item Code is a required field.Pattern : I00-001");
+        $("#btnAddItem").prop('disabled', true);
     }
 });
-$("#txtItemUnitPrice").keydown(function (event) {
-    if (event.key == "Enter") {
-        $("#txtItemQty").focus();
+
+let regItemName = /^[A-z 0-9.]{3,}$/;
+let iName;
+$("#txtItemName").keyup(function (event) {
+    iName = $("#txtItemName").val();
+    if (regItemName.test(iName)) {
+        $("#txtItemName").css('border', '2px solid green');
+        $("#itemNameError").text("");
+        $("#txtItemUnitPrice").css('border', '2px solid red');
+        $("#itemUnitPriceError").text("Unit Price is a required field.Pattern : 100.00 or 100");
+        if (event.key == "Enter") {
+            $("#txtItemUnitPrice").focus();
+        }
+        iQty = $("#txtItemQty").val();
+        iUnitPrice = $("#txtItemUnitPrice").val();
+        iCode = $("#txtIcode").val();
+        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+            $("#btnAddItem").prop('disabled', false);
+        }
+    } else {
+        $("#txtItemName").css('border', '2px solid red');
+        $("#itemNameError").text("Item name is a required field.");
+        $("#btnAddItem").prop('disabled', true);
     }
 });
-$("#txtItemQty").keydown(function (event) {
-    if (event.key == "Enter") {
-        let itemCode = $("#txtIcode").val();
-        let itemName = $("#txtItemName").val();
-        let itemUnitPrice = $("#txtItemUnitPrice").val();
-        let itemQty = $("#txtItemQty").val();
 
-        let tableRow = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQty}</td></tr>`;
+let regItemUnitPrice = /^[0-9]{1,}([.][0-9]{2})?$/;
+let iUnitPrice;
+$("#txtItemUnitPrice").keyup(function (event) {
+    iUnitPrice = $("#txtItemUnitPrice").val();
+    if (regItemUnitPrice.test(iUnitPrice)) {
+        $("#txtItemUnitPrice").css('border', '2px solid green');
+        $("#itemUnitPriceError").text("");
+        $("#txtItemQty").css('border', '2px solid red');
+        $("#itemQtyError").text("Item Qty is a required field.Pattern : 100");
+        if (event.key == "Enter") {
+            $("#txtItemQty").focus();
+        }
+        iQty = $("#txtItemQty").val();
+        iName = $("#txtItemName").val();
+        iCode = $("#txtIcode").val();
+        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+            $("#btnAddItem").prop('disabled', false);
+        }
+    } else {
+        $("#txtItemUnitPrice").css('border', '2px solid red');
+        $("#itemUnitPriceError").text("Unit Price is a required field.Pattern : 100.00 or 100");
+        $("#btnAddItem").prop('disabled', true);
+    }
+});
 
-        $("#itemTable").append(tableRow);
-
-        $("#txtIcode").val("");
-        $("#txtItemName").val("");
-        $("#txtItemUnitPrice").val("");
-        $("#txtItemQty").val("");
-
-        $("#txtIcode").focus();
+let regItemQty = /^[0-9]{1,}$/;
+let iQty;
+$("#txtItemQty").keyup(function (event) {
+    iQty = $("#txtItemQty").val();
+    if (regItemQty.test(iQty)) {
+        $("#txtItemQty").css('border', '2px solid green');
+        $("#itemQtyError").text("");
+        iUnitPrice = $("#txtItemUnitPrice").val();
+        iName = $("#txtItemName").val();
+        iCode = $("#txtIcode").val();
+        if(regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
+            $("#btnAddItem").prop('disabled', false);
+        }
+    } else {
+        $("#txtItemQty").css('border', '2px solid red');
+        $("#itemQtyError").text("Item Qty is a required field.Pattern : 100");
+        $("#btnAddItem").prop('disabled', true);
     }
 });
 
