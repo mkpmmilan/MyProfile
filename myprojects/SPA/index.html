@@ -424,29 +424,30 @@
             <div class="modal-body">
                 <form>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="searchCustomerId">Search Customer ID :</label>
-                        <input class="form-control" id="searchCustomerId"
+                        <label class="form-label fw-bold mb-0" for="txtSearchCustomerId">Search Customer ID :</label>
+                        <input class="form-control" id="txtSearchCustomerId"
+                               type="text">
+                        <p><small id="searchCustIdError" class="text-danger"></small></p>
+                    </div>
+                    <div class="ms-3 me-3">
+                        <label class="form-label fw-bold mb-0" for="txtCName">Customer Name :</label>
+                        <input class="form-control" id="txtCName"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="cName">Customer Name :</label>
-                        <input class="form-control" id="cName"
+                        <label class="form-label fw-bold mb-0" for="txtCaddress">Customer Address :</label>
+                        <input class="form-control" id="txtCaddress"
                                type="text">
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="caddress">Customer Address :</label>
-                        <input class="form-control" id="caddress"
-                               type="text">
-                    </div>
-                    <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="csalary">Customer Salary :</label>
-                        <input class="form-control" id="csalary"
+                        <label class="form-label fw-bold mb-0" for="txtCsalary">Customer Salary :</label>
+                        <input class="form-control" id="txtCsalary"
                                type="number">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-dismiss="modal" type="submit">Update</button>
+                <button class="btn btn-primary" type="submit" id="btnUpdateCust">Update</button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
             </div>
         </div>

@@ -42,6 +42,7 @@ $(".placeOrderHomeNavi").click(function () {
 });
 
 /*Customer Form JS*/
+/*Customer Registration*/
 
 $("#registerCustomer").on('shown.bs.modal', function () {
     $(this).find("#txtCustomerId").focus();
@@ -182,6 +183,67 @@ $("#btnclearcustomerform").click(function () {
     $("#txtCustomerAddress").css('border', '1px solid #ced4da');
     $("#txtCustomerSalary").css('border', '1px solid #ced4da');
 });
+
+/*Customer Update*/
+
+$("#btnUpdateCust").prop('disabled', true);
+
+let regSearchCId = /^(C00-)[0-9]{3,4}$/;
+let searchCustId;
+$("#txtSearchCustomerId").keyup(function (event) {
+    searchCustId = $("#txtSearchCustomerId").val();
+    if (regSearchCId.test(searchCustId)) {
+        $("#txtSearchCustomerId").css('border', '2px solid green');
+        $("#searchCustIdError").text("");
+        /*$("#txtCustomerName").css('border', '2px solid red');
+        $("#customerNameError").text("Customer name is a required field.");*/
+        if (event.key == "Enter") {
+            var foundOrNot = false;
+            $("#customerTable>tr").each(function () {
+                let tcustId = $(this).children(":eq(0)").text();
+                if (tcustId === searchCustId) {
+                    let tcustName = $(this).children(":eq(1)").text();
+                    let tcustAddress = $(this).children(":eq(2)").text();
+                    let tcustSalary = $(this).children(":eq(3)").text();
+                    $("#txtCName").val(tcustName);
+                    $("#txtCaddress").val(tcustAddress);
+                    $("#txtCsalary").val(tcustSalary);
+                    $("#btnUpdateCust").prop('disabled',false);
+                    foundOrNot=true;
+                }
+            });
+            if(foundOrNot==false){
+                $("#txtCName").val("");
+                $("#txtCaddress").val("");
+                $("#txtCsalary").val("");
+                $("#btnUpdateCust").prop('disabled',true);
+            }
+        }
+    } else {
+        $("#txtSearchCustomerId").css('border', '2px solid red');
+        $("#searchCustIdError").text("Cust ID is a required field.Pattern : C00-001");
+        $("#btnRegisterCustomer").prop('disabled', true);
+    }
+});
+
+/*$("#txtSearchCustomerId").keyup(function (event) {
+    if(event.key=="Enter"){
+        let searchCustomerId = $("#txtSearchCustomerId").val();
+        $("#customerTable>tr").each(function () {
+           let custId = $(this).children(":eq(0)").text();
+           if(custId===searchCustomerId){
+               let custName = $(this).children(":eq(1)").text();
+               let custAddress = $(this).children(":eq(2)").text();
+               let custSalary = $(this).children(":eq(3)").text();
+               $("#txtCName").val(custName);
+               $("#txtCaddress").val(custAddress);
+               $("#txtCsalary").val(custSalary);
+           }else{
+               console.log("Not Found");
+           }
+        });
+    }
+});*/
 
 
 /*Item Form JS*/
