@@ -60,7 +60,14 @@ $("#registerCustomer").on('shown.bs.modal', function () {
 
 $("#btnRegisterCustomer").prop('disabled', true);
 
-$("#btnAddCustomer").click(function () {
+$("#btnRegisterCustomer").click(function () {
+    let res = confirm("Do you want to add this customer?");
+    if(res){
+        addCustomer();
+    }
+});
+
+function addCustomer(){
     let customerId = $("#txtCustomerId").val();
     let customerName = $("#txtCustomerName").val();
     let customerAddress = $("#txtCustomerAddress").val();
@@ -70,18 +77,10 @@ $("#btnAddCustomer").click(function () {
 
     $("#customerTable").append(tableRow);
 
-    $("#txtCustomerId").val("");
-    $("#txtCustomerName").val("");
-    $("#txtCustomerAddress").val("");
-    $("#txtCustomerSalary").val("");
-
     $("#btnRegisterCustomer").prop('disabled', true);
 
-    $("#txtCustomerId").css('border', '1px solid #ced4da');
-    $("#txtCustomerName").css('border', '1px solid #ced4da');
-    $("#txtCustomerAddress").css('border', '1px solid #ced4da');
-    $("#txtCustomerSalary").css('border', '1px solid #ced4da');
-});
+    clearCustomerFields();
+}
 
 
 $("#txtCustomerId").keyup(function (event) {
@@ -166,6 +165,14 @@ $("#txtCustomerSalary").keyup(function (event) {
         if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
             $("#btnRegisterCustomer").prop('disabled', false);
         }
+
+        if(event.key=="Enter"){
+            let res = confirm("Do you want to add this customer?");
+            if(res){
+                addCustomer();
+            }
+        }
+
     } else {
         $("#txtCustomerSalary").css('border', '2px solid red');
         $("#customerSalaryError").text("Customer Salary is a required field.Pattern : 1000.00 or 1000");
@@ -175,6 +182,10 @@ $("#txtCustomerSalary").keyup(function (event) {
 
 $("#btnclearcustomerform").click(function () {
     $("#btnRegisterCustomer").prop('disabled', true);
+    clearCustomerFields();
+});
+
+function clearCustomerFields(){
     $("#txtCustomerId").focus();
 
     $("#txtCustomerId").val("");
@@ -186,7 +197,7 @@ $("#btnclearcustomerform").click(function () {
     $("#txtCustomerName").css('border', '1px solid #ced4da');
     $("#txtCustomerAddress").css('border', '1px solid #ced4da');
     $("#txtCustomerSalary").css('border', '1px solid #ced4da');
-});
+}
 
 /*Customer Update*/
 
@@ -198,23 +209,20 @@ $("#txtSearchCustomerId").keyup(function (event) {
     if (regCusId.test(searchCustId)) {
         $("#txtSearchCustomerId").css('border', '2px solid green');
         $("#searchCustIdError").text("");
-        /*$("#txtCustomerName").css('border', '2px solid red');
-        $("#customerNameError").text("Customer name is a required field.");*/
         if (event.key == "Enter") {
             var foundOrNot = false;
-            $("#customerTable>tr").each(function () {
-                let tcustId = $(this).children(":eq(0)").text();
-                if (tcustId === searchCustId) {
-                    let tcustName = $(this).children(":eq(1)").text();
-                    let tcustAddress = $(this).children(":eq(2)").text();
-                    let tcustSalary = $(this).children(":eq(3)").text();
-                    $("#txtCName").val(tcustName);
-                    $("#txtCaddress").val(tcustAddress);
-                    $("#txtCsalary").val(tcustSalary);
-                    $("#btnUpdateCust").prop('disabled',false);
-                    foundOrNot=true;
-                }
-            });
+
+            let foundCustomer = searchCustomer(searchCustId);
+            if(foundCustomer){
+                $("#txtCName").val(foundCustomer.name);
+                $("#txtCaddress").val(foundCustomer.address);
+                $("#txtCsalary").val(foundCustomer.salary);
+                $("#btnUpdateCust").prop('disabled',false);
+                foundOrNot=true;
+                $("#txtCName").css('border','2px solid green');
+                $("#txtCaddress").css('border','2px solid green');
+                $("#txtCsalary").css('border','2px solid green');
+            }
             if(foundOrNot==false){
                 $("#txtCName").val("");
                 $("#txtCaddress").val("");
@@ -229,6 +237,26 @@ $("#txtSearchCustomerId").keyup(function (event) {
     }
 });
 
+function searchCustomer(searchId) {
+    let customer;
+    $("#customerTable>tr").each(function () {
+        let tcustId = $(this).children(":eq(0)").text();
+        if (tcustId === searchId) {
+            let tcustName = $(this).children(":eq(1)").text();
+            let tcustAddress = $(this).children(":eq(2)").text();
+            let tcustSalary = $(this).children(":eq(3)").text();
+
+            customer={
+                id:searchId,
+                name:tcustName,
+                address:tcustAddress,
+                salary:tcustSalary
+            }
+        }
+    });
+    return customer;
+}
+
 $("#txtCName").keyup(function (event) {
     custName = $("#txtCName").val();
     if (regCustName.test(custName)) {
@@ -240,6 +268,10 @@ $("#txtCName").keyup(function (event) {
         custId = $("#txtSearchCustomerId").val();
         custSalary = $("#txtCsalary").val();
         custAddress = $("#txtCaddress").val();
+
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+            $("#btnUpdateCust").prop('disabled', false);
+        }
 
     } else {
         $("#txtCName").css('border', '2px solid red');
@@ -259,6 +291,10 @@ $("#txtCaddress").keyup(function (event) {
         custName = $("#txtCName").val();
         custSalary = $("#txtCsalary").val();
 
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+            $("#btnUpdateCust").prop('disabled', false);
+        }
+
     } else {
         $("#txtCaddress").css('border', '2px solid red');
         $("#cAddressError").text("Customer address is a required field.");
@@ -273,6 +309,18 @@ $("#txtCsalary").keyup(function (event) {
         custId = $("#txtSearchCustomerId").val();
         custName = $("#txtCName").val();
         custAddress = $("#txtCaddress").val();
+
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+            $("#btnUpdateCust").prop('disabled', false);
+        }
+
+        /*if(event.key=="Enter"){
+            let res = confirm("Do you want to update this customer?");
+            if(res){
+
+            }
+        }*/
+
     } else {
         $("#txtCsalary").css('border', '2px solid red');
         $("#cSalaryError").text("Customer Salary is a required field.Pattern : 1000.00 or 1000");
