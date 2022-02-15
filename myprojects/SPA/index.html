@@ -451,7 +451,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" type="submit" id="btnUpdateCust">Update</button>
-                <button class="btn btn-secondary" type="reset">Clear</button>
+                <button class="btn btn-secondary" type="reset" id="btnClearUpdateCustomer">Clear</button>
             </div>
         </div>
     </div>
@@ -559,7 +559,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" id="btnAddItem" data-bs-target="#addconfirmationitem" data-bs-toggle="modal">Save</button>
+                <button class="btn btn-primary" type="submit" id="btnAddItem">Save</button>
                 <button class="btn btn-secondary" type="reset" id="btnclearitemform">Clear</button>
             </div>
         </div>
@@ -578,30 +578,34 @@
             <div class="modal-body">
                 <form>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="searchItemCode">Search Item Code :</label>
-                        <input class="form-control" id="searchItemCode"
+                        <label class="form-label fw-bold mb-0" for="txtSearchItemCode">Search Item Code :</label>
+                        <input class="form-control" id="txtSearchItemCode"
                                type="text">
+                        <p><small class="text-danger" id="searchItemCodeError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="name">Item Name :</label>
-                        <input class="form-control" id="name"
+                        <label class="form-label fw-bold mb-0" for="txtIName">Item Name :</label>
+                        <input class="form-control" id="txtIName"
                                type="text">
+                        <p><small class="text-danger" id="inameError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="unitPrice">Item Unit Price :</label>
-                        <input class="form-control" id="unitPrice"
+                        <label class="form-label fw-bold mb-0" for="txtIUnitPrice">Item Unit Price :</label>
+                        <input class="form-control" id="txtIUnitPrice"
                                type="number">
+                        <p><small class="text-danger" id="iunitpriceError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="qty">Item Qty :</label>
-                        <input class="form-control" id="qty"
+                        <label class="form-label fw-bold mb-0" for="txtIQty">Item Qty :</label>
+                        <input class="form-control" id="txtIQty"
                                type="number">
+                        <p><small class="text-danger" id="iqtyError"></small></p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Update</button>
-                <button class="btn btn-secondary" type="reset">Clear</button>
+                <button class="btn btn-primary" type="submit" id="btnUpdateItem">Update</button>
+                <button class="btn btn-secondary" type="reset" id="btnClearUpdateItem">Clear</button>
             </div>
         </div>
     </div>
@@ -665,25 +669,6 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" type="submit" data-bs-dismiss="modal">Yes</button>
-                <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Modal add item confirmation-->
-<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="addconfirmationitem" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel3">Confirmation Alert</h5>
-                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
-            </div>
-            <div class="modal-body">
-                Are you sure whether you want to add this item?
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-success" data-bs-dismiss="modal" type="submit" id="btnSaveItem">Yes</button>
                 <button class="btn btn-secondary" data-bs-dismiss="modal" type="reset">No</button>
             </div>
         </div>
