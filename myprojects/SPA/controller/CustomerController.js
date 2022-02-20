@@ -158,6 +158,7 @@ $("#txtSearchCustomerId").keyup(function (event) {
                 $("#txtCName").css('border', '2px solid green');
                 $("#txtCaddress").css('border', '2px solid green');
                 $("#txtCsalary").css('border', '2px solid green');
+                $("#txtCName").focus();
             }
             if (foundOrNot == false) {
                 $("#txtCName").val("");
@@ -247,7 +248,6 @@ $("#txtCsalary").keyup(function (event) {
 });
 
 /*End Of Customer Form Text Field Validations*/
-
 
 /*CRUD Operations Of Customer Form*/
 // Add Customer
