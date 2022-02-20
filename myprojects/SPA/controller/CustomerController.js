@@ -142,7 +142,6 @@ $("#txtSearchCustomerId").keyup(function (event) {
         $("#searchCustIdError").text("");
         if (event.key == "Enter") {
             var foundOrNot = false;
-
             let foundCustomer = searchCustomer(searchCustId);
             if (foundCustomer) {
                 $("#txtCName").val(foundCustomer.name);
@@ -165,6 +164,79 @@ $("#txtSearchCustomerId").keyup(function (event) {
         $("#txtSearchCustomerId").css('border', '2px solid red');
         $("#searchCustIdError").text("Cust ID is a required field.Pattern : C00-001");
         $("#btnUpdateCust").prop('disabled', true);
+    }
+});
+
+$("#txtCName").keyup(function (event) {
+    var custName = $("#txtCName").val();
+    if (regCustName.test(custName)) {
+        $("#txtCName").css('border', '2px solid green');
+        $("#cNameError").text("");
+        if (event.key == "Enter") {
+            $("#txtCaddress").focus();
+        }
+        var custId = $("#txtSearchCustomerId").val();
+        var custSalary = $("#txtCsalary").val();
+        var custAddress = $("#txtCaddress").val();
+
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+            $("#btnUpdateCust").prop('disabled', false);
+        }
+
+    } else {
+        $("#btnUpdateCust").prop('disabled', true);
+        $("#txtCName").css('border', '2px solid red');
+        $("#cNameError").text("Cust name is a required field.");
+    }
+});
+
+$("#txtCaddress").keyup(function (event) {
+    var custAddress = $("#txtCaddress").val();
+    if (regCustAddress.test(custAddress)) {
+        $("#txtCaddress").css('border', '2px solid green');
+        $("#cAddressError").text("");
+        if (event.key == "Enter") {
+            $("#txtCsalary").focus();
+        }
+        var custId = $("#txtSearchCustomerId").val();
+        var custName = $("#txtCName").val();
+        var custSalary = $("#txtCsalary").val();
+
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+            $("#btnUpdateCust").prop('disabled', false);
+        }
+
+    } else {
+        $("#btnUpdateCust").prop('disabled', true);
+        $("#txtCaddress").css('border', '2px solid red');
+        $("#cAddressError").text("Customer address is a required field.");
+    }
+});
+
+$("#txtCsalary").keyup(function (event) {
+    var custSalary = $("#txtCsalary").val();
+    if (regCustSalary.test(custSalary)) {
+        $("#txtCsalary").css('border', '2px solid green');
+        $("#cSalaryError").text("");
+        var custId = $("#txtSearchCustomerId").val();
+        var custName = $("#txtCName").val();
+        var custAddress = $("#txtCaddress").val();
+
+        if (regCusId.test(custId) && regCustName.test(custName) && regCustAddress.test(custAddress) && regCustSalary.test(custSalary)) {
+            $("#btnUpdateCust").prop('disabled', false);
+        }
+
+        if (event.key == "Enter") {
+            let res = confirm("Do you want to update this customer?");
+            if (res) {
+                updateCustomer();
+            }
+        }
+
+    } else {
+        $("#btnUpdateCust").prop('disabled', true);
+        $("#txtCsalary").css('border', '2px solid red');
+        $("#cSalaryError").text("Customer Salary is a required field.Pattern : 1000.00 or 1000");
     }
 });
 
@@ -205,6 +277,28 @@ function searchCustomer(searchId) {
         }
     });
     return customer;
+}
+
+// Update Customer
+
+function updateCustomer() {
+    let updateCustId = $("#txtSearchCustomerId").val();
+    let updateCustName = $("#txtCName").val();
+    let updateCustAddress = $("#txtCaddress").val();
+    let updateCustSalary = $("#txtCsalary").val();
+
+    $("#customerTable>tr").each(function () {
+        let id = $(this).children(":eq(0)").text();
+        if (id === updateCustId) {
+            $(this).children(":eq(0)").text(updateCustId);
+            $(this).children(":eq(1)").text(updateCustName);
+            $(this).children(":eq(2)").text(updateCustAddress);
+            $(this).children(":eq(3)").text(updateCustSalary);
+
+            clearUpdateCustomerFields();
+            $("#btnUpdateCust").prop('disabled', true);
+        }
+    });
 }
 
 /*End Of CRUD Operations*/
@@ -249,4 +343,44 @@ function clearCustomerFields() {
     $("#txtCustomerSalary").css('border', '1px solid #ced4da');
 
     $("#btnRegisterCustomer").prop('disabled', true);
+}
+
+
+// Update Customer Form
+
+$("#btnUpdateCust").prop('disabled', true);
+
+$("#updateCustomer").on('shown.bs.modal', function () {
+    $(this).find("#txtSearchCustomerId").focus();
+});
+
+$("#btnUpdateCust").click(function () {
+    let res = confirm("Do you want to update this customer?");
+    if (res) {
+        updateCustomer();
+    }
+});
+
+$("#btnClearUpdateCustomer").click(function () {
+    $("#btnUpdateCust").prop('disabled',true);
+    clearUpdateCustomerFields();
+});
+
+function clearUpdateCustomerFields() {
+    $("#txtSearchCustomerId").focus();
+
+    $("#txtSearchCustomerId").val("");
+    $("#txtCName").val("");
+    $("#txtCaddress").val("");
+    $("#txtCsalary").val("");
+
+    $("#searchCustIdError").text("");
+    $("#cNameError").text("");
+    $("#cAddressError").text("");
+    $("#cSalaryError").text("");
+
+    $("#txtSearchCustomerId").css('border', '1px solid #ced4da');
+    $("#txtCName").css('border', '1px solid #ced4da');
+    $("#txtCaddress").css('border', '1px solid #ced4da');
+    $("#txtCsalary").css('border', '1px solid #ced4da');
 }
