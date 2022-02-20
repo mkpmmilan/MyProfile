@@ -1,9 +1,4 @@
 
-$(".itemHomeNavi").click(function () {
-    $("#carouselExampleIndicators").css('display', 'block');
-    $("#customerPage").css('display', 'none');
-});
-
 $(".placeOrderHomeNavi").click(function () {
     $("#carouselExampleIndicators").css('display', 'block');
     $("#customerPage").css('display', 'none');
@@ -11,164 +6,6 @@ $(".placeOrderHomeNavi").click(function () {
 
 
 /*Item Form JS*/
-/*add item*/
-
-$("#addItem").on('shown.bs.modal', function () {
-    $(this).find("#txtIcode").focus();
-});
-
-$("#btnAddItem").prop('disabled', true);
-
-let regItemCode = /^(I00-)[0-9]{3,4}$/;
-let regItemName = /^[A-z 0-9.]{3,}$/;
-let regItemUnitPrice = /^[0-9]{1,}([.][0-9]{2})?$/;
-let regItemQty = /^[0-9]{1,}$/;
-
-let iCode;
-let iName;
-let iUnitPrice;
-let iQty;
-
-$("#btnAddItem").click(function () {
-    let res = confirm("Do you want to add this item?");
-    if (res) {
-        addItems();
-    }
-});
-
-function addItems() {
-    let itemCode = $("#txtIcode").val();
-    let itemName = $("#txtItemName").val();
-    let itemUnitPrice = $("#txtItemUnitPrice").val();
-    let itemQty = $("#txtItemQty").val();
-
-    let tableRow = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQty}</td></tr>`;
-
-    $("#itemTable").append(tableRow);
-
-    $("#btnAddItem").prop('disabled', true);
-
-    clearAddItemFields();
-}
-
-$("#txtIcode").keyup(function (event) {
-    iCode = $("#txtIcode").val();
-    if (regItemCode.test(iCode)) {
-        $("#txtIcode").css('border', '2px solid green');
-        $("#itemCodeError").text("");
-        $("#txtItemName").css('border', '2px solid red');
-        $("#itemNameError").text("Item name is a required field.");
-        if (event.key == "Enter") {
-            $("#txtItemName").focus();
-        }
-        iQty = $("#txtItemQty").val();
-        iUnitPrice = $("#txtItemUnitPrice").val();
-        iName = $("#txtItemName").val();
-        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
-            $("#btnAddItem").prop('disabled', false);
-        }
-    } else {
-        $("#txtIcode").css('border', '2px solid red');
-        $("#itemCodeError").text("Item Code is a required field.Pattern : I00-001");
-        $("#btnAddItem").prop('disabled', true);
-    }
-});
-
-$("#txtItemName").keyup(function (event) {
-    iName = $("#txtItemName").val();
-    if (regItemName.test(iName)) {
-        $("#txtItemName").css('border', '2px solid green');
-        $("#itemNameError").text("");
-        $("#txtItemUnitPrice").css('border', '2px solid red');
-        $("#itemUnitPriceError").text("Unit Price is a required field.Pattern : 100.00 or 100");
-        if (event.key == "Enter") {
-            $("#txtItemUnitPrice").focus();
-        }
-        iQty = $("#txtItemQty").val();
-        iUnitPrice = $("#txtItemUnitPrice").val();
-        iCode = $("#txtIcode").val();
-        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
-            $("#btnAddItem").prop('disabled', false);
-        }
-    } else {
-        $("#txtItemName").css('border', '2px solid red');
-        $("#itemNameError").text("Item name is a required field.");
-        $("#btnAddItem").prop('disabled', true);
-    }
-});
-
-$("#txtItemUnitPrice").keyup(function (event) {
-    iUnitPrice = $("#txtItemUnitPrice").val();
-    if (regItemUnitPrice.test(iUnitPrice)) {
-        $("#txtItemUnitPrice").css('border', '2px solid green');
-        $("#itemUnitPriceError").text("");
-        $("#txtItemQty").css('border', '2px solid red');
-        $("#itemQtyError").text("Item Qty is a required field.Pattern : 100");
-        if (event.key == "Enter") {
-            $("#txtItemQty").focus();
-        }
-        iQty = $("#txtItemQty").val();
-        iName = $("#txtItemName").val();
-        iCode = $("#txtIcode").val();
-        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
-            $("#btnAddItem").prop('disabled', false);
-        }
-    } else {
-        $("#txtItemUnitPrice").css('border', '2px solid red');
-        $("#itemUnitPriceError").text("Unit Price is a required field.Pattern : 100.00 or 100");
-        $("#btnAddItem").prop('disabled', true);
-    }
-});
-
-$("#txtItemQty").keyup(function (event) {
-    iQty = $("#txtItemQty").val();
-    if (regItemQty.test(iQty)) {
-        $("#txtItemQty").css('border', '2px solid green');
-        $("#itemQtyError").text("");
-        iUnitPrice = $("#txtItemUnitPrice").val();
-        iName = $("#txtItemName").val();
-        iCode = $("#txtIcode").val();
-        if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
-            $("#btnAddItem").prop('disabled', false);
-        }
-
-        if (event.key == "Enter") {
-            let res = confirm("Do you want to add this item?");
-            if (res) {
-                addItems();
-            }
-        }
-
-    } else {
-        $("#txtItemQty").css('border', '2px solid red');
-        $("#itemQtyError").text("Item Qty is a required field.Pattern : 100");
-        $("#btnAddItem").prop('disabled', true);
-    }
-});
-
-$("#btnclearitemform").click(function () {
-    $("#btnAddItem").prop('disabled', true);
-    clearAddItemFields();
-});
-
-function clearAddItemFields() {
-    $("#txtIcode").focus();
-
-    $("#txtIcode").val("");
-    $("#txtItemName").val("");
-    $("#txtItemUnitPrice").val("");
-    $("#txtItemQty").val("");
-
-    $("#itemCodeError").text("");
-    $("#itemNameError").text("");
-    $("#itemUnitPriceError").text("");
-    $("#itemQtyError").text("");
-
-    $("#txtIcode").css('border', '1px solid #ced4da');
-    $("#txtItemName").css('border', '1px solid #ced4da');
-    $("#txtItemUnitPrice").css('border', '1px solid #ced4da');
-    $("#txtItemQty").css('border', '1px solid #ced4da');
-}
 
 /*Update Item*/
 
@@ -178,7 +15,6 @@ $("#updateItem").on('shown.bs.modal', function () {
 
 $("#btnUpdateItem").prop('disabled', true);
 
-let searchItemCode;
 $("#txtSearchItemCode").keyup(function (event) {
     searchItemCode = $("#txtSearchItemCode").val();
     if (regItemCode.test(searchItemCode)) {

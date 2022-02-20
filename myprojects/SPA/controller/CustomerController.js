@@ -20,38 +20,38 @@ $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary').on('
 });
 
 $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary').on('blur', function () {
-    formValidation();
+    addCustomerFormValidation();
 });
 
 $("#txtCustomerId").on('keyup', function (event) {
-    setButtonDisableOrNot();
+    setAddCustomerButtonDisableOrNot();
     if (event.key == "Enter") {
-        checkIfValid();
+        checkIfAddCustomerFormValid();
     }
 });
 
 $("#txtCustomerName").on('keyup', function (event) {
-    setButtonDisableOrNot();
+    setAddCustomerButtonDisableOrNot();
     if (event.key == "Enter") {
-        checkIfValid();
+        checkIfAddCustomerFormValid();
     }
 });
 
 $("#txtCustomerAddress").on('keyup', function (event) {
-    setButtonDisableOrNot();
+    setAddCustomerButtonDisableOrNot();
     if (event.key == "Enter") {
-        checkIfValid();
+        checkIfAddCustomerFormValid();
     }
 });
 
 $("#txtCustomerSalary").on('keyup', function (event) {
-    setButtonDisableOrNot();
+    setAddCustomerButtonDisableOrNot();
     if (event.key == "Enter") {
-        checkIfValid();
+        checkIfAddCustomerFormValid();
     }
 });
 
-function formValidation() {
+function addCustomerFormValidation() {
     var custId = $("#txtCustomerId").val();
     $("#txtCustomerId").css('border', '2px solid green');
     $("#customerIdError").text("");
@@ -92,8 +92,8 @@ function formValidation() {
     }
 }
 
-function setButtonDisableOrNot(){
-        let check = formValidation();
+function setAddCustomerButtonDisableOrNot(){
+        let check = addCustomerFormValidation();
         if (check) {
             $("#btnRegisterCustomer").attr('disabled', false);
         } else {
@@ -101,7 +101,7 @@ function setButtonDisableOrNot(){
         }
 }
 
-function checkIfValid() {
+function checkIfAddCustomerFormValid() {
     var custID = $("#txtCustomerId").val();
     if (regCusId.test(custID)) {
         $("#txtCustomerName").focus();
@@ -134,6 +134,12 @@ function checkIfValid() {
 }
 
 // Update Customer Form Validations
+
+$('#txtSearchCustomerId,#txtCName,#txtCaddress,#txtCsalary').on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
 
 $("#txtSearchCustomerId").keyup(function (event) {
     searchCustId = $("#txtSearchCustomerId").val();
@@ -242,7 +248,8 @@ $("#txtCsalary").keyup(function (event) {
 
 /*End Of Customer Form Text Field Validations*/
 
-/*CRUD Operations*/
+
+/*CRUD Operations Of Customer Form*/
 // Add Customer
 
 function addCustomer() {
@@ -300,6 +307,10 @@ function updateCustomer() {
         }
     });
 }
+
+// Delete Customer
+
+
 
 /*End Of CRUD Operations*/
 
