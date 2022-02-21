@@ -133,7 +133,7 @@ function checkIfAddItemFormValid() {
     }
 }
 
-/*Update Item Form Validations*/
+// Update Item Form Validations
 
 $('#txtSearchItemCode,#txtIName,#txtIUnitPrice,#txtIQty').on('keydown', function (event) {
     if (event.key == "Tab") {
@@ -161,6 +161,7 @@ $("#txtSearchItemCode").keyup(function (event) {
                 $("#txtIName").focus();
             }
             if (foundOrNot == false) {
+                alert("Item Not Found");
                 $("#txtIName").val("");
                 $("#txtIUnitPrice").val("");
                 $("#txtIQty").val("");
@@ -247,6 +248,39 @@ $("#txtIQty").keyup(function (event) {
     }
 });
 
+// Delete Item Form Validations
+
+$("#txtSearchIcode").keyup(function (event) {
+    searchItemCode = $("#txtSearchIcode").val();
+    if (regItemCode.test(searchItemCode)) {
+        $("#txtSearchIcode").css('border', '2px solid green');
+        $("#searchICodeError").text("");
+        if (event.key == "Enter") {
+            var foundOrNot = false;
+            let foundItem = searchItem(searchItemCode);
+            if (foundItem) {
+                $("#txtdisabledName").val(foundItem.iname);
+                $("#txtdisabledUnitPrice").val(foundItem.iunitprice);
+                $("#txtdisabledQty").val(foundItem.iqty);
+                $("#btnDeleteItem").prop('disabled', false);
+                foundOrNot = true;
+                $("#btnDeleteItem").focus();
+            }
+            if (foundOrNot == false) {
+                alert("Item Not Found");
+                $("#txtdisabledName").val("");
+                $("#txtdisabledUnitPrice").val("");
+                $("#txtdisabledQty").val("");
+                $("#btnDeleteItem").prop('disabled', true);
+            }
+        }
+    } else {
+        $("#txtSearchIcode").css('border', '2px solid red');
+        $("#searchICodeError").text("Item Code is a required field.Pattern : I00-001");
+        $("#btnDeleteItem").prop('disabled', true);
+    }
+});
+
 /*End Of Item Form Validations*/
 
 /*CRUD Operations Of Item Form*/
@@ -304,6 +338,20 @@ function updateItem() {
 
             clearUpdateItemFields();
             $("#btnUpdateItem").prop('disabled', true);
+        }
+    });
+}
+
+// Delete Item
+
+function deleteItem(){
+    let searchIcode = $("#txtSearchIcode").val();
+    $("#itemTable>tr").each(function (){
+        let code = $(this).children(":eq(0)").text();
+        if(code === searchIcode){
+            $(this).remove();
+            clearDeleteItemFields();
+            $("#btnDeleteItem").prop('disabled',true);
         }
     });
 }
@@ -389,4 +437,35 @@ function clearUpdateItemFields() {
     $("#txtIName").css('border', '1px solid #ced4da');
     $("#txtIUnitPrice").css('border', '1px solid #ced4da');
     $("#txtIQty").css('border', '1px solid #ced4da');
+}
+
+// Delete Item Form
+
+$("#btnDeleteItem").prop('disabled',true);
+
+$("#deleteItem").on('shown.bs.modal',function (){
+    $(this).find("#txtSearchIcode").focus();
+});
+
+$("#btnDeleteItem").click(function (){
+    let res = confirm("Do you want to delete this item?");
+    if(res){
+        deleteItem();
+    }
+});
+
+$("#btnClearDeleteItemFormFields").click(function (){
+    $("#btnDeleteItem").prop('disabled',true);
+    clearDeleteItemFields();
+});
+
+function clearDeleteItemFields(){
+    $("#txtSearchIcode").focus();
+
+    $("#txtSearchIcode").val("");
+    $("#txtdisabledName").val("");
+    $("#txtdisabledUnitPrice").val("");
+    $("#txtdisabledQty").val("");
+
+    $("#searchICodeError").text("");
 }

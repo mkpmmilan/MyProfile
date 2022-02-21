@@ -161,6 +161,7 @@ $("#txtSearchCustomerId").keyup(function (event) {
                 $("#txtCName").focus();
             }
             if (foundOrNot == false) {
+                alert("Customer Not Found");
                 $("#txtCName").val("");
                 $("#txtCaddress").val("");
                 $("#txtCsalary").val("");
@@ -247,6 +248,39 @@ $("#txtCsalary").keyup(function (event) {
     }
 });
 
+// Delete Customer Form Validations
+
+$("#txtSearchCId").keyup(function (event) {
+    searchCustId = $("#txtSearchCId").val();
+    if (regCusId.test(searchCustId)) {
+        $("#txtSearchCId").css('border', '2px solid green');
+        $("#searchCustomerIdError").text("");
+        if (event.key == "Enter") {
+            var foundOrNot = false;
+            let foundCustomer = searchCustomer(searchCustId);
+            if (foundCustomer) {
+                $("#txtdcName").val(foundCustomer.name);
+                $("#txtdcAddress").val(foundCustomer.address);
+                $("#txtdcSalary").val(foundCustomer.salary);
+                $("#btnDeleteCustomer").prop('disabled', false);
+                foundOrNot = true;
+                $("#btnDeleteCustomer").focus();
+            }
+            if (foundOrNot == false) {
+                alert("Customer Not Found");
+                $("#txtdcName").val("");
+                $("#txtdcAddress").val("");
+                $("#txtdcSalary").val("");
+                $("#btnDeleteCustomer").prop('disabled', true);
+            }
+        }
+    } else {
+        $("#txtSearchCId").css('border', '2px solid red');
+        $("#searchCustomerIdError").text("Cust ID is a required field.Pattern : C00-001");
+        $("#btnDeleteCustomer").prop('disabled', true);
+    }
+});
+
 /*End Of Customer Form Text Field Validations*/
 
 /*CRUD Operations Of Customer Form*/
@@ -310,7 +344,17 @@ function updateCustomer() {
 
 // Delete Customer
 
-
+function deleteCustomer(){
+    let searchCustomerId = $("#txtSearchCId").val();
+    $("#customerTable>tr").each(function (){
+       let id = $(this).children(":eq(0)").text();
+       if(id === searchCustomerId){
+           $(this).remove();
+           clearDeleteCustomerFields();
+           $("#btnDeleteCustomer").prop('disabled',true);
+       }
+    });
+}
 
 /*End Of CRUD Operations*/
 
@@ -394,4 +438,35 @@ function clearUpdateCustomerFields() {
     $("#txtCName").css('border', '1px solid #ced4da');
     $("#txtCaddress").css('border', '1px solid #ced4da');
     $("#txtCsalary").css('border', '1px solid #ced4da');
+}
+
+// Delete Customer Form
+
+$("#btnDeleteCustomer").prop('disabled',true);
+
+$("#deleteCustomer").on('shown.bs.modal',function (){
+    $(this).find("#txtSearchCId").focus();
+});
+
+$("#btnDeleteCustomer").click(function (){
+   let res = confirm("Do you want to delete this customer?");
+   if(res){
+       deleteCustomer();
+   }
+});
+
+$("#btnClearDeleteCustomerFields").click(function (){
+   $("#btnDeleteCustomer").prop('disabled',true);
+    clearDeleteCustomerFields();
+});
+
+function clearDeleteCustomerFields(){
+    $("#txtSearchCId").focus();
+
+    $("#txtSearchCId").val("");
+    $("#txtdcName").val("");
+    $("#txtdcAddress").val("");
+    $("#txtdcSalary").val("");
+
+    $("#searchCustomerIdError").text("");
 }
