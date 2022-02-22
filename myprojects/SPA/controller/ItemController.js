@@ -92,7 +92,7 @@ function addItemFormValidation() {
     }
 }
 
-function setAddItemButtonDisableOrNot(){
+function setAddItemButtonDisableOrNot() {
     let check = addItemFormValidation();
     if (check) {
         $("#btnAddItem").attr('disabled', false);
@@ -117,6 +117,7 @@ function checkIfAddItemFormValid() {
                     let res = confirm("Do you want to add this Item..?");
                     if (res) {
                         addItem();
+                        loadAllItems();
                         clearItemFields();
                     }
                 } else {
@@ -150,9 +151,9 @@ $("#txtSearchItemCode").keyup(function (event) {
             var foundOrNot = false;
             let foundItem = searchItem(searchItemCode);
             if (foundItem) {
-                $("#txtIName").val(foundItem.iname);
-                $("#txtIUnitPrice").val(foundItem.iunitprice);
-                $("#txtIQty").val(foundItem.iqty);
+                $("#txtIName").val(foundItem.getName());
+                $("#txtIUnitPrice").val(foundItem.getUnitPrice());
+                $("#txtIQty").val(foundItem.getQty());
                 $("#btnUpdateItem").prop('disabled', false);
                 foundOrNot = true;
                 $("#txtIName").css('border', '2px solid green');
@@ -238,6 +239,7 @@ $("#txtIQty").keyup(function (event) {
             let res = confirm("Do you want to update this item?");
             if (res) {
                 updateItem();
+                loadAllItems();
             }
         }
 
@@ -259,9 +261,9 @@ $("#txtSearchIcode").keyup(function (event) {
             var foundOrNot = false;
             let foundItem = searchItem(searchItemCode);
             if (foundItem) {
-                $("#txtdisabledName").val(foundItem.iname);
-                $("#txtdisabledUnitPrice").val(foundItem.iunitprice);
-                $("#txtdisabledQty").val(foundItem.iqty);
+                $("#txtdisabledName").val(foundItem.getName());
+                $("#txtdisabledUnitPrice").val(foundItem.getUnitPrice());
+                $("#txtdisabledQty").val(foundItem.getQty());
                 $("#btnDeleteItem").prop('disabled', false);
                 foundOrNot = true;
                 $("#btnDeleteItem").focus();
@@ -284,6 +286,7 @@ $("#txtSearchIcode").keyup(function (event) {
 /*End Of Item Form Validations*/
 
 /*CRUD Operations Of Item Form*/
+
 // Add Item
 
 function addItem() {
@@ -292,32 +295,18 @@ function addItem() {
     let itemUnitPrice = $("#txtItemUnitPrice").val();
     let itemQty = $("#txtItemQty").val();
 
-    let tableRow = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQty}</td></tr>`;
-
-    $("#itemTable").append(tableRow);
-
+    var item = new ItemDTO(itemCode, itemName, itemUnitPrice, itemQty);
+    itemDB.push(item);
 }
 
 // Search Item
 
 function searchItem(itemCode) {
-    let item;
-    $("#itemTable>tr").each(function () {
-        let tItemCode = $(this).children(":eq(0)").text();
-        if (tItemCode === itemCode) {
-            let tItemName = $(this).children(":eq(1)").text();
-            let tItemUnitPrice = $(this).children(":eq(2)").text();
-            let tItemQty = $(this).children(":eq(3)").text();
-
-            item = {
-                code: itemCode,
-                iname: tItemName,
-                iunitprice: tItemUnitPrice,
-                iqty: tItemQty
-            }
+    for (var i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].getCode() == itemCode) {
+            return itemDB[i];
         }
-    });
-    return item;
+    }
 }
 
 // Update Item
@@ -328,32 +317,40 @@ function updateItem() {
     let updateItemUnitprice = $("#txtIUnitPrice").val();
     let updateItemQty = $("#txtIQty").val();
 
-    $("#itemTable>tr").each(function () {
-        let code = $(this).children(":eq(0)").text();
-        if (code === updateItemCode) {
-            $(this).children(":eq(0)").text(updateItemCode);
-            $(this).children(":eq(1)").text(updateItemName);
-            $(this).children(":eq(2)").text(updateItemUnitprice);
-            $(this).children(":eq(3)").text(updateItemQty);
+    for (var i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].getCode() == updateItemCode) {
+            itemDB[i].setCode(updateItemCode);
+            itemDB[i].setName(updateItemName);
+            itemDB[i].setUnitPrice(updateItemUnitprice);
+            itemDB[i].setQty(updateItemQty);
 
             clearUpdateItemFields();
             $("#btnUpdateItem").prop('disabled', true);
         }
-    });
+    }
 }
 
 // Delete Item
 
-function deleteItem(){
+function deleteItem() {
     let searchIcode = $("#txtSearchIcode").val();
-    $("#itemTable>tr").each(function (){
-        let code = $(this).children(":eq(0)").text();
-        if(code === searchIcode){
-            $(this).remove();
+    for (var i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].getCode() == searchIcode) {
+            itemDB.splice(i, 1);
             clearDeleteItemFields();
-            $("#btnDeleteItem").prop('disabled',true);
+            $("#btnDeleteItem").prop('disabled', true);
         }
-    });
+    }
+}
+
+// Load All Items
+
+function loadAllItems() {
+    $("#itemTable").empty();
+    for (var i = 0; i < itemDB.length; i++) {
+        let tableRow = `<tr><td>${itemDB[i].getCode()}</td><td>${itemDB[i].getName()}</td><td>${itemDB[i].getUnitPrice()}</td><td>${itemDB[i].getQty()}</td></tr>`;
+        $("#itemTable").append(tableRow);
+    }
 }
 
 /*End Of CRUD Operations Of Item Form*/
@@ -371,6 +368,7 @@ $("#btnAddItem").click(function () {
     let res = confirm("Do you want to add this item?");
     if (res) {
         addItem();
+        loadAllItems();
         clearItemFields();
     }
 });
@@ -412,11 +410,12 @@ $("#btnUpdateItem").click(function () {
     let res = confirm("Do you want to update this item?");
     if (res) {
         updateItem();
+        loadAllItems();
     }
 });
 
 $("#btnClearUpdateItem").click(function () {
-    $("#btnUpdateItem").prop('disabled',true);
+    $("#btnUpdateItem").prop('disabled', true);
     clearUpdateItemFields();
 });
 
@@ -441,25 +440,26 @@ function clearUpdateItemFields() {
 
 // Delete Item Form
 
-$("#btnDeleteItem").prop('disabled',true);
+$("#btnDeleteItem").prop('disabled', true);
 
-$("#deleteItem").on('shown.bs.modal',function (){
+$("#deleteItem").on('shown.bs.modal', function () {
     $(this).find("#txtSearchIcode").focus();
 });
 
-$("#btnDeleteItem").click(function (){
+$("#btnDeleteItem").click(function () {
     let res = confirm("Do you want to delete this item?");
-    if(res){
+    if (res) {
         deleteItem();
+        loadAllItems();
     }
 });
 
-$("#btnClearDeleteItemFormFields").click(function (){
-    $("#btnDeleteItem").prop('disabled',true);
+$("#btnClearDeleteItemFormFields").click(function () {
+    $("#btnDeleteItem").prop('disabled', true);
     clearDeleteItemFields();
 });
 
-function clearDeleteItemFields(){
+function clearDeleteItemFields() {
     $("#txtSearchIcode").focus();
 
     $("#txtSearchIcode").val("");

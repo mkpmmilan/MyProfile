@@ -295,10 +295,6 @@ function addCustomer() {
     let customerAddress = $("#txtCustomerAddress").val();
     let customerSalary = $("#txtCustomerSalary").val();
 
-    /*let tableRow = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td></tr>`;
-
-    $("#customerTable").append(tableRow);*/
-
     var customer = new CustomerDTO(customerId, customerName, customerAddress, customerSalary);
     customerDB.push(customer);
 }
@@ -306,23 +302,6 @@ function addCustomer() {
 // Search Customer
 
 function searchCustomer(searchId) {
-    /*let customer;
-    $("#customerTable>tr").each(function () {
-        let tcustId = $(this).children(":eq(0)").text();
-        if (tcustId === searchId) {
-            let tcustName = $(this).children(":eq(1)").text();
-            let tcustAddress = $(this).children(":eq(2)").text();
-            let tcustSalary = $(this).children(":eq(3)").text();
-
-            customer = {
-                id: searchId,
-                name: tcustName,
-                address: tcustAddress,
-                salary: tcustSalary
-            }
-        }
-    });
-    return customer;*/
     for (var i=0;i<customerDB.length;i++){
         if(customerDB[i].getId()==searchId){
             return customerDB[i];
@@ -337,19 +316,6 @@ function updateCustomer() {
     let updateCustName = $("#txtCName").val();
     let updateCustAddress = $("#txtCaddress").val();
     let updateCustSalary = $("#txtCsalary").val();
-
-    /*$("#customerTable>tr").each(function () {
-        let id = $(this).children(":eq(0)").text();
-        if (id === updateCustId) {
-            $(this).children(":eq(0)").text(updateCustId);
-            $(this).children(":eq(1)").text(updateCustName);
-            $(this).children(":eq(2)").text(updateCustAddress);
-            $(this).children(":eq(3)").text(updateCustSalary);
-
-            clearUpdateCustomerFields();
-            $("#btnUpdateCust").prop('disabled', true);
-        }
-    });*/
 
     for (var i =0;i<customerDB.length;i++){
         if(customerDB[i].getId()==updateCustId){
