@@ -233,7 +233,7 @@ $("#txtIQty").keyup(function (event) {
         var iUnitPrice = $("#txtIUnitPrice").val();
 
         if (regItemCode.test(iCode) && regItemName.test(iName) && regItemUnitPrice.test(iUnitPrice) && regItemQty.test(iQty)) {
-            $("#btnUpdateCust").prop('disabled', false);
+            $("#btnUpdateItem").prop('disabled', false);
         }
 
         if (event.key == "Enter") {
@@ -246,8 +246,8 @@ $("#txtIQty").keyup(function (event) {
 
     } else {
         $("#btnUpdateItem").prop('disabled', true);
-        $("#txtCsalary").css('border', '2px solid red');
-        $("#cSalaryError").text("item qty is a required field.Pattern : 100");
+        $("#txtIQty").css('border', '2px solid red');
+        $("#iqtyError").text("item qty is a required field.Pattern : 100");
     }
 });
 
@@ -356,7 +356,8 @@ function loadAllItems() {
 
 /*End Of CRUD Operations Of Item Form*/
 
-/*Generate Item Code*/
+/*Other Functions*/
+// Generate Item Code
 
 function genarateItemCode() {
     if(itemDB.length==0){
@@ -374,6 +375,29 @@ function genarateItemCode() {
         }else if (tempCode<=9999){
             $("#txtIcode").val("I00-"+tempCode);
         }
+    }
+}
+
+// Search Item By Table
+
+function searchItemByTable(searchCode){
+    var item = searchItem(searchCode);
+    let foundOrNot = false;
+    if(item){
+        var code = item.getCode();
+        var name = item.getName();
+        var unitPrice = item.getUnitPrice();
+        var qty = item.getQty();
+
+        $("#itemTable").empty();
+
+        let tableRow = `<tr><td>${code}</td><td>${name}</td><td>${unitPrice}</td><td>${qty}</td></tr>`;
+        $("#itemTable").append(tableRow);
+        foundOrNot=true;
+    }
+    if (foundOrNot==false){
+        alert("Item Not Found");
+        loadAllItems();
     }
 }
 
@@ -494,3 +518,26 @@ function clearDeleteItemFields() {
 
     $("#searchICodeError").text("");
 }
+
+//Other
+
+$("#searchItemForm").submit(function (e) {
+    e.preventDefault();
+});
+
+$("#txtSIcode").on('keyup',function (event) {
+    if (event.key == "Enter") {
+        var itemCode = $("#txtSIcode").val();
+        searchItemByTable(itemCode);
+    }
+});
+
+$("#btnSearchItem").click(function () {
+    var itemCode = $("#txtSIcode").val();
+    searchItemByTable(itemCode);
+});
+
+$("#btnClearSearchItemField").click(function () {
+    $("#txtSIcode").val("");
+    loadAllItems();
+});

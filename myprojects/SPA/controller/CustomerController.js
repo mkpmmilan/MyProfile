@@ -399,8 +399,6 @@ function searchCustomerByTable(searchId){
         alert("Customer Not Found");
         loadAllCustomers();
     }
-
-
 }
 
 /*Controller Functions*/
@@ -523,6 +521,10 @@ function clearDeleteCustomerFields() {
 }
 
 //Other
+
+$("#searchCustomerForm").submit(function (e) {
+    e.preventDefault();
+});
 
 $("#txtSCustId").on('keyup',function (event) {
     if (event.key == "Enter") {
