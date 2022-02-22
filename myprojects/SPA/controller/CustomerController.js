@@ -151,9 +151,9 @@ $("#txtSearchCustomerId").keyup(function (event) {
             var foundOrNot = false;
             let foundCustomer = searchCustomer(searchCustId);
             if (foundCustomer) {
-                $("#txtCName").val(foundCustomer.name);
-                $("#txtCaddress").val(foundCustomer.address);
-                $("#txtCsalary").val(foundCustomer.salary);
+                $("#txtCName").val(foundCustomer.getName());
+                $("#txtCaddress").val(foundCustomer.getAddress());
+                $("#txtCsalary").val(foundCustomer.getSalary());
                 $("#btnUpdateCust").prop('disabled', false);
                 foundOrNot = true;
                 $("#txtCName").css('border', '2px solid green');
@@ -239,6 +239,7 @@ $("#txtCsalary").keyup(function (event) {
             let res = confirm("Do you want to update this customer?");
             if (res) {
                 updateCustomer();
+                loadAllCustomers();
             }
         }
 
@@ -260,9 +261,9 @@ $("#txtSearchCId").keyup(function (event) {
             var foundOrNot = false;
             let foundCustomer = searchCustomer(searchCustId);
             if (foundCustomer) {
-                $("#txtdcName").val(foundCustomer.name);
-                $("#txtdcAddress").val(foundCustomer.address);
-                $("#txtdcSalary").val(foundCustomer.salary);
+                $("#txtdcName").val(foundCustomer.getName());
+                $("#txtdcAddress").val(foundCustomer.getAddress());
+                $("#txtdcSalary").val(foundCustomer.getSalary());
                 $("#btnDeleteCustomer").prop('disabled', false);
                 foundOrNot = true;
                 $("#btnDeleteCustomer").focus();
@@ -305,7 +306,7 @@ function addCustomer() {
 // Search Customer
 
 function searchCustomer(searchId) {
-    let customer;
+    /*let customer;
     $("#customerTable>tr").each(function () {
         let tcustId = $(this).children(":eq(0)").text();
         if (tcustId === searchId) {
@@ -321,7 +322,12 @@ function searchCustomer(searchId) {
             }
         }
     });
-    return customer;
+    return customer;*/
+    for (var i=0;i<customerDB.length;i++){
+        if(customerDB[i].getId()==searchId){
+            return customerDB[i];
+        }
+    }
 }
 
 // Update Customer
@@ -332,7 +338,7 @@ function updateCustomer() {
     let updateCustAddress = $("#txtCaddress").val();
     let updateCustSalary = $("#txtCsalary").val();
 
-    $("#customerTable>tr").each(function () {
+    /*$("#customerTable>tr").each(function () {
         let id = $(this).children(":eq(0)").text();
         if (id === updateCustId) {
             $(this).children(":eq(0)").text(updateCustId);
@@ -343,7 +349,19 @@ function updateCustomer() {
             clearUpdateCustomerFields();
             $("#btnUpdateCust").prop('disabled', true);
         }
-    });
+    });*/
+
+    for (var i =0;i<customerDB.length;i++){
+        if(customerDB[i].getId()==updateCustId){
+            customerDB[i].setId(updateCustId);
+            customerDB[i].setName(updateCustName);
+            customerDB[i].setAddress(updateCustAddress);
+            customerDB[i].setSalary(updateCustSalary);
+
+            clearUpdateCustomerFields();
+            $("#btnUpdateCust").prop('disabled', true);
+        }
+    }
 }
 
 // Delete Customer
@@ -428,6 +446,7 @@ $("#btnUpdateCust").click(function () {
     let res = confirm("Do you want to update this customer?");
     if (res) {
         updateCustomer();
+        loadAllCustomers();
     }
 });
 
