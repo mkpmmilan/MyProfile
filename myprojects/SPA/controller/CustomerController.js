@@ -92,13 +92,13 @@ function addCustomerFormValidation() {
     }
 }
 
-function setAddCustomerButtonDisableOrNot(){
-        let check = addCustomerFormValidation();
-        if (check) {
-            $("#btnRegisterCustomer").attr('disabled', false);
-        } else {
-            $("#btnRegisterCustomer").attr('disabled', true);
-        }
+function setAddCustomerButtonDisableOrNot() {
+    let check = addCustomerFormValidation();
+    if (check) {
+        $("#btnRegisterCustomer").attr('disabled', false);
+    } else {
+        $("#btnRegisterCustomer").attr('disabled', true);
+    }
 }
 
 function checkIfAddCustomerFormValid() {
@@ -118,6 +118,7 @@ function checkIfAddCustomerFormValid() {
                     if (res) {
                         addCustomer();
                         clearCustomerFields();
+                        loadAllCustomers();
                     }
                 } else {
                     $("#txtCustomerSalary").focus();
@@ -284,6 +285,7 @@ $("#txtSearchCId").keyup(function (event) {
 /*End Of Customer Form Text Field Validations*/
 
 /*CRUD Operations Of Customer Form*/
+
 // Add Customer
 
 function addCustomer() {
@@ -292,10 +294,12 @@ function addCustomer() {
     let customerAddress = $("#txtCustomerAddress").val();
     let customerSalary = $("#txtCustomerSalary").val();
 
-    let tableRow = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td></tr>`;
+    /*let tableRow = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td></tr>`;
 
-    $("#customerTable").append(tableRow);
+    $("#customerTable").append(tableRow);*/
 
+    var customer = new CustomerDTO(customerId, customerName, customerAddress, customerSalary);
+    customerDB.push(customer);
 }
 
 // Search Customer
@@ -344,16 +348,26 @@ function updateCustomer() {
 
 // Delete Customer
 
-function deleteCustomer(){
+function deleteCustomer() {
     let searchCustomerId = $("#txtSearchCId").val();
-    $("#customerTable>tr").each(function (){
-       let id = $(this).children(":eq(0)").text();
-       if(id === searchCustomerId){
-           $(this).remove();
-           clearDeleteCustomerFields();
-           $("#btnDeleteCustomer").prop('disabled',true);
-       }
+    $("#customerTable>tr").each(function () {
+        let id = $(this).children(":eq(0)").text();
+        if (id === searchCustomerId) {
+            $(this).remove();
+            clearDeleteCustomerFields();
+            $("#btnDeleteCustomer").prop('disabled', true);
+        }
     });
+}
+
+// Load all customers
+
+function loadAllCustomers() {
+    $("#customerTable").empty();
+    for (var i = 0; i < customerDB.length; i++) {
+        let tableRow = `<tr><td>${customerDB[i].getId()}</td><td>${customerDB[i].getName()}</td><td>${customerDB[i].getAddress()}</td><td>${customerDB[i].getSalary()}</td></tr>`;
+        $("#customerTable").append(tableRow);
+    }
 }
 
 /*End Of CRUD Operations*/
@@ -372,6 +386,7 @@ $("#btnRegisterCustomer").click(function () {
     if (res) {
         addCustomer();
         clearCustomerFields();
+        loadAllCustomers();
     }
 });
 
@@ -417,7 +432,7 @@ $("#btnUpdateCust").click(function () {
 });
 
 $("#btnClearUpdateCustomer").click(function () {
-    $("#btnUpdateCust").prop('disabled',true);
+    $("#btnUpdateCust").prop('disabled', true);
     clearUpdateCustomerFields();
 });
 
@@ -442,25 +457,25 @@ function clearUpdateCustomerFields() {
 
 // Delete Customer Form
 
-$("#btnDeleteCustomer").prop('disabled',true);
+$("#btnDeleteCustomer").prop('disabled', true);
 
-$("#deleteCustomer").on('shown.bs.modal',function (){
+$("#deleteCustomer").on('shown.bs.modal', function () {
     $(this).find("#txtSearchCId").focus();
 });
 
-$("#btnDeleteCustomer").click(function (){
-   let res = confirm("Do you want to delete this customer?");
-   if(res){
-       deleteCustomer();
-   }
+$("#btnDeleteCustomer").click(function () {
+    let res = confirm("Do you want to delete this customer?");
+    if (res) {
+        deleteCustomer();
+    }
 });
 
-$("#btnClearDeleteCustomerFields").click(function (){
-   $("#btnDeleteCustomer").prop('disabled',true);
+$("#btnClearDeleteCustomerFields").click(function () {
+    $("#btnDeleteCustomer").prop('disabled', true);
     clearDeleteCustomerFields();
 });
 
-function clearDeleteCustomerFields(){
+function clearDeleteCustomerFields() {
     $("#txtSearchCId").focus();
 
     $("#txtSearchCId").val("");
