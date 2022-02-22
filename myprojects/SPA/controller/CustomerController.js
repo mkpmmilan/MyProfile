@@ -356,7 +356,8 @@ function loadAllCustomers() {
 
 /*End Of CRUD Operations*/
 
-/*Generate Customer Id*/
+/*Other Functions*/
+// Generate Customer Id
 
 function generateCustomerId(){
     if(customerDB.length==0){
@@ -375,6 +376,31 @@ function generateCustomerId(){
             $("#txtCustomerId").val("C00-"+tempId);
         }
     }
+}
+
+// Search Customer By Table
+
+function searchCustomerByTable(searchId){
+    var customer = searchCustomer(searchId);
+    let foundOrNot = false;
+    if(customer){
+        var id = customer.getId();
+        var name = customer.getName();
+        var address = customer.getAddress();
+        var salary = customer.getSalary();
+
+        $("#customerTable").empty();
+
+        let tableRow = `<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${salary}</td></tr>`;
+        $("#customerTable").append(tableRow);
+        foundOrNot=true;
+    }
+    if (foundOrNot==false){
+        alert("Customer Not Found");
+        loadAllCustomers();
+    }
+
+
 }
 
 /*Controller Functions*/
@@ -495,3 +521,22 @@ function clearDeleteCustomerFields() {
 
     $("#searchCustomerIdError").text("");
 }
+
+//Other
+
+$("#txtSCustId").on('keyup',function (event) {
+    if (event.key == "Enter") {
+        var custId = $("#txtSCustId").val();
+        searchCustomerByTable(custId);
+    }
+});
+
+$("#btnSearchCustId").click(function () {
+   var custId = $("#txtSCustId").val();
+   searchCustomerByTable(custId);
+});
+
+$("#btnClearSearchField").click(function () {
+   $("#txtSCustId").val("");
+   loadAllCustomers();
+});
