@@ -119,6 +119,7 @@ function checkIfAddCustomerFormValid() {
                         addCustomer();
                         clearCustomerFields();
                         loadAllCustomers();
+                        generateCustomerId();
                     }
                 } else {
                     $("#txtCustomerSalary").focus();
@@ -355,11 +356,33 @@ function loadAllCustomers() {
 
 /*End Of CRUD Operations*/
 
+/*Generate Customer Id*/
+
+function generateCustomerId(){
+    if(customerDB.length==0){
+        $("#txtCustomerId").val("C00-0001");
+    }else if (customerDB.length>0){
+        var id = customerDB[customerDB.length-1].getId().split("-")[1];
+        var tempId=parseInt(id);
+        tempId=tempId+1;
+        if(tempId<=9){
+            $("#txtCustomerId").val("C00-000"+tempId);
+        }else if (tempId<=99){
+            $("#txtCustomerId").val("C00-00"+tempId);
+        }else if (tempId<=999){
+            $("#txtCustomerId").val("C00-0"+tempId);
+        }else if (tempId<=9999){
+            $("#txtCustomerId").val("C00-"+tempId);
+        }
+    }
+}
+
 /*Controller Functions*/
 // Add Customer Form
 
 $("#registerCustomer").on('shown.bs.modal', function () {
     $(this).find("#txtCustomerId").focus();
+    generateCustomerId();
 });
 
 $("#btnRegisterCustomer").prop('disabled', true);
@@ -370,11 +393,13 @@ $("#btnRegisterCustomer").click(function () {
         addCustomer();
         clearCustomerFields();
         loadAllCustomers();
+        generateCustomerId();
     }
 });
 
 $("#btnclearcustomerform").click(function () {
     clearCustomerFields();
+    generateCustomerId();
 });
 
 function clearCustomerFields() {
