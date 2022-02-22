@@ -368,14 +368,13 @@ function updateCustomer() {
 
 function deleteCustomer() {
     let searchCustomerId = $("#txtSearchCId").val();
-    $("#customerTable>tr").each(function () {
-        let id = $(this).children(":eq(0)").text();
-        if (id === searchCustomerId) {
-            $(this).remove();
+    for (var i=0;i<customerDB.length;i++){
+        if(customerDB[i].getId()==searchCustomerId){
+            customerDB.splice(i,1);
             clearDeleteCustomerFields();
             $("#btnDeleteCustomer").prop('disabled', true);
         }
-    });
+    }
 }
 
 // Load all customers
@@ -486,6 +485,7 @@ $("#btnDeleteCustomer").click(function () {
     let res = confirm("Do you want to delete this customer?");
     if (res) {
         deleteCustomer();
+        loadAllCustomers();
     }
 });
 
