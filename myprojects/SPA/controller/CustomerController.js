@@ -303,8 +303,8 @@ function addCustomer() {
 // Search Customer
 
 function searchCustomer(searchId) {
-    for (var i=0;i<customerDB.length;i++){
-        if(customerDB[i].getId()==searchId){
+    for (var i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].getId() == searchId) {
             return customerDB[i];
         }
     }
@@ -318,8 +318,8 @@ function updateCustomer() {
     let updateCustAddress = $("#txtCaddress").val();
     let updateCustSalary = $("#txtCsalary").val();
 
-    for (var i =0;i<customerDB.length;i++){
-        if(customerDB[i].getId()==updateCustId){
+    for (var i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].getId() == updateCustId) {
             customerDB[i].setId(updateCustId);
             customerDB[i].setName(updateCustName);
             customerDB[i].setAddress(updateCustAddress);
@@ -335,9 +335,9 @@ function updateCustomer() {
 
 function deleteCustomer() {
     let searchCustomerId = $("#txtSearchCId").val();
-    for (var i=0;i<customerDB.length;i++){
-        if(customerDB[i].getId()==searchCustomerId){
-            customerDB.splice(i,1);
+    for (var i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].getId() == searchCustomerId) {
+            customerDB.splice(i, 1);
             clearDeleteCustomerFields();
             $("#btnDeleteCustomer").prop('disabled', true);
         }
@@ -357,33 +357,34 @@ function loadAllCustomers() {
 /*End Of CRUD Operations*/
 
 /*Other Functions*/
+
 // Generate Customer Id
 
-function generateCustomerId(){
-    if(customerDB.length==0){
+function generateCustomerId() {
+    if (customerDB.length == 0) {
         $("#txtCustomerId").val("C00-0001");
-    }else if (customerDB.length>0){
-        var id = customerDB[customerDB.length-1].getId().split("-")[1];
-        var tempId=parseInt(id);
-        tempId=tempId+1;
-        if(tempId<=9){
-            $("#txtCustomerId").val("C00-000"+tempId);
-        }else if (tempId<=99){
-            $("#txtCustomerId").val("C00-00"+tempId);
-        }else if (tempId<=999){
-            $("#txtCustomerId").val("C00-0"+tempId);
-        }else if (tempId<=9999){
-            $("#txtCustomerId").val("C00-"+tempId);
+    } else if (customerDB.length > 0) {
+        var id = customerDB[customerDB.length - 1].getId().split("-")[1];
+        var tempId = parseInt(id);
+        tempId = tempId + 1;
+        if (tempId <= 9) {
+            $("#txtCustomerId").val("C00-000" + tempId);
+        } else if (tempId <= 99) {
+            $("#txtCustomerId").val("C00-00" + tempId);
+        } else if (tempId <= 999) {
+            $("#txtCustomerId").val("C00-0" + tempId);
+        } else if (tempId <= 9999) {
+            $("#txtCustomerId").val("C00-" + tempId);
         }
     }
 }
 
 // Search Customer By Table
 
-function searchCustomerByTable(searchId){
+function searchCustomerByTable(searchId) {
     var customer = searchCustomer(searchId);
     let foundOrNot = false;
-    if(customer){
+    if (customer) {
         var id = customer.getId();
         var name = customer.getName();
         var address = customer.getAddress();
@@ -393,9 +394,9 @@ function searchCustomerByTable(searchId){
 
         let tableRow = `<tr><td>${id}</td><td>${name}</td><td>${address}</td><td>${salary}</td></tr>`;
         $("#customerTable").append(tableRow);
-        foundOrNot=true;
+        foundOrNot = true;
     }
-    if (foundOrNot==false){
+    if (foundOrNot == false) {
         alert("Customer Not Found");
         loadAllCustomers();
     }
@@ -526,7 +527,7 @@ $("#searchCustomerForm").submit(function (e) {
     e.preventDefault();
 });
 
-$("#txtSCustId").on('keyup',function (event) {
+$("#txtSCustId").on('keyup', function (event) {
     if (event.key == "Enter") {
         var custId = $("#txtSCustId").val();
         searchCustomerByTable(custId);
@@ -534,11 +535,11 @@ $("#txtSCustId").on('keyup',function (event) {
 });
 
 $("#btnSearchCustId").click(function () {
-   var custId = $("#txtSCustId").val();
-   searchCustomerByTable(custId);
+    var custId = $("#txtSCustId").val();
+    searchCustomerByTable(custId);
 });
 
 $("#btnClearSearchField").click(function () {
-   $("#txtSCustId").val("");
-   loadAllCustomers();
+    $("#txtSCustId").val("");
+    loadAllCustomers();
 });

@@ -357,33 +357,34 @@ function loadAllItems() {
 /*End Of CRUD Operations Of Item Form*/
 
 /*Other Functions*/
+
 // Generate Item Code
 
 function genarateItemCode() {
-    if(itemDB.length==0){
+    if (itemDB.length == 0) {
         $("#txtIcode").val("I00-0001");
-    }else if (itemDB.length>0){
-        var code = itemDB[itemDB.length-1].getCode().split("-")[1];
-        var tempCode=parseInt(code);
-        tempCode=tempCode+1;
-        if(tempCode<=9){
-            $("#txtIcode").val("I00-000"+tempCode);
-        }else if (tempCode<=99){
-            $("#txtIcode").val("I00-00"+tempCode);
-        }else if (tempCode<=999){
-            $("#txtIcode").val("I00-0"+tempCode);
-        }else if (tempCode<=9999){
-            $("#txtIcode").val("I00-"+tempCode);
+    } else if (itemDB.length > 0) {
+        var code = itemDB[itemDB.length - 1].getCode().split("-")[1];
+        var tempCode = parseInt(code);
+        tempCode = tempCode + 1;
+        if (tempCode <= 9) {
+            $("#txtIcode").val("I00-000" + tempCode);
+        } else if (tempCode <= 99) {
+            $("#txtIcode").val("I00-00" + tempCode);
+        } else if (tempCode <= 999) {
+            $("#txtIcode").val("I00-0" + tempCode);
+        } else if (tempCode <= 9999) {
+            $("#txtIcode").val("I00-" + tempCode);
         }
     }
 }
 
 // Search Item By Table
 
-function searchItemByTable(searchCode){
+function searchItemByTable(searchCode) {
     var item = searchItem(searchCode);
     let foundOrNot = false;
-    if(item){
+    if (item) {
         var code = item.getCode();
         var name = item.getName();
         var unitPrice = item.getUnitPrice();
@@ -393,9 +394,9 @@ function searchItemByTable(searchCode){
 
         let tableRow = `<tr><td>${code}</td><td>${name}</td><td>${unitPrice}</td><td>${qty}</td></tr>`;
         $("#itemTable").append(tableRow);
-        foundOrNot=true;
+        foundOrNot = true;
     }
-    if (foundOrNot==false){
+    if (foundOrNot == false) {
         alert("Item Not Found");
         loadAllItems();
     }
@@ -525,7 +526,7 @@ $("#searchItemForm").submit(function (e) {
     e.preventDefault();
 });
 
-$("#txtSIcode").on('keyup',function (event) {
+$("#txtSIcode").on('keyup', function (event) {
     if (event.key == "Enter") {
         var itemCode = $("#txtSIcode").val();
         searchItemByTable(itemCode);

@@ -9,39 +9,39 @@
 </head>
 <body>
 <section class="position-relative vh-100 d-flex flex-column">
-<nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img alt="" class="d-inline-block align-text-top logo" src="assets/images/logo.png"
-                 style="width: 130px; height: 30px">
-        </a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler"
-                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 naviItems">
-                <li class="nav-item nav-link naviItem-1">
-                    Home
-                   <!-- <a aria-current="page" class="nav-link active" href="#">Home</a>-->
-                </li>
-                <li class="nav-item nav-link naviItem-2">
-                    Customer
-                    <!--<a class="nav-link" href="#">Customers</a>-->
-                </li>
-                <li class="nav-item nav-link naviItem-3">
-                    Items
-                    <!--<a class="nav-link" href="#">Items</a>-->
-                </li>
-                <li class="nav-item nav-link naviItem-4">
-                    Orders
-                    <!--<a class="nav-link" href="#">Orders</a>-->
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img alt="" class="d-inline-block align-text-top logo" src="assets/images/logo.png"
+                     style="width: 130px; height: 30px">
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 naviItems">
+                    <li class="nav-item nav-link naviItem-1">
+                        Home
+                        <!-- <a aria-current="page" class="nav-link active" href="#">Home</a>-->
+                    </li>
+                    <li class="nav-item nav-link naviItem-2">
+                        Customer
+                        <!--<a class="nav-link" href="#">Customers</a>-->
+                    </li>
+                    <li class="nav-item nav-link naviItem-3">
+                        Items
+                        <!--<a class="nav-link" href="#">Items</a>-->
+                    </li>
+                    <li class="nav-item nav-link naviItem-4">
+                        Orders
+                        <!--<a class="nav-link" href="#">Orders</a>-->
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <!--homepage-->
     <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators">
         <div class="carousel-indicators">
@@ -86,12 +86,13 @@
     </div>
 
     <!--customer Form-->
-    <div id="customerPage" class="container flex-grow-1 flex-column" style="background-color: #c8c8c8;display: none">
+    <div class="container flex-grow-1 flex-column" id="customerPage" style="background-color: #c8c8c8;display: none">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h1><i class="fas fa-users"></i> Customers</h1>
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item customerPageNavi customerHomeNavi"><!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
+                    <li class="breadcrumb-item customerPageNavi customerHomeNavi">
+                        <!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
                     <li aria-current="page" class="breadcrumb-item active">Customers</li>
                 </ol>
             </nav>
@@ -105,8 +106,12 @@
                                placeholder="Input Customer ID"
                                type="text">
                     </div>
-                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" id="btnSearchCustId" type="button">Search</button>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="reset" id="btnClearSearchField">Clear</button>
+                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" id="btnSearchCustId" type="button">
+                        Search
+                    </button>
+                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" id="btnClearSearchField" type="reset">
+                        Clear
+                    </button>
                 </form>
             </div>
             <div class="col-10 col-md-5 col-lg-5 mt-2">
@@ -145,12 +150,13 @@
     </div>
 
     <!--item form-->
-    <div id="itemPage" class="container flex-grow-1 flex-column" style="background-color: #c8c8c8; display: none;">
+    <div class="container flex-grow-1 flex-column" id="itemPage" style="background-color: #c8c8c8; display: none;">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h1><i class="fas fa-boxes"></i> Items</h1>
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item itemPageNavi itemHomeNavi"><!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
+                    <li class="breadcrumb-item itemPageNavi itemHomeNavi">
+                        <!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
                     <li aria-current="page" class="breadcrumb-item active">Items</li>
                 </ol>
             </nav>
@@ -164,18 +170,24 @@
                                placeholder="Input Item Code"
                                type="text">
                     </div>
-                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" type="button" id="btnSearchItem">Search</button>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="reset" id="btnClearSearchItemField">Clear</button>
+                    <button class="btn btn-success ms-3 mb-3 ms-md-3 ms-lg-3" id="btnSearchItem" type="button">Search
+                    </button>
+                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" id="btnClearSearchItemField" type="reset">
+                        Clear
+                    </button>
                 </form>
             </div>
             <div class="col-10 col-md-5 col-lg-5 mt-2">
                 <button class="btn btn-info position-relative m-2" data-bs-target="#addItem"
-                        data-bs-toggle="modal">Add Item</button>
+                        data-bs-toggle="modal">Add Item
+                </button>
                 <!--<button class="btn btn-warning position-relative m-2">View All Items</button>-->
                 <button class="btn btn-primary position-relative m-2" data-bs-target="#updateItem"
-                        data-bs-toggle="modal">Update Item</button>
+                        data-bs-toggle="modal">Update Item
+                </button>
                 <button class="btn btn-danger position-relative m-2" data-bs-target="#deleteItem"
-                        data-bs-toggle="modal">Delete Item</button>
+                        data-bs-toggle="modal">Delete Item
+                </button>
             </div>
         </div>
         <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
@@ -201,12 +213,14 @@
     </div>
 
     <!--placeOrder Form-->
-    <div id="placeOrderPage" class="container-fluid flex-grow-1 flex-column" style="background-color: #c8c8c8; display: none">
+    <div class="container-fluid flex-grow-1 flex-column" id="placeOrderPage"
+         style="background-color: #c8c8c8; display: none">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h1><i class="fas fa-cart-plus"></i> Place Order</h1>
             <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item placeOrderPageNavi placeOrderHomeNavi"><!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
+                    <li class="breadcrumb-item placeOrderPageNavi placeOrderHomeNavi">
+                        <!--<a class="text-decoration-none" href="index.html">-->Home<!--</a>--></li>
                     <li aria-current="page" class="breadcrumb-item active">Orders</li>
                 </ol>
             </nav>
@@ -227,7 +241,8 @@
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="selectcustomerId">Customer ID</label>
-                        <select aria-label="Default select example" class="form-select border-dark" id="selectcustomerId">
+                        <select aria-label="Default select example" class="form-select border-dark"
+                                id="selectcustomerId">
                             <option selected>-Select Customer-</option>
                             <option value="1">C001</option>
                             <option value="2">C002</option>
@@ -237,17 +252,17 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="pocName">Customer Name</label>
-                        <input class="form-control border-dark" id="pocName" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="pocName" type="text">
                     </div>
                 </div>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="pocaddress">Customer Address</label>
-                        <input class="form-control border-dark" id="pocaddress" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="pocaddress" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="pocsalary">Customer Salary</label>
-                        <input class="form-control border-dark" id="pocsalary" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="pocsalary" type="text">
                     </div>
                 </div>
             </div>
@@ -266,17 +281,17 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="poiName">Item Name</label>
-                        <input class="form-control border-dark" id="poiName" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="poiName" type="text">
                     </div>
                 </div>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="itemPrice">Unit Price</label>
-                        <input class="form-control border-dark" id="itemPrice" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="itemPrice" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="qtyOnHand">Qty On Hand</label>
-                        <input class="form-control border-dark" id="qtyOnHand" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="qtyOnHand" type="text">
                     </div>
                 </div>
                 <div class="row mt-1">
@@ -285,8 +300,8 @@
                         <input class="form-control border-dark" id="buyQty" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <button type="submit" class="btn btn-primary rounded-2">Add To Cart</button>
-                        <button type="submit" class="btn btn-secondary rounded-2">Clear</button>
+                        <button class="btn btn-primary rounded-2" type="submit">Add To Cart</button>
+                        <button class="btn btn-secondary rounded-2" type="submit">Clear</button>
                     </div>
                 </div>
             </div>
@@ -295,11 +310,11 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="total">Total (Rs.)</label>
-                        <input class="form-control border-dark" id="total" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="total" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="noOfItems">No Of Items</label>
-                        <input class="form-control border-dark" id="noOfItems" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="noOfItems" type="text">
                     </div>
                 </div>
                 <div class="row">
@@ -309,13 +324,13 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="balance">Balance (Rs.)</label>
-                        <input class="form-control border-dark" id="balance" type="text" disabled>
+                        <input class="form-control border-dark" disabled id="balance" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary rounded-2 mt-2">Place Order</button>
-                        <button type="submit" class="btn btn-secondary rounded-2 mt-2">Cancel</button>
+                        <button class="btn btn-primary rounded-2 mt-2" type="submit">Place Order</button>
+                        <button class="btn btn-secondary rounded-2 mt-2" type="submit">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -342,7 +357,9 @@
                             <td>150.00</td>
                             <td>200</td>
                             <td>2</td>
-                            <td><button type="button" class="bg-danger">Delete</button></td>
+                            <td>
+                                <button class="bg-danger" type="button">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>I002</td>
@@ -350,7 +367,9 @@
                             <td>200.00</td>
                             <td>100</td>
                             <td>1</td>
-                            <td><button type="button" class="bg-danger">Delete</button></td>
+                            <td>
+                                <button class="bg-danger" type="button">Delete</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>I003</td>
@@ -358,7 +377,9 @@
                             <td>450.00</td>
                             <td>150</td>
                             <td>1</td>
-                            <td><button type="button" class="bg-danger">Delete</button></td>
+                            <td>
+                                <button class="bg-danger" type="button">Delete</button>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -382,31 +403,31 @@
                         <label class="form-label fw-bold mb-0" for="txtCustomerId">Customer ID :</label>
                         <input class="form-control" id="txtCustomerId"
                                type="text">
-                        <p><small id="customerIdError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="customerIdError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtCustomerName">Customer Name :</label>
                         <input class="form-control" id="txtCustomerName"
                                type="text">
-                        <p><small id="customerNameError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="customerNameError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtCustomerAddress">Customer Address :</label>
                         <input class="form-control" id="txtCustomerAddress"
                                type="text">
-                        <p><small id="customerAddressError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="customerAddressError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtCustomerSalary">Customer Salary :</label>
                         <input class="form-control" id="txtCustomerSalary"
                                type="number">
-                        <p><small id="customerSalaryError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="customerSalaryError"></small></p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-primary" id="btnRegisterCustomer" type="submit">Save</button>
-                <button class="btn btn-secondary" type="reset" id="btnclearcustomerform">Clear</button>
+                <button class="btn btn-secondary" id="btnclearcustomerform" type="reset">Clear</button>
             </div>
         </div>
     </div>
@@ -427,31 +448,31 @@
                         <label class="form-label fw-bold mb-0" for="txtSearchCustomerId">Search Customer ID :</label>
                         <input class="form-control" id="txtSearchCustomerId"
                                type="text">
-                        <p><small id="searchCustIdError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="searchCustIdError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtCName">Customer Name :</label>
                         <input class="form-control" id="txtCName"
                                type="text">
-                        <p><small id="cNameError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="cNameError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtCaddress">Customer Address :</label>
                         <input class="form-control" id="txtCaddress"
                                type="text">
-                        <p><small id="cAddressError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="cAddressError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtCsalary">Customer Salary :</label>
                         <input class="form-control" id="txtCsalary"
                                type="number">
-                        <p><small id="cSalaryError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="cSalaryError"></small></p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" id="btnUpdateCust">Update</button>
-                <button class="btn btn-secondary" type="reset" id="btnClearUpdateCustomer">Clear</button>
+                <button class="btn btn-primary" id="btnUpdateCust" type="submit">Update</button>
+                <button class="btn btn-secondary" id="btnClearUpdateCustomer" type="reset">Clear</button>
             </div>
         </div>
     </div>
@@ -494,8 +515,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" type="submit" id="btnDeleteCustomer">Delete</button>
-                <button class="btn btn-secondary" type="reset" id="btnClearDeleteCustomerFields">Clear</button>
+                <button class="btn btn-danger" id="btnDeleteCustomer" type="submit">Delete</button>
+                <button class="btn btn-secondary" id="btnClearDeleteCustomerFields" type="reset">Clear</button>
             </div>
         </div>
     </div>
@@ -515,31 +536,31 @@
                         <label class="form-label fw-bold mb-0" for="txtIcode">Item Code :</label>
                         <input class="form-control" id="txtIcode"
                                type="text">
-                        <p><small id="itemCodeError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="itemCodeError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtItemName">Item Name :</label>
                         <input class="form-control" id="txtItemName"
                                type="text">
-                        <p><small id="itemNameError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="itemNameError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtItemUnitPrice">Item Unit Price :</label>
                         <input class="form-control" id="txtItemUnitPrice"
                                type="number">
-                        <p><small id="itemUnitPriceError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="itemUnitPriceError"></small></p>
                     </div>
                     <div class="ms-3 me-3">
                         <label class="form-label fw-bold mb-0" for="txtItemQty">Item Quantity :</label>
                         <input class="form-control" id="txtItemQty"
                                type="number">
-                        <p><small id="itemQtyError" class="text-danger"></small></p>
+                        <p><small class="text-danger" id="itemQtyError"></small></p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" id="btnAddItem">Save</button>
-                <button class="btn btn-secondary" type="reset" id="btnclearitemform">Clear</button>
+                <button class="btn btn-primary" id="btnAddItem" type="submit">Save</button>
+                <button class="btn btn-secondary" id="btnclearitemform" type="reset">Clear</button>
             </div>
         </div>
     </div>
@@ -583,8 +604,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-primary" type="submit" id="btnUpdateItem">Update</button>
-                <button class="btn btn-secondary" type="reset" id="btnClearUpdateItem">Clear</button>
+                <button class="btn btn-primary" id="btnUpdateItem" type="submit">Update</button>
+                <button class="btn btn-secondary" id="btnClearUpdateItem" type="reset">Clear</button>
             </div>
         </div>
     </div>
@@ -627,8 +648,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" type="submit" id="btnDeleteItem">Delete</button>
-                <button class="btn btn-secondary" type="reset" id="btnClearDeleteItemFormFields">Clear</button>
+                <button class="btn btn-danger" id="btnDeleteItem" type="submit">Delete</button>
+                <button class="btn btn-secondary" id="btnClearDeleteItemFormFields" type="reset">Clear</button>
             </div>
         </div>
     </div>
