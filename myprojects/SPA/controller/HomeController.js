@@ -19,7 +19,7 @@ $(".naviItem-3").click(function () {
     $("#placeOrderPage").css('display', 'none');
 });
 
-$(".naviItem-4").click(function () {
+$("#placeOrderForm").click(function () {
     $("#carouselExampleIndicators").css('display', 'none');
     $("#customerPage").css('display', 'none');
     $("#itemPage").css('display', 'none');

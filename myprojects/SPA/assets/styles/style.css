@@ -42,3 +42,20 @@
     height: 20vh;
     overflow: auto;
 }
+.searchOrderContent{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 75vw;
+    height: max-content;
+}
+.searchOrderBody{
+    width: 75vw;
+    height: 85vh;
+}
+.orderTableDiv{
+    height: 35%;
+}

@@ -3,3 +3,5 @@ $(".placeOrderHomeNavi").click(function () {
     $("#customerPage").css('display', 'none');
 });
 
+$('#txtOrderDate').val(new Date().toISOString().slice(0, 10));
+
