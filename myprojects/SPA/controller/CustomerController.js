@@ -8,7 +8,7 @@ $(".customerHomeNavi").click(function () {
 let regCusId = /^(C00-)[0-9]{4}$/;
 let regCustName = /^[A-z .]{3,}$/;
 let regCustAddress = /^[A-z ,.0-9]{3,}$/;
-let regCustSalary = /^[1-9][0-9]{3,}([.][0-9]{2})?$/;
+let regCustSalary = /^[1-9][0-9]{3,}(.[0-9]{2})?$/;
 
 let searchCustId;
 

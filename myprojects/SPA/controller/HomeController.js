@@ -24,4 +24,33 @@ $("#placeOrderForm").click(function () {
     $("#customerPage").css('display', 'none');
     $("#itemPage").css('display', 'none');
     $("#placeOrderPage").css('display', 'block');
+    generateOrderId();
+    setCustomerIdsToComboBox();
 });
+
+function generateOrderId() {
+    if (orderDB.length == 0) {
+        $("#txtOrderId").val("O-0001");
+    } else if (orderDB.length > 0) {
+        var orderId = orderDB[orderDB.length - 1].getOrderId().split("-")[1];
+        var tempId = parseInt(orderId);
+        tempId = tempId + 1;
+        if (tempId <= 9) {
+            $("#txtOrderId").val("O-000" + tempId);
+        } else if (tempId <= 99) {
+            $("#txtOrderId").val("O-00" + tempId);
+        } else if (tempId <= 999) {
+            $("#txtOrderId").val("O-0" + tempId);
+        } else if (tempId <= 9999) {
+            $("#txtOrderId").val("O-" + tempId);
+        }
+    }
+}
+
+function setCustomerIdsToComboBox() {
+    $("#cmbSelectCustomerId").empty();
+    $("#cmbSelectCustomerId").append(new Option("-Select Customer-",""));
+    for (var i = 0; i < customerDB.length; i++) {
+        $("#cmbSelectCustomerId").append(new Option(customerDB[i].getId(),i));
+    }
+}

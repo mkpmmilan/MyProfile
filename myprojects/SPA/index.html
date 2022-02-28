@@ -236,8 +236,8 @@
                 <h3 class="text-center bg-success p-2 text-light">Invoice</h3>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="orderId">Order ID</label>
-                        <input class="form-control border-dark" id="orderId" type="text">
+                        <label class="fw-bold" for="txtOrderId">Order ID</label>
+                        <input class="form-control border-dark" id="txtOrderId" type="text" disabled>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="txtOrderDate">Order Date</label>
@@ -246,29 +246,25 @@
                 </div>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="selectcustomerId">Customer ID</label>
+                        <label class="fw-bold" for="cmbSelectCustomerId">Customer ID</label>
                         <select aria-label="Default select example" class="form-select border-dark"
-                                id="selectcustomerId">
+                                id="cmbSelectCustomerId">
                             <option selected>-Select Customer-</option>
-                            <option value="1">C001</option>
-                            <option value="2">C002</option>
-                            <option value="3">C003</option>
-                            <option value="4">C004</option>
                         </select>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="pocName">Customer Name</label>
-                        <input class="form-control border-dark" disabled id="pocName" type="text">
+                        <label class="fw-bold" for="txtpocName">Customer Name</label>
+                        <input class="form-control border-dark" disabled id="txtpocName" type="text">
                     </div>
                 </div>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="pocaddress">Customer Address</label>
-                        <input class="form-control border-dark" disabled id="pocaddress" type="text">
+                        <label class="fw-bold" for="txtpocaddress">Customer Address</label>
+                        <input class="form-control border-dark" disabled id="txtpocaddress" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="pocsalary">Customer Salary</label>
-                        <input class="form-control border-dark" disabled id="pocsalary" type="text">
+                        <label class="fw-bold" for="txtpocsalary">Customer Salary</label>
+                        <input class="form-control border-dark" disabled id="txtpocsalary" type="text">
                     </div>
                 </div>
             </div>
@@ -351,8 +347,8 @@
                             <th>Item Code</th>
                             <th>Name</th>
                             <th>Unit Price</th>
-                            <th>Qty On Hand</th>
                             <th>Buy Qty</th>
+                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -360,22 +356,8 @@
                             <td>I001</td>
                             <td>Keerisamba 5kg</td>
                             <td>150.00</td>
-                            <td>200</td>
                             <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>I002</td>
-                            <td>Dhal 2kg</td>
-                            <td>200.00</td>
-                            <td>100</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>I003</td>
-                            <td>Keerisamba 10kg</td>
-                            <td>450.00</td>
-                            <td>150</td>
-                            <td>1</td>
+                            <td>300.00</td>
                         </tr>
                         </tbody>
                     </table>
@@ -703,12 +685,14 @@
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="db/DB.js"></script>
 <script src="controller/HomeController.js"></script>
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
 <script src="controller/PlaceOrderController.js"></script>
-<script src="db/DB.js"></script>
 <script src="model/CustomerDTO.js"></script>
 <script src="model/ItemDTO.js"></script>
+<script src="model/OrderDTO.js"></script>
+<script src="model/OrderDetailsDTO.js"></script>
 </body>
 </html>
