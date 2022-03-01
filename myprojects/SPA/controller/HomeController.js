@@ -26,6 +26,7 @@ $("#placeOrderForm").click(function () {
     $("#placeOrderPage").css('display', 'block');
     generateOrderId();
     setCustomerIdsToComboBox();
+    setItemCodesToComboBox();
 });
 
 function generateOrderId() {
@@ -52,5 +53,13 @@ function setCustomerIdsToComboBox() {
     $("#cmbSelectCustomerId").append(new Option("-Select Customer-",""));
     for (var i = 0; i < customerDB.length; i++) {
         $("#cmbSelectCustomerId").append(new Option(customerDB[i].getId(),i));
+    }
+}
+
+function setItemCodesToComboBox() {
+    $("#cmbitemcode").empty();
+    $("#cmbitemcode").append(new Option("-Select Item-",""));
+    for (var i = 0; i < itemDB.length; i++) {
+        $("#cmbitemcode").append(new Option(itemDB[i].getCode(),i));
     }
 }
