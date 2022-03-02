@@ -293,11 +293,11 @@
                 </div>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="buyQty">Buy Qty</label>
-                        <input class="form-control border-dark" id="buyQty" type="text">
+                        <label class="fw-bold" for="txtbuyQty">Buy Qty</label>
+                        <input class="form-control" id="txtbuyQty" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <button class="btn btn-primary rounded-2" type="submit">Add To Cart</button>
+                        <button class="btn btn-primary rounded-2" type="submit" id="btnAddToCart">Add To Cart</button>
                         <button class="btn btn-secondary rounded-2" type="submit">Clear</button>
                     </div>
                 </div>
@@ -346,14 +346,8 @@
                             <th>Total</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>I001</td>
-                            <td>Keerisamba 5kg</td>
-                            <td>150.00</td>
-                            <td>2</td>
-                            <td>300.00</td>
-                        </tr>
+                        <tbody id="cartTable">
+
                         </tbody>
                     </table>
                 </div>
@@ -689,5 +683,6 @@
 <script src="model/ItemDTO.js"></script>
 <script src="model/OrderDTO.js"></script>
 <script src="model/OrderDetailsDTO.js"></script>
+<script src="model/tm/CartTM.js"></script>
 </body>
 </html>
