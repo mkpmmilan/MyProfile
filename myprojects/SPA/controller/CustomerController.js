@@ -163,16 +163,22 @@ $("#txtSearchCustomerId").keyup(function (event) {
                 $("#txtCName").focus();
             }
             if (foundOrNot == false) {
-                alert("Customer Not Found");
                 $("#txtCName").val("");
                 $("#txtCaddress").val("");
                 $("#txtCsalary").val("");
                 $("#btnUpdateCust").prop('disabled', true);
+                swal({
+                    title: "Error!",
+                    text: "Customer Not Found.",
+                    icon: "warning",
+                    button: "Close",
+                    timer: 2000
+                });
             }
         }
     } else {
         $("#txtSearchCustomerId").css('border', '2px solid red');
-        $("#searchCustIdError").text("Cust ID is a required field.Pattern : C00-001");
+        $("#searchCustIdError").text("Cust ID is a required field.Pattern : C00-0001");
         $("#btnUpdateCust").prop('disabled', true);
     }
 });
@@ -270,16 +276,22 @@ $("#txtSearchCId").keyup(function (event) {
                 $("#btnDeleteCustomer").focus();
             }
             if (foundOrNot == false) {
-                alert("Customer Not Found");
                 $("#txtdcName").val("");
                 $("#txtdcAddress").val("");
                 $("#txtdcSalary").val("");
                 $("#btnDeleteCustomer").prop('disabled', true);
+                swal({
+                    title: "Error!",
+                    text: "Customer Not Found.",
+                    icon: "warning",
+                    button: "Close",
+                    timer: 2000
+                });
             }
         }
     } else {
         $("#txtSearchCId").css('border', '2px solid red');
-        $("#searchCustomerIdError").text("Cust ID is a required field.Pattern : C00-001");
+        $("#searchCustomerIdError").text("Cust ID is a required field.Pattern : C00-0001");
         $("#btnDeleteCustomer").prop('disabled', true);
     }
 });
@@ -397,8 +409,14 @@ function searchCustomerByTable(searchId) {
         foundOrNot = true;
     }
     if (foundOrNot == false) {
-        alert("Customer Not Found");
         loadAllCustomers();
+        swal({
+            title: "Error!",
+            text: "Customer Not Found.",
+            icon: "warning",
+            button: "Close",
+            timer: 2000
+        });
     }
 }
 

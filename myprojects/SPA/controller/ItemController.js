@@ -163,16 +163,22 @@ $("#txtSearchItemCode").keyup(function (event) {
                 $("#txtIName").focus();
             }
             if (foundOrNot == false) {
-                alert("Item Not Found");
                 $("#txtIName").val("");
                 $("#txtIUnitPrice").val("");
                 $("#txtIQty").val("");
                 $("#btnUpdateItem").prop('disabled', true);
+                swal({
+                    title: "Error!",
+                    text: "Item Not Found.",
+                    icon: "warning",
+                    button: "Close",
+                    timer: 2000
+                });
             }
         }
     } else {
         $("#txtSearchItemCode").css('border', '2px solid red');
-        $("#searchItemCodeError").text("Item code is a required field.Pattern : I00-001");
+        $("#searchItemCodeError").text("Item code is a required field.Pattern : I00-0001");
         $("#btnUpdateItem").prop('disabled', true);
     }
 });
@@ -270,16 +276,22 @@ $("#txtSearchIcode").keyup(function (event) {
                 $("#btnDeleteItem").focus();
             }
             if (foundOrNot == false) {
-                alert("Item Not Found");
                 $("#txtdisabledName").val("");
                 $("#txtdisabledUnitPrice").val("");
                 $("#txtdisabledQty").val("");
                 $("#btnDeleteItem").prop('disabled', true);
+                swal({
+                    title: "Error!",
+                    text: "Item Not Found.",
+                    icon: "warning",
+                    button: "Close",
+                    timer: 2000
+                });
             }
         }
     } else {
         $("#txtSearchIcode").css('border', '2px solid red');
-        $("#searchICodeError").text("Item Code is a required field.Pattern : I00-001");
+        $("#searchICodeError").text("Item Code is a required field.Pattern : I00-0001");
         $("#btnDeleteItem").prop('disabled', true);
     }
 });
@@ -397,8 +409,14 @@ function searchItemByTable(searchCode) {
         foundOrNot = true;
     }
     if (foundOrNot == false) {
-        alert("Item Not Found");
         loadAllItems();
+        swal({
+            title: "Error!",
+            text: "Item Not Found.",
+            icon: "warning",
+            button: "Close",
+            timer: 2000
+        });
     }
 }
 

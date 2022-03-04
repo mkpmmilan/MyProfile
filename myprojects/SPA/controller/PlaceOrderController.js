@@ -134,7 +134,13 @@ $("#btnAddToCart").click(function () {
         });
 
     } else {
-        alert("Buy qty is incorrect.Please enter low quantity.");
+        swal({
+            title: "Error!",
+            text: "Buy qty is incorrect.Please enter low quantity.",
+            icon: "warning",
+            button: "Close",
+            timer: 2000
+        });
     }
 });
 
@@ -323,9 +329,15 @@ function searchOrderByOrderTable(orderId) {
         found = true;
     }
     if (found == false) {
-        alert("Order Not Found");
         loadOrderTable();
         loadOrderDetailTable();
+        swal({
+            title: "Error!",
+            text: "Order Not Found",
+            icon: "warning",
+            button: "Close",
+            timer: 2000
+        });
     }
 }
 
