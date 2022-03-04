@@ -528,9 +528,14 @@ $("#searchCustomerForm").submit(function (e) {
 });
 
 $("#txtSCustId").on('keyup', function (event) {
-    if (event.key == "Enter") {
-        var custId = $("#txtSCustId").val();
-        searchCustomerByTable(custId);
+    var custId = $("#txtSCustId").val();
+    if (regCusId.test(custId)) {
+        $("#txtSCustId").css('border', '2px solid green');
+        if (event.key == "Enter") {
+            searchCustomerByTable(custId);
+        }
+    } else {
+        $("#txtSCustId").css('border', '2px solid red');
     }
 });
 
@@ -541,5 +546,6 @@ $("#btnSearchCustId").click(function () {
 
 $("#btnClearSearchField").click(function () {
     $("#txtSCustId").val("");
+    $("#txtSCustId").css('border', '1px solid #ced4da');
     loadAllCustomers();
 });

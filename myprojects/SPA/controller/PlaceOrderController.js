@@ -299,3 +299,80 @@ function loadOrderDetailTable() {
         $("#orderDetailsTable").append(tableRow);
     }
 }
+
+// Search Order details from Order Table and Order Detail Table
+
+function searchOrderByOrderTable(orderId) {
+    let order = searchOrderByOrderDB(orderId);
+    var found = false;
+    if (order) {
+        let oid = order.getOrderId();
+        let orderDate = order.getOrderDate();
+        let customerId = order.getCustomerId();
+        let total = order.getTotal();
+
+        $("#orderTable").empty();
+
+        let tableRow = `<tr><td>${oid}</td><td>${orderDate}</td><td>${customerId}</td><td>${total}</td></tr>`;
+        $("#orderTable").append(tableRow);
+
+        found = true;
+    }
+    if (found == false) {
+        alert("Order Not Found");
+        loadOrderTable();
+        loadOrderDetailTable();
+    }
+}
+
+function searchOrderByOrderDetailTable(orderId) {
+    $("#orderDetailsTable").empty();
+    for (var i = 0; i < orderDetailsDB.length; i++) {
+        if(orderDetailsDB[i].getOrderId()==orderId){
+            let tableRow = `<tr><td>${orderDetailsDB[i].getOrderId()}</td><td>${orderDetailsDB[i].getItemCode()}</td><td>${orderDetailsDB[i].getItemName()}</td><td>${orderDetailsDB[i].getUnitPrice()}</td><td>${orderDetailsDB[i].getBuyQty()}</td><td>${orderDetailsDB[i].getTotal()}</td></tr>`;
+            $("#orderDetailsTable").append(tableRow);
+        }
+    }
+}
+
+function searchOrderByOrderDB(searchOID) {
+    for (var i = 0; i < orderDB.length; i++) {
+        if (orderDB[i].getOrderId() == searchOID) {
+            return orderDB[i];
+        }
+    }
+}
+
+// Search Order
+let regOrderId = /^(O-)[0-9]{4}$/;
+
+$("#searchOrder").on('shown.bs.modal', function () {
+    $(this).find("#txtSearchOrderId").focus();
+});
+
+$("#btnSearchOrder").click(function (){
+   let searchOid = $("#txtSearchOrderId").val();
+   searchOrderByOrderDetailTable(searchOid);
+   searchOrderByOrderTable(searchOid);
+});
+
+$("#btnClearSearchOrderField").click(function () {
+   $("#txtSearchOrderId").val("");
+   $("#txtSearchOrderId").css('border','1px solid #ced4da');
+   $("#txtSearchOrderId").focus();
+   loadOrderTable();
+   loadOrderDetailTable();
+});
+
+$("#txtSearchOrderId").keyup(function (event) {
+    let searchOid = $("#txtSearchOrderId").val();
+    if(regOrderId.test(searchOid)){
+        $("#txtSearchOrderId").css('border','2px solid green');
+        if(event.key=="Enter"){
+            searchOrderByOrderDetailTable(searchOid);
+            searchOrderByOrderTable(searchOid);
+        }
+    }else{
+        $("#txtSearchOrderId").css('border','2px solid red');
+    }
+});

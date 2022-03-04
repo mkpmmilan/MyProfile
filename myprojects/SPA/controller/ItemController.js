@@ -527,9 +527,14 @@ $("#searchItemForm").submit(function (e) {
 });
 
 $("#txtSIcode").on('keyup', function (event) {
-    if (event.key == "Enter") {
-        var itemCode = $("#txtSIcode").val();
-        searchItemByTable(itemCode);
+    var itemCode = $("#txtSIcode").val();
+    if (regItemCode.test(itemCode)) {
+        $("#txtSIcode").css('border','2px solid green');
+        if (event.key == "Enter") {
+            searchItemByTable(itemCode);
+        }
+    }else{
+        $("#txtSIcode").css('border','2px solid red');
     }
 });
 
@@ -540,5 +545,6 @@ $("#btnSearchItem").click(function () {
 
 $("#btnClearSearchItemField").click(function () {
     $("#txtSIcode").val("");
+    $("#txtSIcode").css('border', '1px solid #ced4da');
     loadAllItems();
 });
