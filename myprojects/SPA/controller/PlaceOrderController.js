@@ -8,6 +8,7 @@ $("#btnAddToCart").prop('disabled', true);
 $("#btnPlaceOrder").prop('disabled', true);
 let regBuyItemQty = /^[0-9]{1,}$/;
 
+// Generate Order Id
 function generateOId() {
     if (orderDB.length == 0) {
         $("#txtOrderId").val("O-0001");
@@ -27,6 +28,7 @@ function generateOId() {
     }
 }
 
+// Add Listener method to customer id combo box for search customer details
 $("#cmbSelectCustomerId").change(function () {
     var id = $("#cmbSelectCustomerId").find('option:selected').text();
     var found = false;
@@ -50,6 +52,7 @@ $("#cmbSelectCustomerId").change(function () {
     }
 });
 
+// Add Listener method to item code combo box for search item details
 $("#cmbitemcode").change(function () {
     var code = $("#cmbitemcode").find('option:selected').text();
     var found = false;
@@ -88,6 +91,7 @@ $("#cmbitemcode").change(function () {
     }
 });
 
+// Add Validation for buy qty text field
 $("#txtbuyQty").on('keyup', function () {
     addValidation();
 });
@@ -224,6 +228,7 @@ $("#btnCancelOrder").click(function () {
     loadCartItemsToTable();
 });
 
+// Clear Place order form
 function clearPlaceOrderForm() {
     $("#cmbSelectCustomerId").val("");
     $("#txtpocName").val("");
@@ -301,7 +306,6 @@ function loadOrderDetailTable() {
 }
 
 // Search Order details from Order Table and Order Detail Table
-
 function searchOrderByOrderTable(orderId) {
     let order = searchOrderByOrderDB(orderId);
     var found = false;
@@ -350,12 +354,14 @@ $("#searchOrder").on('shown.bs.modal', function () {
     $(this).find("#txtSearchOrderId").focus();
 });
 
+// btn search order function
 $("#btnSearchOrder").click(function (){
    let searchOid = $("#txtSearchOrderId").val();
    searchOrderByOrderDetailTable(searchOid);
    searchOrderByOrderTable(searchOid);
 });
 
+// btn clear search field function
 $("#btnClearSearchOrderField").click(function () {
    $("#txtSearchOrderId").val("");
    $("#txtSearchOrderId").css('border','1px solid #ced4da');
@@ -364,6 +370,7 @@ $("#btnClearSearchOrderField").click(function () {
    loadOrderDetailTable();
 });
 
+// add validation to search order text field
 $("#txtSearchOrderId").keyup(function (event) {
     let searchOid = $("#txtSearchOrderId").val();
     if(regOrderId.test(searchOid)){
