@@ -1,9 +1,8 @@
-function OrderDTO(orderId, orderDate, customerId, total, orderDetailsDB) {
+function OrderDTO(orderId, orderDate, customerId, total) {
     var __orderId = orderId;
     var __orderDate = orderDate;
     var __customerId = customerId;
     var __total = total;
-    var __orderDetails = orderDetailsDB;
 
     this.getOrderId = function () {
         return __orderId;
@@ -28,11 +27,5 @@ function OrderDTO(orderId, orderDate, customerId, total, orderDetailsDB) {
     }
     this.setTotal = function (total) {
         __total = total;
-    }
-    this.getOrderDetails = function () {
-        return __orderDetails;
-    }
-    this.setOrderDetails = function (orderDetailsDB) {
-        __orderDetails = orderDetailsDB;
     }
 }

@@ -294,11 +294,11 @@
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
                         <label class="fw-bold" for="txtbuyQty">Buy Qty</label>
-                        <input class="form-control" id="txtbuyQty" type="text">
+                        <input class="form-control" id="txtbuyQty" type="number">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
                         <button class="btn btn-primary rounded-2" type="submit" id="btnAddToCart">Add To Cart</button>
-                        <button class="btn btn-secondary rounded-2" type="submit">Clear</button>
+                        <button class="btn btn-secondary rounded-2" type="submit" id="btnClearItemFields">Clear</button>
                     </div>
                 </div>
             </div>
@@ -306,28 +306,28 @@
                 <h3 class="text-center bg-success p-2 text-light">Payment Details</h3>
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="total">Total (Rs.)</label>
-                        <input class="form-control border-dark" disabled id="total" type="text">
+                        <label class="fw-bold" for="txtTotal">Total (Rs.)</label>
+                        <input class="form-control border-dark" disabled id="txtTotal" type="text">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="noOfItems">No Of Items</label>
-                        <input class="form-control border-dark" disabled id="noOfItems" type="text">
+                        <label class="fw-bold" for="txtNoOfItems">No Of Items</label>
+                        <input class="form-control border-dark" disabled id="txtNoOfItems" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="cash">Cash (Rs.)</label>
-                        <input class="form-control border-dark" id="cash" type="text">
+                        <label class="fw-bold" for="txtCash">Cash (Rs.)</label>
+                        <input class="form-control border-dark" id="txtCash" type="number">
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <label class="fw-bold" for="balance">Balance (Rs.)</label>
-                        <input class="form-control border-dark" disabled id="balance" type="text">
+                        <label class="fw-bold" for="txtBalance">Balance (Rs.)</label>
+                        <input class="form-control border-dark" disabled id="txtBalance" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary rounded-2 mt-2" type="submit">Place Order</button>
-                        <button class="btn btn-secondary rounded-2 mt-2" type="submit">Cancel</button>
+                        <button class="btn btn-primary rounded-2 mt-2" type="submit" id="btnPlaceOrder">Place Order</button>
+                        <button class="btn btn-secondary rounded-2 mt-2" type="submit" id="btnCancelOrder">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -632,19 +632,20 @@
             </div>
             <div class="modal-body" style="background-color: #c8c8c8;">
                     <div class="ms-3 me-3">
-                        <label class="form-label fw-bold mb-0" for="txtSearchOrderId">Search Order Id :</label>
                         <input class="form-control" id="txtSearchOrderId"
-                               type="text">
+                               type="text" style="width: 80%; display: inline" placeholder="Search Order Id">
+                        <button class="btn btn-success" type="submit">Search Order</button>
+                        <button class="btn btn-primary" type="reset">Clear</button>
                     </div>
                 <h3 class="text-primary mt-2">Order Table</h3>
                 <div class="orderTableDiv">
                     <table class="table bg-light table-bordered w-100 h-100 table-hover">
                         <thead class="bg-info">
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Salary</th>
+                            <th>Order ID</th>
+                            <th>Order Date</th>
+                            <th>Customer ID</th>
+                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody id="orderTable">
@@ -659,6 +660,10 @@
                         <tr>
                             <th>Order Id</th>
                             <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Unit Price</th>
+                            <th>Buy Qty</th>
+                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody id="orderDetailsTable">
