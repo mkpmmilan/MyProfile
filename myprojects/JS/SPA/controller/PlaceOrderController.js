@@ -280,6 +280,15 @@ $("#btnPlaceOrder").click(function () {
     loadOrderTable();
     loadOrderDetailTable();
     generateOId();
+
+    swal({
+        title: "Success!",
+        text: "Place Order Successfully",
+        icon: "success",
+        button: "Ok",
+        timer: 2000
+    });
+
 });
 
 // Manage Item Quantity
