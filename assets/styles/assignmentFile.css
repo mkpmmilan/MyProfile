@@ -1,16 +1,20 @@
-body{
+body {
     background-color: grey;
 }
-html, body{
+
+html, body {
     overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #FFF200;
 }
-#assignment_title{
+
+#assignment_title {
     font-family: 'Saira', sans-serif;
     font-size: 66px;
     text-align: center;
@@ -19,15 +23,18 @@ html, body{
     text-shadow: 2px 3px white;
     text-decoration: underline;
 }
-.FirstLetter{
+
+.FirstLetter {
     color: #00D2D3;
     text-shadow: 2px 3px #00D2D3;
 }
-.LastLetter{
+
+.LastLetter {
     color: #00D2D3;
     text-shadow: 2px 3px #00D2D3;
 }
-#css_title{
+
+#css_title {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     text-decoration: underline;
@@ -36,7 +43,8 @@ html, body{
     padding-left: 20px;
     margin: 0;
 }
-#layout_title{
+
+#layout_title {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     color: white;
@@ -48,11 +56,13 @@ html, body{
     margin-right: 0;
     margin-bottom: 40px;
 }
-.layout_section{
+
+.layout_section {
     height: 650px;
     position: relative;
 }
-.layout_assignment_section{
+
+.layout_assignment_section {
     position: absolute;
     left: 0;
     top: 0;
@@ -61,24 +71,27 @@ html, body{
     margin: auto;
     width: 1300px;
     display: grid;
-    grid-template-columns: repeat(3,400px);
-    grid-template-rows: repeat(2,300px);
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 300px);
     grid-gap: 35px 50px;
 }
-.layout_assignment_section>div{
+
+.layout_assignment_section > div {
     position: relative;
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
     box-shadow: 8px 10px 13px black;
 }
-.assignment_section>img{
+
+.assignment_section > img {
     width: 100%;
     height: 100%;
     opacity: 0.3;
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
 }
-.assignment_section>div{
+
+.assignment_section > div {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -90,7 +103,8 @@ html, body{
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
 }
-.main-title{
+
+.main-title {
     position: absolute;
     top: 14%;
     font-family: 'Ubuntu', sans-serif;
@@ -100,7 +114,8 @@ html, body{
     padding-left: 35px;
     text-decoration: underline;
 }
-.viewFile{
+
+.viewFile {
     position: absolute;
     bottom: 25%;
     font-family: 'Ubuntu', sans-serif;
@@ -110,13 +125,15 @@ html, body{
     color: blue;
     padding-left: 35%;
 }
-.assignment_section>div:hover{
+
+.assignment_section > div:hover {
     opacity: 1;
     cursor: pointer;
     border: 6px ridge #FFF200;
     transition: all 0.6s;
 }
-#transition_title{
+
+#transition_title {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     color: white;
@@ -125,11 +142,13 @@ html, body{
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.transition_section{
+
+.transition_section {
     height: 300px;
     position: relative;
 }
-.transition_assignment_section{
+
+.transition_assignment_section {
     position: absolute;
     left: 0;
     top: 0;
@@ -138,17 +157,19 @@ html, body{
     margin: auto;
     width: 1300px;
     display: grid;
-    grid-template-columns: repeat(3,400px);
-    grid-template-rows: repeat(1,300px);
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(1, 300px);
     grid-gap: 35px 50px;
 }
-.transition_assignment_section>div{
+
+.transition_assignment_section > div {
     position: relative;
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
     box-shadow: 8px 10px 13px black;
 }
-#animations_title{
+
+#animations_title {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     color: white;
@@ -157,11 +178,13 @@ html, body{
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.animations_section{
+
+.animations_section {
     height: 690px;
     position: relative;
 }
-.animations_assignment_section{
+
+.animations_assignment_section {
     position: absolute;
     left: 0;
     top: 0;
@@ -170,17 +193,19 @@ html, body{
     margin: auto;
     width: 1300px;
     display: grid;
-    grid-template-columns: repeat(3,400px);
-    grid-template-rows: repeat(2,300px);
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 300px);
     grid-gap: 35px 50px;
 }
-.animations_assignment_section>div{
+
+.animations_assignment_section > div {
     position: relative;
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
     box-shadow: 8px 10px 13px black;
 }
-#css_frameworks_title{
+
+#css_frameworks_title {
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     text-decoration: underline;
@@ -188,11 +213,13 @@ html, body{
     font-size: 40px;
     padding-left: 20px;
 }
-.frameworks_section{
+
+.frameworks_section {
     height: 350px;
     position: relative;
 }
-.frameworks_assignment_section{
+
+.frameworks_assignment_section {
     position: absolute;
     left: 0;
     top: 0;
@@ -201,643 +228,969 @@ html, body{
     margin: auto;
     width: 1300px;
     display: grid;
-    grid-template-columns: repeat(3,400px);
-    grid-template-rows: repeat(1,300px);
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(1, 300px);
     grid-gap: 35px 50px;
 }
-.frameworks_assignment_section>div{
+
+.frameworks_assignment_section > div {
     position: relative;
     border-top-left-radius: 20%;
     border-bottom-right-radius: 20%;
     box-shadow: 8px 10px 13px black;
 }
+
+#js_title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+.js_section {
+    height: 350px;
+    position: relative;
+}
+
+.js_assignment_section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(1, 300px);
+    grid-gap: 35px 50px;
+}
+
+.js_assignment_section > div {
+    position: relative;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 8px 10px 13px black;
+}
+
 @media all and (max-width: 320px) {
-    .layout_section{
+    .layout_section {
         height: 1050px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(4, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(15px, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 35px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 20px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 20px;
     }
-    #layout_title{
+
+    #layout_title {
         font-size: 18px;
     }
-    .assignment_section>div{
+
+    .assignment_section > div {
         border: 6px ridge #FFF200;
         opacity: 1;
         transition: all 0s;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 18px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(2, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(1, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .frameworks_section {
         height: 270px;
     }
-    .transition_section{
+
+    #js_title {
+        font-size: 20px;
+    }
+
+    .js_section {
+        height: 800px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(1, 85vw);
+        grid-template-rows: repeat(3, 210px);
+        grid-gap: 50px;
+    }
+
+    .transition_section {
         height: 530px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 18px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(4, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 1050px;
     }
 }
+
 @media all and (min-width: 320px) and (max-width: 375px) {
-    .layout_section{
+    .layout_section {
         height: 1050px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(4, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(15px, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 40px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 22px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 22px;
     }
-    #layout_title{
+
+    #js_title {
+        font-size: 22px;
+    }
+
+    #layout_title {
         font-size: 20px;
     }
-    .assignment_section>div{
+
+    .assignment_section > div {
         border: 6px ridge #FFF200;
         opacity: 1;
         transition: all 0s;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 20px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(2, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(1, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .frameworks_section {
         height: 270px;
     }
-    .transition_section{
+
+    .js_section {
+        height: 930px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(1, 88vw);
+        grid-template-rows: repeat(3, 250px);
+        grid-gap: 50px;
+    }
+
+    .transition_section {
         height: 530px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 20px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(1, 85vw);
         grid-template-rows: repeat(4, 210px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 1050px;
     }
 }
+
 @media all and (min-width: 375px) and (max-width: 425px) {
-    .layout_section{
+    .layout_section {
         height: 1200px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(1, 88vw);
         grid-template-rows: repeat(4, 250px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(15px, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 43px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 25px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 25px;
     }
-    #layout_title{
+
+    #js_title {
+        font-size: 25px;
+    }
+
+    #layout_title {
         font-size: 23px;
     }
-    .assignment_section>div{
+
+    .assignment_section > div {
         border: 6px ridge #FFF200;
         opacity: 1;
         transition: all 0s;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 23px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(1, 88vw);
         grid-template-rows: repeat(2, 250px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 88vw);
         grid-template-rows: repeat(1, 250px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .frameworks_section {
         height: 300px;
     }
-    .transition_section{
+
+    .js_section {
+        height: 940px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(1, 88vw);
+        grid-template-rows: repeat(3, 250px);
+        grid-gap: 50px;
+    }
+
+    .transition_section {
         height: 600px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 23px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(1, 88vw);
         grid-template-rows: repeat(4, 250px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 1200px;
     }
 }
+
 @media all and (min-width: 425px) and (max-width: 500px) {
-    .layout_section{
+    .layout_section {
         height: 1300px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(1, 82vw);
         grid-template-rows: repeat(4, 275px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(10%, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 45px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 27px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 27px;
     }
-    #layout_title{
+
+    #js_title {
+        font-size: 27px;
+    }
+
+    #layout_title {
         font-size: 25px;
     }
-    .assignment_section>div{
+
+    .assignment_section > div {
         border: 6px ridge #FFF200;
         opacity: 1;
         transition: all 0s;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 25px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(1, 82vw);
         grid-template-rows: repeat(2, 275px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 82vw);
         grid-template-rows: repeat(1, 275px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .frameworks_section {
         height: 320px;
     }
-    .transition_section{
+
+    .js_section {
+        height: 1000px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(1, 82vw);
+        grid-template-rows: repeat(3, 275px);
+        grid-gap: 50px;
+    }
+
+    .transition_section {
         height: 650px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 25px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(1, 82vw);
         grid-template-rows: repeat(4, 275px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 1300px;
     }
 }
+
 @media all and (min-width: 500px) and (max-width: 690px) {
-    .layout_section{
+    .layout_section {
         height: 500px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(2, 40vw);
         grid-template-rows: repeat(2, 195px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(10%, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 45px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 27px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 27px;
     }
-    #layout_title{
+
+    #js_title {
+        font-size: 27px;
+    }
+
+    #layout_title {
         font-size: 25px;
     }
-    .assignment_section>div{
+
+    .assignment_section > div {
         border: 6px ridge #FFF200;
         opacity: 1;
         transition: all 0s;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 25px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(2, 40vw);
         grid-template-rows: repeat(1, 195px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 40vw);
         grid-template-rows: repeat(1, 195px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .frameworks_section {
         height: 250px;
     }
-    .transition_section{
+
+    .js_section {
+        height: 520px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(2, 195px);
+        grid-gap: 50px;
+    }
+
+    .transition_section {
         height: 220px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 25px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(2, 40vw);
         grid-template-rows: repeat(2, 195px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 500px;
     }
-    .viewFile{
+
+    .viewFile {
         padding-left: 25%;
     }
 }
+
 @media all and (min-width: 690px) and (max-width: 768px) {
-    .layout_section{
+    .layout_section {
         height: 525px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(2, 41vw);
         grid-template-rows: repeat(2, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(10%, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 50px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 30px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 30px;
     }
-    #layout_title{
+
+    #js_title {
+        font-size: 30px;
+    }
+
+    #layout_title {
         font-size: 27px;
     }
-    .assignment_section>div{
+
+    .assignment_section > div {
         border: 6px ridge #FFF200;
         opacity: 1;
         transition: all 0s;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 27px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(2, 41vw);
         grid-template-rows: repeat(1, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 41vw);
         grid-template-rows: repeat(1, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .frameworks_section {
         height: 280px;
     }
-    .transition_section{
+
+    .js_section {
+        height: 580px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(2, 41vw);
+        grid-template-rows: repeat(2, 225px);
+        grid-gap: 50px;
+    }
+
+    .transition_section {
         height: 250px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 27px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(2, 41vw);
         grid-template-rows: repeat(2, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 550px;
     }
-    .viewFile{
+
+    .viewFile {
         padding-left: 25%;
     }
 }
+
 @media all and (min-width: 769px) and (max-width: 850px) {
-    .layout_section{
+    .layout_section {
         height: 525px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(2, 41vw);
         grid-template-rows: repeat(2, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(10%, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 55px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 35px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 35px;
     }
-    #layout_title{
+
+    #js_title {
+
+    }
+
+    #layout_title {
         font-size: 30px;
     }
-    .main-title{
+
+    .main-title {
         font-size: 33px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 30px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(2, 41vw);
         grid-template-rows: repeat(1, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 41vw);
         grid-template-rows: repeat(1, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .js_section {
+        height: 600px;
+    }
+
+    .js_assignment_section {
+        grid-template-columns: repeat(2, 41vw);
+        grid-template-rows: repeat(2, 225px);
+        grid-gap: 50px;
+    }
+
+    .frameworks_section {
         height: 280px;
     }
-    .transition_section{
+
+    .transition_section {
         height: 250px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 30px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(2, 41vw);
         grid-template-rows: repeat(2, 225px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 550px;
     }
-    .viewFile{
+
+    .viewFile {
         padding-left: 25%;
     }
 }
+
 @media all and (min-width: 850px) and (max-width: 1024px) {
-    .layout_section{
+    .layout_section {
         height: 500px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(3, 27vw);
         grid-template-rows: repeat(2, 200px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(10%, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 55px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 35px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 35px;
     }
-    #layout_title{
+
+    #js_title {
+        font-size: 35px;
+    }
+
+    #layout_title {
         font-size: 30px;
     }
-    .main-title{
+
+    .main-title {
         font-size: 33px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 30px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(2, 27vw);
         grid-template-rows: repeat(1, 200px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 27vw);
         grid-template-rows: repeat(1, 200px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .js_section {
         height: 280px;
     }
-    .transition_section{
+
+    .js_assignment_section {
+        grid-template-columns: repeat(3, 27vw);
+        grid-template-rows: repeat(1, 200px);
+        grid-gap: 50px;
+    }
+
+    .frameworks_section {
+        height: 280px;
+    }
+
+    .transition_section {
         height: 250px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 30px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(3, 27vw);
         grid-template-rows: repeat(2, 200px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 500px;
     }
-    .viewFile{
+
+    .viewFile {
         padding-left: 25%;
     }
 }
+
 @media all and (min-width: 1024px) and (max-width: 1440px) {
-    .layout_section{
+    .layout_section {
         height: 620px;
     }
-    .layout_assignment_section{
+
+    .layout_assignment_section {
         grid-template-columns: repeat(3, 28vw);
         grid-template-rows: repeat(2, 260px);
         grid-gap: 50px;
         width: 100vw
     }
-    .assignment_section{
+
+    .assignment_section {
         transform: translate(10%, 10px);
     }
-    #assignment_title{
+
+    #assignment_title {
         font-size: 60px;
     }
-    #css_title{
+
+    #css_title {
         font-size: 40px;
     }
-    #css_frameworks_title{
+
+    #css_frameworks_title {
         font-size: 40px;
     }
-    #layout_title{
+
+    #js_title{
+        font-size: 40px;
+    }
+
+    #layout_title {
         font-size: 35px;
     }
-    .main-title{
+
+    .main-title {
         font-size: 33px;
     }
-    .assignment_section>img{
+
+    .assignment_section > img {
         opacity: 0.3;
     }
-    #transition_title{
+
+    #transition_title {
         font-size: 35px;
     }
-    .transition_assignment_section{
+
+    .transition_assignment_section {
         grid-template-columns: repeat(2, 28vw);
         grid-template-rows: repeat(1, 260px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_assignment_section{
+
+    .frameworks_assignment_section {
         grid-template-columns: repeat(1, 28vw);
         grid-template-rows: repeat(1, 260px);
         grid-gap: 50px;
         width: 100vw
     }
-    .frameworks_section{
+
+    .js_section{
+        height: 350px;
+    }
+
+    .js_assignment_section{
+        grid-template-columns: repeat(3, 28vw);
+        grid-template-rows: repeat(1, 260px);
+        grid-gap: 50px;
+    }
+
+    .frameworks_section {
         height: 320px;
     }
-    .transition_section{
+
+    .transition_section {
         height: 290px;
     }
-    #animations_title{
+
+    #animations_title {
         font-size: 35px;
     }
-    .animations_assignment_section{
+
+    .animations_assignment_section {
         grid-template-columns: repeat(3, 28vw);
         grid-template-rows: repeat(2, 260px);
         grid-gap: 50px;
         width: 100vw
     }
-    .animations_section{
+
+    .animations_section {
         height: 620px;
     }
-    .viewFile{
+
+    .viewFile {
         padding-left: 25%;
     }
 }
