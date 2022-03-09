@@ -167,6 +167,9 @@ $("#txtSearchCustomerId").keyup(function (event) {
                 $("#txtCaddress").val("");
                 $("#txtCsalary").val("");
                 $("#btnUpdateCust").prop('disabled', true);
+                $("#txtCName").css('border', '1px solid #ced4da');
+                $("#txtCaddress").css('border', '1px solid #ced4da');
+                $("#txtCsalary").css('border', '1px solid #ced4da');
                 swal({
                     title: "Error!",
                     text: "Customer Not Found.",

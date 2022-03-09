@@ -166,6 +166,9 @@ $("#txtSearchItemCode").keyup(function (event) {
                 $("#txtIName").val("");
                 $("#txtIUnitPrice").val("");
                 $("#txtIQty").val("");
+                $("#txtIName").css('border', '1px solid #ced4da');
+                $("#txtIUnitPrice").css('border', '1px solid #ced4da');
+                $("#txtIQty").css('border', '1px solid #ced4da');
                 $("#btnUpdateItem").prop('disabled', true);
                 swal({
                     title: "Error!",
