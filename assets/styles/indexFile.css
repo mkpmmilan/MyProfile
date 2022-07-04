@@ -580,8 +580,8 @@ body > section > section > div > div > h2 {
     justify-content: space-between;
 }
 .skill_inner_container>img{
-    width: 10%;
-    height: 46%;
+    width: 7%;
+    height: 37%;
     border-radius: 30px;
     position: relative;
 }
@@ -611,6 +611,26 @@ body > section > section > div > div > h2 {
     cursor: pointer;
 }
 .skill_inner_container>img:nth-child(6):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.skill_inner_container>img:nth-child(7):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.skill_inner_container>img:nth-child(8):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.skill_inner_container>img:nth-child(9):hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.skill_inner_container>img:nth-child(10):hover{
     transform: scale(1.2);
     transition: transform 0.5s;
     cursor: pointer;
@@ -646,6 +666,30 @@ body > section > section > div > div > h2 {
     animation-duration: 5s;
 }
 .skill_inner_container>img:nth-child(6){
+    animation-name: bottomToTop;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(7){
+    animation-name: topToBottom;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(8){
+    animation-name: bottomToTop;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(9){
+    animation-name: topToBottom;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+}
+.skill_inner_container>img:nth-child(10){
     animation-name: bottomToTop;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -1188,17 +1232,17 @@ footer > h4:nth-child(2) {
     }
 
     #skills_section {
-        height: 650px;
+        height: 750px;
     }
     .skill_inner_container{
-        height: 505px;
+        height: 655px;
         flex-direction: column;
         filter: drop-shadow(5px 5px 2px grey);
-        bottom: 65px;
+        bottom: 25px;
     }
     .skill_inner_container>img{
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
         border-radius: 20px;
         transform: none;
     }
@@ -1233,6 +1277,30 @@ footer > h4:nth-child(2) {
         animation-duration: 5s;
     }
     .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(7){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(8){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(9){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(10){
         animation-name: rightToLeft;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -1594,17 +1662,17 @@ footer > h4:nth-child(2) {
     }
 
     #skills_section {
-        height: 650px;
+        height: 780px;
     }
     .skill_inner_container{
-        height: 505px;
+        height: 691px;
         flex-direction: column;
         filter: drop-shadow(5px 5px 2px grey);
-        bottom: 65px;
+        bottom: 30px;
     }
     .skill_inner_container>img{
-        width: 70px;
-        height: 70px;
+        width: 55px;
+        height: 55px;
         border-radius: 20px;
         transform: none;
     }
@@ -1639,6 +1707,30 @@ footer > h4:nth-child(2) {
         animation-duration: 5s;
     }
     .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(7){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(8){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(9){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(10){
         animation-name: rightToLeft;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -1998,17 +2090,17 @@ footer > h4:nth-child(2) {
     }
 
     #skills_section {
-        height: 650px;
+        height: 820px;
     }
     .skill_inner_container{
-        height: 530px;
+        height: 720px;
         flex-direction: column;
         filter: drop-shadow(5px 5px 2px grey);
-        bottom: 40px;
+        bottom: 28px;
     }
     .skill_inner_container>img{
-        width: 75px;
-        height: 75px;
+        width: 60px;
+        height: 60px;
         border-radius: 20px;
         transform: none;
     }
@@ -2043,6 +2135,30 @@ footer > h4:nth-child(2) {
         animation-duration: 5s;
     }
     .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(7){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(8){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(9){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(10){
         animation-name: rightToLeft;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -2409,18 +2525,18 @@ footer > h4:nth-child(2) {
     }
 
     #skills_section {
-        height: 700px;
+        height: 880px;
     }
 
     .skill_inner_container{
-        height: 590px;
+        height: 785px;
         flex-direction: column;
         filter: drop-shadow(5px 5px 2px grey);
-        bottom: 40px;
+        bottom: 25px;
     }
     .skill_inner_container>img{
-        width: 80px;
-        height: 80px;
+        width: 65px;
+        height: 65px;
         border-radius: 20px;
         transform: none;
     }
@@ -2455,6 +2571,30 @@ footer > h4:nth-child(2) {
         animation-duration: 5s;
     }
     .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(7){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(8){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(9){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(10){
         animation-name: rightToLeft;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -2821,18 +2961,18 @@ footer > h4:nth-child(2) {
     }
 
     #skills_section {
-        height: 770px;
+        height: 960px;
     }
 
     .skill_inner_container{
-        height: 660px;
+        height: 860px;
         flex-direction: column;
         filter: drop-shadow(5px 5px 2px grey);
-        bottom: 40px;
+        bottom: 25px;
     }
     .skill_inner_container>img{
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
         border-radius: 20px;
         transform: none;
     }
@@ -2867,6 +3007,30 @@ footer > h4:nth-child(2) {
         animation-duration: 5s;
     }
     .skill_inner_container>img:nth-child(6){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(7){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(8){
+        animation-name: rightToLeft;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(9){
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+    }
+    .skill_inner_container>img:nth-child(10){
         animation-name: rightToLeft;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -3235,10 +3399,12 @@ footer > h4:nth-child(2) {
     .skill_inner_container{
         height: 335px;
         bottom: 40px;
+        width: 92%;
+        filter: drop-shadow(5px 5px 2px grey);
     }
     .skill_inner_container>img{
-        width: 75px;
-        height: 75px;
+        width: 50px;
+        height: 50px;
         border-radius: 20px;
     }
     @keyframes topToBottom {
@@ -3607,10 +3773,11 @@ footer > h4:nth-child(2) {
     .skill_inner_container{
         height: 335px;
         bottom: 40px;
+        width: 92%;
     }
     .skill_inner_container>img{
-        width: 11vw;
-        height: 11vw;
+        width: 7vw;
+        height: 7vw;
         border-radius: 20px;
     }
     @keyframes topToBottom {
@@ -3966,10 +4133,11 @@ footer > h4:nth-child(2) {
     .skill_inner_container{
         height: 335px;
         bottom: 40px;
+        width: 92%;
     }
     .skill_inner_container>img{
-        width: 9vw;
-        height: 9vw;
+        width: 7vw;
+        height: 7vw;
         border-radius: 20px;
     }
     @keyframes topToBottom {
