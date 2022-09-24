@@ -10,10 +10,6 @@
 <br>
 <li style="font-size: 20px"><b>Mockup URL of My Profile designed by figma</b> :- <a href="https://www.figma.com/file/ooJCjOQp25zr4At6LmkXCH/MyProfile?node-id=0%3A1" target="_blank">https://www.figma.com/file/ooJCjOQp25zr4At6LmkXCH/MyProfile?node-id=0%3A1</a></li>
 <br>
-<li style="font-size: 20px"><b>Github My Profile Page URL</b> :- <a href="https://prageethmilan.github.io/MyProfile/" target="_blank">https://prageethmilan.github.io/MyProfile/</a></li>
-<br>
-<li style="font-size: 20px"><b>InfinityFree URL</b> :- <a href="http://prageethmilan.epizy.com/" target="_blank">http://prageethmilan.epizy.com/</a></li>
-</ul>
 
 <h3><u><b>Some images of my website</b></u></h3>
 
